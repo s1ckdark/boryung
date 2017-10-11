@@ -1,0 +1,16 @@
+// April Creative Thinking Project
+//
+//
+
+.april-ctp {
+  @extend %section-margin-mixed;
+  .section-header {
+    margin-bottom: 0;
+  }
+  .heading-1 {
+    @extend %eng;
+  }
+  .text {
+    text-align: left;
+  }
+}

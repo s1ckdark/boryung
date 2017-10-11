@@ -1,0 +1,54 @@
+// Section
+//
+//
+
+
+// Section
+//
+// 섹션에 따른 마진 일원화하기 - 배경색 넣어야해서 margin 대신 padding으로 작업.
+%section-margin-base {
+  margin-top: rem($vertical-margin-1);
+  margin-bottom: rem($vertical-margin-1);
+}
+%section-margin-mixed {
+  margin-top: rem($vertical-margin-1);
+  margin-bottom: rem($vertical-margin-2);
+}
+%section-margin-narrow {
+  margin-top: rem($vertical-margin-2);
+  margin-bottom: rem($vertical-margin-2);
+}
+
+%section-padding-base {
+  padding-top: rem($vertical-margin-1);
+  padding-bottom: rem($vertical-margin-1);
+}
+%section-padding-mixed {
+  padding-top: rem($vertical-margin-1);
+  padding-bottom: rem($vertical-margin-2);
+}
+%section-padding-narrow {
+  padding-top: rem($vertical-margin-2);
+  padding-bottom: rem($vertical-margin-2);
+}
+
+
+// Section Header
+//
+// 구조1: subtitle + heading-1
+// 구조2: heading-1 + text
+.section-header {
+  margin-bottom: rem(45px);
+  .sub-title {
+    margin-bottom: rem(15px);
+    font-size: rem(16px);
+    color: $text-color-muted;
+    line-height: 1;
+  }
+  .heading-1 {
+    line-height: 1.26;
+  }
+  .text {
+    margin-top: rem(15px);
+  }
+}

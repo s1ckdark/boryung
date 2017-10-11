@@ -1,0 +1,208 @@
+// institute-curriculum
+
+.institute-curriculum {
+	// @extend %section-margin-base;
+	.curriculum-title {
+		margin:0;
+		width:100vw;
+		height:calc(100vw * 340 / 640);
+		background-image:url('../img/institute/bg_curriculum.jpg');
+		.sub-title {
+			color:$text-color-gray;
+            position:relative;
+            display:inline-block;
+            width:auto;
+            &:after {
+                content:'';
+                background-color:$institute-text-color;
+                height:rem(3px);
+                width:100%;
+                display:inline-block;
+            }
+        }
+	}
+	.article {padding:0;margin:0;}
+	#realize .col {border:none;
+		&:nth-child(1) {width:rem(500px);margin-right:rem(20px);padding-right:0;}
+		&:nth-child(2) {}
+		.aside {display:block;}
+	}
+	.discouraged {
+		background-color:#282832;
+		background-image:url('../img/institute/bg_discouraged.jpg');
+		background-position:50% 100%;
+		background-repeat:no-repeat;
+		width:100vw;
+		background-size:100vw;
+		height:calc(100vw * 820 / 640);
+		display:block;
+		margin-bottom:rem(30px);
+		.sub-title {
+			padding-top:rem(50px);
+			color:$text-color-gray;
+            position:relative;
+            display:inline-block;
+            width:auto;
+            &:before {
+                content:'';
+                background-color:$institute-text-color;
+                height:rem(3px);
+                width:100%;
+                display:inline-block;
+                margin-bottom:rem(15px);
+            }
+        }
+		.heading-1 {
+			margin-top:rem(50px);
+			color:$text-color-gray;
+			line-height:1.6;
+		}
+
+	}
+	#innerbox-slider {
+		position:relative;
+		margin-bottom:rem(25px);
+		.curriculum {width:100vw;height:calc(100vw * 356 / 516);display:block;background-size:cover;}
+		.curriculum1 {background-image:url('../img/institute/curriculum1.jpg');}
+		.curriculum2 {background-image:url('../img/institute/curriculum2.jpg');}
+		.curriculum3 {background-image:url('../img/institute/curriculum3.jpg');}
+		.curriculum4 {background-image:url('../img/institute/curriculum4.jpg');}
+		.curriculum5 {background-image:url('../img/institute/curriculum5.jpg');}
+		.curriculum6 {background-image:url('../img/institute/curriculum6.jpg');}
+		.inner-slider {text-align:center;width:100%;height:rem(80px);padding:rem(20px) 0px rem(60px);background:$text-color-dgray;display:block;
+			p {color:#fff;padding:10px 20px;text-align:center;line-height:1.5;font-size:rem(14px);color:$text-color-gray;}
+		}
+		#slider-counter {position:absolute;bottom:rem(30px);color:#fff;width:rem(120px);z-index:10;left:calc(50% - 60px);color:$text-color-muted;font-size:rem(15px);line-height:1.5;}
+		.owl-nav {position:absolute;left:calc(50% - 70px);bottom:60px;width:rem(140px);
+			& > * {background:none;}
+			.owl-prev {width:40px;height:40px;left:0px;margin:0;
+				&:before {content:none;}
+			}
+			.owl-next {width:40px;height:40px;right:0px;margin:0;
+				&:before {content:none;}
+			}
+		}
+	}
+			.cardItem {
+					    transform: matrix(1, 0, 0, 1, 0, 0);
+						width:auto;
+						padding:0 rem(40px);
+						// height:rem(270px);
+						background-color:transparent;
+					    display: inline-block;
+					    // margin:0 20px;
+					    position: relative;
+					    z-index: 1;
+					    text-align:center;
+				    	.cardInner {
+				    		padding:20px;
+				    	}
+						.bookContents {
+							white-space: initial;
+							font-size:rem(15px);
+							line-height:1.4;
+							color:$text-color-gray;
+							display:block;
+							p.bookTitle {
+							    font-weight: 600;
+							    font-size: rem(15px);
+							    line-height: 1.6;
+							    overflow: hidden;
+							    margin-bottom:rem(5px);
+							    will-change: transform;
+							}   
+						}
+						.bookSummary {display:block;}
+						.bookImg {
+							margin-top:rem(30px);
+							position:relative;
+							.awards {right:15px;bottom:0px;position:absolute;background-color:$institute-bg-color;height:rem(60px);display:table;width:rem(60px);border-radius:50%;
+								span {line-height:1.2;color:$text-color-gray;text-align:center;display:block;margin-top:rem(13px);font-size:rem(14px);}
+							}
+							img {width:auto;height:rem(230px);text-align:center;margin:0 auto;}
+						}
+						&.newberry {background-color:$institute-bg-color;padding:rem(10px) rem(20px);
+							.awards {color:$text-color-gray;font-size:rem(19px);margin-top:rem(30px);line-height:1.3;
+								&:after {
+									content:'';
+									background-color:$text-color-gray;
+									height:2px;
+									width:50%;
+									display:block;
+									margin:rem(5px) auto rem(15px);
+								}
+							}
+							.bookContents {
+								p {color:$text-color-gray;font-size:rem(15px);}
+							}
+							.readmoreBook {
+								a, a:hover {color:$text-color-gray;}
+								margin:rem(18px) auto rem(35px);font-size:rem(13px);height:rem(20px);color:$text-color-gray;border-radius:50px;display:table;padding:rem(10px) rem(30px);width:auto;border:1px solid $text-color-gray;
+							}
+					
+						}
+					}
+	#drag-slider {
+		margin-top:rem(30px);
+		#drag-slider-title {
+			background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKcAAAARCAMAAACPW0y2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEUAAACxFTOxFTOxFTOxFTOxFTOxFTP19fX19fX19fX19fWxFTOxFTOxFTOxFTOxFTOxFTOxFTP19fX19fX19fWxFTP19fX19fX19fX19fWxFTP19fX19fX19fX19fWxFTP19fX///88gs5wAAAAH3RSTlMAYMAwQCCA8FCQsPCwUKCQENCg0GDgQOAgEHAwcIDA2VffCgAAAAFiS0dEIcRsDRYAAAAHdElNRQfhCQIRGiwpxJcCAAAC80lEQVRIx82V2XLjIBBFkQA5MVqQY7womYH//8rpS7NIip08TE1qusplQDQ69HIlxP9uTStF2/7Mu5SuY62+3Om73UrnFTgPIbxg+hrCcfO89TDTx2MljZJXtHagsc+W945668tzHWeTZX8Db8knEZKdvZ/X0fNT4eOzE+cphBOW30I4P+AkA9KU/rN3fMeek8jk1tcQnDQ8nu3qwZA5R95UbPQuR7Yjc4XzEsKVVm8hhDse326Vc1FDz4F0dHafOGkV2BKcKhr2KrW4tEfwHKFb4tg1I9+sob+xoX3OMucSD6qGSw2ruTOZU1xDeBfiI6b9fj6GX5UTKZ/xNxCt95Y5Vby2b8BZ93JxuPWcqEa4ogl0vK9jqh4XACd50DnVqAoGYyq4pYtnTipMQjsi7e8U1D3nhD/C6mJwMmcMxp7T7jjhhZ2RpIdjqkWFC9CDyWGwaiJH1Tl4s9Qeaug3do44Ce5N3EM4CHE5nK47TiRCWlQXv4M5tUN6Snkyl+zXeW9bE0tv5IvBcVAcW1yoTZXuauyWma+kjHeTzmmnfXNr4EaJv72kbhK/15ypt5HABQGRqz6itthwPuyjqaQlZkDli1ROUxTLGk/6YEnCLFW25Kbqii7FxJ9PSZ0ecPYWNaoBO1VOSAt6A1b2mpUu0fqMvH8TT18VXFpR9FOyRrVixUmtfjwg7Z84x64bZOyBxBFfl1bFtj4VpcurOs/1muqa05HyPODK9MAMJj2tJVp03k6sWIUT0pnTvuVMr52KUA65j8QnTgGNafecHj1DIpQ+FLGshS39Dh+jH3M6P0ux4fwA5+U5J04nlex8VIkNZ8eJZy5XtK/kvY/jOesn9G1aTAwr63xbLiejFC9+ZE22S/6CFU5o/FU85RySmiA8dsdZv0exnla6xKbq96jlzuACKt8j1NSy9SmeYseJxL8+5xzzSUjXV5wIaLN6p+lj4uyIAKZ0NjPWtcicsUx1jWcx+4Dzn5t+OvneVKd/jPNvTco/QUVpGQYKiEUAAAAASUVORK5CYII=');
+			width:rem(135px);
+			height:rem(17px);
+			display:block;
+			margin-bottom:rem(30px);
+			text-align:center;
+			margin:0 auto;
+			background-size:cover;
+		}
+		@extend %section-margin-base;
+		// height:rem(500px);
+		width:100vw;
+		background-color:#282832;
+	    overflow: hidden;
+		// padding-bottom: 120px;
+		position: relative;
+		z-index: 1;
+		.selection-wrapper {
+		    overflow: hidden;
+		    position: relative;
+		    z-index: 1;
+		    transform-origin: 0 0;
+		    padding:0 0 rem(50px);
+		    .selection-slider {
+	    	    margin:0 auto;
+			    transform-origin: 0 0;
+			    width:100vw;
+				.selection-slider-inner {
+				    display: table;
+				    white-space: nowrap;
+				    overflow: visible;
+				    transform: translate3d(0px, 0px, 0px);
+				    cursor: move;
+				    touch-action: pan-y;
+				    user-select: none;
+				}
+			}
+	
+				.owl-nav > * {margin-top:0;}
+				.owl-nav {
+					position:absolute;
+					bottom:0px;
+					left: calc(50% - 70px);
+					margin:0 auto; 
+				    width: rem(140px);
+				}
+			#book-slider-counter {
+		    	position:absolute;
+		    	bottom:20px;
+		    	left: calc(50% - 60px);
+				margin:0 auto; 
+			    width: rem(120px);
+			    font-size:rem(15px);
+			    text-align:center;
+			    color:$text-color-muted;
+			    line-height:1.5;
+			}
+		}
+	}
+}
+

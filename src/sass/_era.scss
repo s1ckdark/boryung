@@ -1,0 +1,41 @@
+//
+// brand-era
+//
+#era {
+	background-color: rgb(51, 51, 51);
+	width:1600px;
+	height:auto;
+	article {
+		background-color: rgb(255, 255, 255);
+		margin: rem(60px) 0;
+		width: rem(900px);
+	}
+	article.article_1962 {
+		width: rem(900px);
+		height: rem(600px);
+	}
+	article.article_1967 {
+		width: rem(900px);
+		height: rem(600px);
+	}
+	article.article_1970 {
+		width: rem(900px);
+		height: rem(600px);
+	}
+	article.article_2b {
+		width: rem(900px);
+		height: rem(260px);
+	}
+	article.article_1975 {
+		width: rem(900px);
+		height: rem(600px);
+	}
+	article.article_1980 {
+		width: rem(900px);
+		height: rem(600px);
+	}
+	article.article_1990 {
+		width: rem(900px);
+		height: rem(600px);
+	}
+}

@@ -1,0 +1,46 @@
+// Brand Robert
+//
+//
+
+.brand-robert {
+  height: 320px;
+  background: url('../img/brand-robert-bg.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  text-align: center;
+  .wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.robert-quote {
+  font-weight: 400;
+  .color {
+    color: #ffffff;
+  }
+  &:before,
+  &:after {
+    width: rem(15px);
+    height: rem(10px);
+  }
+  &:before {
+    top: 0;
+    margin-bottom: rem(10px);
+    margin-right: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAACEklEQVRIiZXVS4hOcRjH8c97MsqlSJHUuGThsrBxWSALZcol1OwspmyEBVukR3NYYKVJpliIrFwWkmJjspgtsjAWipSiXBoZpjEui3NOnY4zr/f8Vs//+T+///ff/33O87b6+/u10WocwT5cxdFqQUTUGtM0nYE+HMzPWRARo9OmAM3GWRxCgttI292sAuvBZSzBB/RGxCjUAZfjHlZhFAdws0NQK7/YyTx1C4ci4lNRUwWuwCMswhtsx8tOYLkuyZ4QAmci4k+5oAychwc57D224VWnpDRNT5RhEXG6ri4pxVewNI/7GsI2ogA8xJmpalt5l+7A/Tx3F3s7hcku/RRr8AtrIuLF/4DD2JjnejFX1qnvMITPbYC780uSdfMNdGMcTyLiSRW4EiP5egyzKgf+xCCO43sN8B525fEEplf2n+NwRAyTPcee0mYVBl2yj/9xzf4M9JTWVRjZUw+ladpbALfWFNVpHQZqcnWQqrpwPU3TxQk2dAiE/VhWWq9v4J2JYwnmNDC1ZB1daFMDL+xM8kOaaEkpXtDQ2538v+YflTv1a0PvZIIvDU1PS/FwQ+/rBHcaGMZlo6vQAH438F9PZN/YWIeGUzm00Ddc7ND7EecS/MBm9VOkrEGcryYj4qhs2rTTJ6yNiMmiaZ5hPq7J5mbxHzYh+8224PBUp0XEbtnAH5GNQvkZH3EBCyPiLfwFg2mEAVKBINYAAAAASUVORK5CYII=');
+  }
+  &:after {
+    top: 0;
+    margin-top: rem(10px);
+    margin-left: 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAACGElEQVRIiZXUTYhOURzH8c9zDU2IGKKUKAsvC8ZWyEIslGSymlhRJs1YeSmOnhsipUwRUcrOgma8zIKyUDMJWcxiUMpbIcpLzUuZMhb3TG5Pd8xzf3V7/ufc/+9+z3PO//wr1WpVVAPOoRVNqGAUb3AU3QoUQgBpmq7HBazCNIzhB+6iLYQwDEn0LcYXHMS8CIOpWIEu3CkCRtglPEZzhInfmIs9+Jam6RqoVKvVBnyOoMnUiY6auUM4W4d3CPMTHK4TBgcwMzduRHWC3FrNQGeC3XUayI6gPTfeEqH1ameCpSUMsC4XN5f0zklk1VlGs3Lx9JJeCT6W9HzNxe9LescS3C9p6s3FPbL7Vq9+JTiD4RKmZ7n4La6X8D5N8EFWqaN1GH7jec1ce8HcRHo03mluYRP6J4CM6wFG8i9DCEPYKGsKRYseysXd+QrtxWqsjU+jrKBa0RJzrhYtO/bJjjRNq3HhizCIn/HPQF8I4VXRlXgRH1iJHTHux70iYA78PQeQpmlX7vUp/jXvIlVwHlPwB/vjb11K03Qztsfh7RBCz2TAY7LWBcfRVwK2DDfi8B32jr8rAlYiII3jyzhdArYcD7EQn7A1bnUhsAk3c7CTaCsB24UnWIKX2BBCeJ3PyRfNNlzDAlnL2ie7BvWAmmQ70SI754s4EkIYrM0dB86WVdcATsj2f6Q2+T8KsvO+gs4QwsBEiX8Bh/eG0sSgAXsAAAAASUVORK5CYII=');
+  }
+}
+
+.robert-about {
+  margin-top: rem(30px);
+  font-size: $font-size-small;
+  color: #ffffff;
+}

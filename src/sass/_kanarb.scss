@@ -1,0 +1,51 @@
+#kanarb {
+	width:rem(1600px);
+	.bestMedicine {
+		width:rem(1600px);
+		height:rem(900px);
+		margin:0 auto;
+		background-image: url(../img/kanarb/kanarb_bg.jpg);
+		.inner {
+			margin:rem(200px) auto rem(100px);
+			.listofmedicine {
+				.medicine {
+					width:rem(190px);
+					height:rem(350px);
+					display:inline-block;
+					.icon {
+						background-color: rgb(255, 255, 255);
+						width: rem(190px);
+						height: rem(180px);
+						display:block;
+					}
+				}
+			}
+		}
+	}
+	.container {
+		.col:nth-child(1) {
+			background-color: rgb(255, 255, 255);
+			height:900px;
+			.kanarbSales {
+
+			}
+		}
+		.col:nth-child(2) {
+			background-image: url('../img/kanarb/bg_kanarb_medicine.png');
+			height:900px;
+			.inner {
+				background-color: rgb(255, 255, 255);
+				width:rem(400px);
+				padding:rem(30px) rem(45px);
+				margin:0 auto;
+				.kanarbMedicine {
+					width: rem(300px);
+					height: rem(257px);
+					display:block;
+					margin:0 auto;
+					background-image: url('../img/kanarb/kanarb_medicine.jpg');
+				}
+			}
+		}
+	}
+}

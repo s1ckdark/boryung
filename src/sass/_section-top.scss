@@ -1,0 +1,158 @@
+// Section Top
+//
+//
+
+.section-top {
+  @extend %full-screen;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .inner {
+    box-sizing: border-box;
+    width: rem(640px);
+    padding: rem(65px) rem(35px) rem(35px);
+  }
+  .title {
+    font-weight: 400;
+    font-size: rem(56px);
+    color: #ffffff;
+    .point {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        display: block;
+        width: rem(10px);
+        height: rem(10px);
+        margin-left: rem(-5px);
+        border-radius: 50%;
+        background: #ffffff;
+      }
+    }
+  }
+  .text {
+    margin-top: rem(25px);
+    color: #fff;
+    .lead {
+      display: block;
+      margin-bottom: rem(10px);
+      font-size: rem(24px);
+      span {
+        display: inline-block;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+
+  &.igarten {
+    background: $igarten-bg-color url('../img/section-top-igarten.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    .inner {
+      background: rgba($igarten-bg-color, .8);
+      margin-left: 50%;
+      transform: translate(60px, 80px);
+      // 컨텐츠 맞춤 반응형
+      @media (max-width: 1420px) {
+        transform: translate(0, 80px);
+      }
+      @media (max-width: 1320px) {
+        transform: translate(-60px, 80px);
+      }
+      @media (max-width: 1200px) {
+        transform: translate(-100px, 80px);
+      }
+    }
+  }
+  &.april {
+    background: $april-bg-color url('../img/section-top-april.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    .inner {
+      background: rgba($april-bg-color, .8);
+      transform: translate(-200px, 0);
+      // 컨텐츠 맞춤 반응형
+      @media (max-width: 1420px) {
+        transform: translate(-100px, 0);
+      }
+      @media (max-width: 1260px) {
+        transform: translate(0, 0);
+      }
+    }
+    .graphic {
+      margin-top: rem(40px);
+      display: flex;
+      text-align: center;
+      font-weight: 400;
+      .left > span, .right {
+        display: inline-block; // ie10 bug fix
+        position: relative;
+        box-sizing: border-box;
+        width: rem(128px);
+        height: rem(48px);
+        line-height: rem(46px);
+      }
+      .left {
+        display: flex;
+        > span {
+          height: 100%;
+          border: 1px solid #fff;
+          color: #fff;
+          &:not(:first-child) {
+            border-left: 0;
+          }
+        }
+      }
+      .right {
+        margin-left: rem(50px);
+        background: #fff;
+        color: $april-text-color;
+      }
+      .plus, .equal {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+      }
+      .plus {
+        left: -15px;
+        margin-left: -1px;
+      }
+      .equal {
+        left: -40px;
+      }
+    }
+  }
+  &.institute {
+    background: $institute-bg-color url('../img/section-top-institute.jpg') 50% 50% no-repeat;
+    background-size:cover;
+    position:relative;
+    .inner {
+      background-color:rgba(177,28,57,0.95);
+      margin:0; 
+      padding:0;
+      width:100%;
+      height:rem(220px);
+      position:absolute;
+      bottom:0px;
+      left:0;right:0;
+      .wrapper {text-align:left;}
+      //margin-left: 50%;
+      //margin-right: rem(-150px);
+      //padding-left: rem(60px);
+      // 컨텐츠 맞춤 반응형
+      @media (min-width:1100px) and (max-width: 1199px) {
+      .title.col {border:none;width:rem(420px);line-height:1;display:inline-block;margin-top:rem(40px);letter-spacing:-3px;}
+      .hero-desc.col {width:calc(100% - 23.33333rem);padding:0;margin-top:rem(15px);line-height:1.4;}
+      .text {color:#fff;font-size:rem(20px);display:inline-block;}
+      }
+      @media (min-width:1200px) {
+      .title.col {border:none;width:rem(420px);line-height:1;display:inline-block;margin-top:rem(40px);letter-spacing:-3px;}
+      .hero-desc.col {width:calc(100% - 23.33333rem);padding:0;margin-top:rem(15px);}
+      .text {color:#fff;font-size:rem(20px);display:inline-block;}
+      }
+    }
+  }
+}

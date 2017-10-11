@@ -1,0 +1,90 @@
+// Variables - Mobile
+//
+//
+
+
+// Color
+//
+
+$brand-text-color:    #b11533;
+$brand-bg-color:      $brand-text-color;
+
+$igarten-text-color:  #1c3f94;
+$igarten-bg-color:    $igarten-text-color;
+$igarten-bg-color2:   #1e5ad2; // sectioin top
+
+$april-text-color:    #a3bd0b;
+$april-bg-color:      $april-text-color;
+
+$institute-text-color:    #b11533;
+$institute-bg-color:      $institute-text-color;
+$institute-header-color:  #282832;
+
+$text-color-silver:   #c8c8c8;
+$text-color-muted:    #969696;
+$text-color:          #646464;
+$text-color-dark:     #323232;
+$text-color-gray: 	  #f5f5f5;
+$text-color-dgray: 	  #282832;
+
+$body-bg:             #fff;
+$bg-gray1:            #f5f5f5;
+$bg-gray2:            #e6e6e6;
+$bg-gray3:            #d2d2d2;
+
+$bg-navy1:            #23222f; // 루트번스타인 섹션 배경
+$bg-navy2:            #161323; // 루트번스타인 인터뷰 배경
+
+$border-color-gray:   #dadada;
+
+$viewport : 100vw;
+// Typography
+//
+$font-family:         'Spoqa Han Sans', sans-serif;
+$font-family-eng:     'Roboto', sans-serif;
+$font-weight:         300;
+$line-height:         1.5;
+$line-height-small:   1.5;
+$letter-spacing:      -.05em;
+$font-size-base:      15px; // 디자인 기준 폰트 사이즈, rem 함수 기준
+$font-sizes: (
+  xs: $font-size-base
+);
+
+$font-size-smaller:   rem(11px);
+$font-size-small:     rem(13px);
+$font-size-lead:      rem(18px);
+
+$heading-1:           rem(21px);
+$heading-2:           rem(18px);
+$heading-font-weight: 400;
+$heading-text-color:  $text-color-dark;
+$heading-line-height: 1.26;
+
+$link-color:          $text-color;
+$link-color-hover:    $text-color;
+
+
+// Responsive Design
+//
+$breakpoints: (
+  xs:     0,
+  //sm:   425px,
+  //md:   800px,
+  //lg:  1024px,
+  //xl:  1100px,
+  //xxl: 1400px
+);
+
+
+// Layout
+//
+$max-width: 600px; // 화면 600 이상일 경우 중앙 박스로 정렬
+
+$header-height: 50px;
+
+$vertical-margin-1: 50px; // section top margin
+$vertical-margin-2: 30px; // section bottom margin
+$vertical-margin-3: 20px; // section bottom margin2
+
+$max-breakpoint: 640px; // convert px to vw for design

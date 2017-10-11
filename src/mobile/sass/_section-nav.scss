@@ -1,0 +1,39 @@
+// Section Nav
+//
+//
+
+.section-nav {
+  display: flex;
+  text-align: center;
+  height: rem(60px);
+  line-height: 1;
+  > a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    &.igarten {
+      background: $igarten-bg-color;
+    }
+    &.april {
+      background: $april-bg-color;
+    }
+    &.institute {
+      background: $institute-bg-color;
+    }
+  }
+  span {
+    display: block;
+  }
+  .title {
+    margin-top: rem(3px);
+    @extend %eng;
+    letter-spacing: .1em;
+  }
+  .info {
+    margin-top: rem(8px);
+    font-size: $font-size-smaller;
+    font-weight: 400;
+  }
+}

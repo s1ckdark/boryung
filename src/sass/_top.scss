@@ -1,0 +1,75 @@
+// Brand Top
+//
+//
+
+.brand-top {
+  overflow: hidden;
+  position: relative;
+  background-color:$hero-bg-color;
+  width:100vw;
+  height:calc(100vw * 9 / 16);
+  @extend %full-screen;
+  > .wrapper {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+  }
+}
+
+.brand-slider {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  .map {
+    position:absolute;
+    left:calc(50% - 590.5px);
+    top:calc(50% - 354.5px);
+    background-size: contain !important;
+    width:1181px;
+    height:709px;
+    display:block;
+    &.greydot {
+      z-index: 1;
+      background: url('../img/hero/map_greydot.png') 50% 50% no-repeat;
+    }
+    &.orangedot {
+      opacity: 0;
+      background: url('../img/hero/map_orangedot.png') 50% 50% no-repeat;
+    }
+  }
+}
+
+.brand-top-intro  {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right:0;
+  padding-bottom: rem(128px);
+  .text {
+    left: 0px;
+    font-weight: 400;
+    font-size: rem(18px);
+    line-height: rem(32px);
+    text-align: left;
+    color: $text-color;
+  }
+}
+
+.brand-top-indicator {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right:0;
+  padding-bottom: rem(60px);
+  .link {
+    &:after { 
+      content: '';
+      display: block;
+      width: 24px;
+      height: 16px;
+      margin: rem(15px) auto 0;
+      background: url('../img/hero/icon-arrow-down.svg') 50% 50% no-repeat;
+    }
+  }
+}

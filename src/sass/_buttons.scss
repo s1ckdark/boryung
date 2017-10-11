@@ -1,0 +1,38 @@
+// Buttons
+//
+//
+
+
+$btn-padding-wide: rem(60px);
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  height: rem(50px);
+  border: 1px solid gray;
+  padding: 0 1.5em;
+  line-height: rem(49px);
+  font-size: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-white {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-wide {
+  padding-left: $btn-padding-wide;
+  padding-right: $btn-padding-wide;
+}
+
+.btn-corner-rounded {
+  display:inline-block;
+  border-radius: 100px;
+}

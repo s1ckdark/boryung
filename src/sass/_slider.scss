@@ -1,0 +1,91 @@
+// Slider
+//
+//
+
+// owl carousel
+.owl-nav {
+  > * {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    background: rgba(255,255,255,.4);
+    font-size: 0;
+    color: transparent;
+    text-align: center;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 30px;
+      margin-top: 15px;
+      @at-root .igarten & {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAABx0lEQVRIia3WT4hNURwH8M+bGVIamvwpf14iNGVSuBILJQulbJTMw4YFUWIQRpHFRAYZEiWlZnOVshilLKQoJQ8l0qCkV9QkEmkIWRyvXtM88949fttzzufezj2/77m56e0PxVQpTeQLxUk4gJZcLIiF2Idm3G2KgHJYjw34jcvoywo2Yy8W4SO6S2nyHLKAc3AQk/HsL/apPFgvuArbMArX0VtKk1+VE2oFR2MHVuIbTuH+cBNrAaegEzPxFsfwrtrkkcAl6MBY3MEFDP5rQTWwAZuwDj9xETdHeHhVcDz2Yz4+4Dhe1oINB7YKR2ICnuAkvtSKDQXXYAsacRWp0AF1VRPGYCeW4ytOo1gvVAmewCy8FvZrICtG+Jr/tRqEHLuH2TiLJBYcRDcuCft5BBtlfPvKRTdwSIijdhwVYiozCC+wC0+xAOcwNwaEzziMa5gonILVMSDhQPeiC9+xHXuEPc4EluuBkDZvsELIwakxILwXbrXbmIEzWBYDwg/04LwQ/53YLPR9JrBct4RGGMBadOULxZYYEF5hNx6hDT35QnFeeTDmz2HoRX8FfY3j2rZmBQn3cj8WYymmRadNKU0eC93Vj9Y/RudixE9ARA0AAAAASUVORK5CYII=');
+      }
+      @at-root .april & {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAABmElEQVRIia3Wz4tNYRzH8dcdP1KaJDGPJRE2FkPxbGycsrKUkpWNUhYiwz9AyOJubCyUzbCxmIWNpxTlbJQNJdnY6EliQbJgrsVc03XnznHPuedsz/e8+zzP83k+n9Pp9XomfWIKWzGHzVMtwGbRxR687TRVGFPo4CROYRH3sLC2IWwaF3EAX3CzLPIbqA2MKezGFWzD6z7s69/3tYAxhWM4i3V4hPtlkX8Pzoy1hzGF9TiHo/iBblnkF6Nm/6swprAdV7EDH3CtLPLH1eYrgTGFQ7iAjXiKO2WRf1Z9M3LJMYUpnMYJ/MLdssiPK5eymsKYwiZcxn58xvWyyO/Gga0AxhT2WrLEFrzCrbLI38aF/QOMKRzHGazBA8yXRV6sA4PO4SczG3AeR/Adt8siv6wLGlR4Azvx3tJ+fWoKg4nTZhRwDs+xC92YwsFJgMs+HDqUh5oeyqCxYwr7+oob22bFTZnU2K1fvcr4ai0chqC14qv1gK3Veq1VwBC0sqQa9XJVjbZe9I2BA+BZXMI0nk0M7EOXf5b+AOxfyeJVqsfcAAAAAElFTkSuQmCC');
+      }
+    }
+  }
+  .disabled {
+    opacity: .1;
+    cursor: default !important;
+  }
+  .owl-prev {
+    right: 100%;
+    &:before {
+      transform: translate(-4px, 0);
+    }
+  }
+  .owl-next {
+    left: 100%;
+    &:before {
+      transform: translate(4px, 0) rotate(180deg);
+    }
+  }
+  &.disabled {
+    display: none;
+  }
+}
+
+.owl-dots {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0;
+  .owl-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    border-radius: 50%;
+    background-color: $text-color-silver;
+    cursor: pointer;
+    @at-root .igarten &.active {
+      background-color: $igarten-text-color;
+    }
+    @at-root .april &.active {
+      background-color: $april-text-color;
+    }
+  }
+}
+
+// 중앙 활성화 슬라이더 스타일 - igarten quiz, april illust
+.owl-carousel-center {
+  .owl-item {
+    width: 800px; // 슬라이더마다 다름
+    opacity: .4;
+    transition: opacity .4s;
+    &.center {
+      opacity: 1;
+    }
+  }
+  .owl-prev {
+    right: 50%;
+    margin-right: 400px; // 슬라이더마다 다름
+  }
+  .owl-next {
+    left: 50%;
+    margin-left: 400px; // 슬라이더마다 다름
+  }
+}

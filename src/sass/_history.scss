@@ -1,0 +1,19 @@
+//
+// brand-history
+//
+#history {
+    @extend %section-padding-mixed;
+	.listofcircle {
+		@extend %clearfix;
+		.grid {
+			float:left;
+			width: rem(150px);
+
+		}
+	}
+    .article {
+    	padding:rem(20px) 0;
+    	width: calc(100% / 6);
+    	display: inline-block;	
+    }
+}

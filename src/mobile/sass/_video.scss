@@ -1,0 +1,33 @@
+// Video
+//
+//
+
+.video-play {
+  position: relative;
+  .play {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000 50% 50% no-repeat;
+    background-size: cover;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 34px;
+      height: 34px;
+      transform: translate(-50%, -50%);
+      background: url('../img/video/play.png') no-repeat;
+      background-size: contain;
+    }
+  }
+  video {
+    display: block;
+    width: 100%;
+  }
+}

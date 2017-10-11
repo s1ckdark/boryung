@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.69 365.3">
+  <g id="as4-monitor">
+    <path d="M207.31,293.71V327a18.52,18.52,0,0,1-18.52,18.52H299.92A18.52,18.52,0,0,1,281.4,327V293.71Z" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <path d="M414.59,259.67V63.56a9.43,9.43,0,0,0-9.42-9.42h-325a9.43,9.43,0,0,0-9.41,9.42V259.67Z" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <path d="M70.58,259.46v29c0,5.56,5.7,11.75,11.26,11.75H406c5.57,0,8.89-5.72,8.89-11.28V259.46Z" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <path d="M159.39,257.52a98.87,98.87,0,0,1,85-48.66h0a98.87,98.87,0,0,1,84.88,48.52" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <circle cx="242.56" cy="154.11" r="65.86" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <path d="M265.08,111.44c4.17,3.12,7.33,15.21,9.08,23.56a134.49,134.49,0,0,1,33.68,13.05,65.85,65.85,0,0,0-131.15,0,135.18,135.18,0,0,1,65.57-16.82,137.19,137.19,0,0,1,20.57,1.56C264,123.41,265.08,111.44,265.08,111.44Z" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <rect x="212.52" y="158.53" width="8.94" height="17" rx="4" ry="4" style="fill: #4e4d4e"/>
+    <rect x="260.47" y="158.53" width="8.94" height="17" rx="4" ry="4" style="fill: #4e4d4e"/>
+    <path d="M224.1,187.19a25.72,25.72,0,0,0,36.37,0" style="fill: none;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 7px"/>
+  </g>
+  <g id="as4-camera">
+    <g>
+      <line x1="71.31" y1="320.54" x2="68.11" y2="320.54" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+      <line x1="61.17" y1="320.54" x2="9.17" y2="320.54" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+      <polyline points="5.7 320.54 2.5 320.54 2.5 317.34" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+      <line x1="2.5" y1="311.15" x2="2.5" y2="153.22" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+      <polyline points="2.5 150.12 2.5 146.92 5.7 146.92" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+      <line x1="11.87" y1="146.92" x2="132.23" y2="146.92" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+      <line x1="135.31" y1="146.92" x2="138.51" y2="146.92" style="fill: none;stroke: #4f4e4e;stroke-linecap: round;stroke-miterlimit: 2;stroke-width: 5px;stroke-dasharray: 6,12"/>
+    </g>
+    <g>
+      <polygon points="127.68 308.32 127.68 330.9 153.74 353.49 153.74 285.73 127.68 308.32" style="fill: #d7dc91;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+      <rect x="36.06" y="277.92" width="94.22" height="83.38" rx="7.82" ry="7.82" style="fill: #d7dc91;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+      <polygon points="74.54 303.09 74.54 334.81 96.75 318.95 74.54 303.09" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    </g>
+  </g>
+  <g id="as4-talk">
+    <path d="M355.74,4H317.6a38.92,38.92,0,0,0-38.81,38.81h0a38.93,38.93,0,0,0,36.76,38.75v18.64L335.2,81.62h20.53a38.92,38.92,0,0,0,38.81-38.81h0A38.92,38.92,0,0,0,355.74,4Z" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <line x1="306.54" y1="45.89" x2="327.54" y2="45.89" style="fill: none;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <line x1="306.54" y1="31.89" x2="347.54" y2="31.89" style="fill: none;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+  </g>
+  <g id="as4-mic">
+    <circle cx="409.11" cy="195.42" r="26.6" transform="translate(-26.26 321.97) rotate(-41.74)" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <polygon points="492.23 270.56 474.32 286.53 425.55 236.38 447.94 216.4 492.23 270.56" style="fill: #d7dc91;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <rect x="403.91" y="205.61" width="53" height="27.35" transform="translate(-36.74 342.21) rotate(-41.74)" style="fill: #d7dc91;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+    <path d="M484,279.39s13,13.53,23.66,4" style="fill: #f6f6f6;stroke: #4e4d4e;stroke-linecap: round;stroke-linejoin: round;stroke-width: 8px"/>
+  </g>
+</svg>

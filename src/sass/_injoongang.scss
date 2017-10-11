@@ -1,0 +1,33 @@
+//
+// injoongang
+//
+#injoongang {
+    @extend %section-margin-mixed;
+    .type-b {
+    	.title {
+		font-size: rem(26px);
+	    letter-spacing: rem(-1px);
+		color: rgb(17, 17, 17);
+		}
+		.text {
+			@include text16;
+		}
+	}
+	.article_injoonang {
+		@extend %clearfix;
+		display:flex;
+		flex-wrap: wrap;
+		.grid {
+			float:left;
+			width: rem(346px);
+			height: rem(223px);
+			display:block;
+			.bg_article {
+				width: rem(346px);
+				height: rem(223px);
+				display:block;
+			}
+			
+		}
+	}
+}

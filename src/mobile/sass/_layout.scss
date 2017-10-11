@@ -1,0 +1,30 @@
+// Layout - Mobile
+//
+//
+
+
+body {
+  padding-top: $header-height !important; // gnb.css 가 덮어쓰지 않도록 important 추가
+}
+
+.viewport {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+}
+.wrapper2 {
+  padding-left: rem(20px);
+  padding-right: rem(20px);
+}
+
+%full-screen {
+  height: calc(100vh - #{$header-height});
+  min-height: 500px;
+}

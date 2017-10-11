@@ -1,0 +1,21 @@
+// April Creative Thinking Project
+//
+//
+
+.april-ctp {
+  @extend %section-margin-mixed;
+  .section-header {
+    text-align: center;
+  }
+  .sub-title {
+    color: $april-text-color;
+  }
+
+  .col:first-child {
+    padding-right: rem(30px);
+    border-right: 1px solid $april-bg-color;
+  }
+  .col:last-child {
+    padding-left: rem(30px);
+  }
+}

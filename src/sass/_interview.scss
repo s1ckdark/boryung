@@ -1,0 +1,41 @@
+// 
+// Interview
+//
+#interview {
+  margin:0 auto;
+  background-color: $black;
+  width: 1600px;
+  height: 1050px;
+  span.interview_title {
+  	background-image: url('../img/interview/interview_title.svg');
+  	background-size: cover;
+  	width: rem(308px);
+  	height: rem(106px);
+  	display:block;
+  }
+  .section-header {
+    height: rem(30px);
+    line-height: rem(30px);
+    padding: rem(120px) 0 rem(30px);
+    margin: 0;
+    h4 {
+      position:relative;
+      &:after {
+        content:'';
+        position:absolute;
+        top:-10px;
+        left:0px;
+        width:20px;
+        height:2px;
+        background-color: $lipstick;
+      }
+    }
+  }
+  .type-b {
+    margin: 0 0 rem(50px);
+    .text {
+      color: rgb(245, 245, 245);
+      @include text16;
+    }
+  }
+}

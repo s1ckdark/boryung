@@ -1,0 +1,20 @@
+#market {
+	
+	.marketshare {
+		background-color: rgb(245, 245, 245);
+		.market {
+		width: rem(1600px);
+ 		height: rem(1040px);
+		background-image: url('../img/market/bg_marketshare.png');
+		background-size: contain;
+		background-position: 50% 100%;
+		background-repeat: no-repeat;
+		margin:0 auto;
+		}
+	}
+	.valueadded {
+		.col:nth-child(1) {
+			width:rem(700px);
+		}
+	}
+}

@@ -1,0 +1,26 @@
+// April Illustrations
+//
+//
+
+.april-illustrations {
+  @extend %section-margin-mixed;
+  background: $bg-gray1 url('../img/april-illust-bg.jpg') 0 0 no-repeat;
+  .section-header {
+    text-align: center;
+    .heading-1 {
+      color: $april-text-color;
+    }
+  }
+}
+
+.april-illust-slider {
+  .owl-item {
+    width: 630px;
+  }
+  .owl-prev {
+    margin-right: 315px; // owl-item 넓이의 반
+  }
+  .owl-next {
+    margin-left: 315px; // owl-item 넓이의 반
+  }
+}

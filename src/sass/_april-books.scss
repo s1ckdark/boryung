@@ -1,0 +1,40 @@
+// April Books
+//
+//
+
+.april-books {
+  @extend %section-margin-base;
+  text-align: center;
+  .heading-1 {
+    color: $april-text-color;
+  }
+}
+
+.april-book-slider {
+  width: 660px;
+  margin: rem(65px) auto 0;
+  .item {
+    position: relative;
+    width: 200px;
+    height: 267px;
+    .layer {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(0,0,0,.8);
+      @extend %p-small;
+      text-align: center;
+      color: #fff;
+      transition: opacity .3s;
+    }
+    &:hover .layer {
+      opacity: 1;
+    }
+  }
+}

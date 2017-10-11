@@ -1,0 +1,35 @@
+//
+// contribute
+//
+#contribute {
+    @extend %section-padding-mixed;
+    background-color: rgb(240, 240, 240);
+    .article {
+    	padding:rem(20px) 0;
+		.container.col2 {
+			.col:nth-child(1) {
+				> div {width:100%;height:276px;display:block;}
+				.contribute_img1 {
+					background-color: #121212;
+				}
+				.contribute_img2 {
+					background-color: #121212;
+				}
+			}
+			.col:nth-child(2) {
+				header {
+					h2 {
+						font-size:rem(26px);
+						letter-spacing: -1px;
+						text-align:left;
+						color: rgb(17, 17, 17);
+					}
+				}
+				.text {
+					@include text16;
+					text-align:left;
+				}
+			}
+		}
+	}
+}

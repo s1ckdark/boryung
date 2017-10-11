@@ -1,0 +1,60 @@
+// Igarten Art
+//
+//
+
+
+.igarten-art {
+  @extend %section-margin-base;
+  .section-header {
+    margin-bottom: rem($vertical-margin-1);
+    .text {
+      text-align: left;
+    }
+    .p-lead {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.art-frame {
+  box-sizing: border-box;
+  min-height: 186px;
+  padding-top: 13px;
+  background: url('../img/art/frame.png') 50% 0 no-repeat;
+  background-size: 216px auto;
+}
+.art-slider {
+  width: 200px;
+  margin: 0 auto;
+  .item {
+    img {
+      width: 190px;
+      height: 122px;
+      margin: 0 auto;
+    }
+    .text {
+      margin-top: rem(20px);
+      text-align: center;
+      color: $igarten-text-color;
+      line-height: 1;
+      font-weight: 400;
+      white-space: nowrap;
+      font-size: $font-size-small;
+    }
+  }
+  .owl-nav>* {
+    top: 37px;
+    margin-top: 0;
+  }
+  .owl-next {
+    left: 100%;
+    right: auto;
+    margin-left: 8px;
+  }
+  .owl-prev {
+    right: 100%;
+    left: auto;
+    margin-right: 8px;
+  }
+}

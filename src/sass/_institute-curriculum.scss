@@ -1,0 +1,282 @@
+// institute-curriculum
+
+.institute-curriculum {
+	// @extend %section-margin-base;
+	.section-header {
+		margin:0;
+	}
+	#course {padding:0;margin-top:rem(100px);}
+	.curriculum-title {
+		 background-image: url('../img/institute/bg_curriculum.jpg');
+		.sub-title {
+			color:$text-color-gray;
+            position:relative;
+            display:inline-block;
+            width:auto;
+            &:before {
+            	position:absolute;
+                content:'';
+                background-color:$institute-text-color;
+                height:rem(6px);
+                width:100%;
+                display:inline-block;
+                top:-20px;
+            }
+        }
+	}
+	.article {@extend %section-margin-base;}
+	#realize {
+		padding:rem(150px) 0 rem(100px);
+		background-color:$text-color-gray;
+		.col {border:none;
+		&:nth-child(1) {width:rem(500px);margin-right:rem(20px);padding-right:0;}
+		&:nth-child(2) {}
+		.aside {display:block;}
+		}
+	}
+	.discouraged {
+		background-color:#282832;
+		background-image:url('../img/institute/aside-curriculum.jpg');
+		background-position:50% 100%;
+		background-repeat:no-repeat;
+		width:rem(500px) !important;
+		height:rem(1110px);
+		display:block;
+		.sub-title {
+			padding-top:rem(80px);
+			color:$text-color-gray;
+            position:relative;
+            display:inline-block;
+            width:auto;
+            line-height:1.2;
+            &:before {
+                content:'';
+                background-color:$institute-text-color;
+                height:rem(6px);
+                width:100%;
+                display:inline-block;
+                margin-bottom:rem(15px);
+            }
+        }
+		.heading-1 {
+			margin-top:rem(150px);
+			color:$text-color-gray;
+			line-height:1.2;
+		}
+
+	}
+	#innerbox-slider {
+		position:relative;
+		margin-bottom:86px;
+		.curriculum {width:rem(516px);height:rem(356px);display:block;}
+		.curriculum1 {background-image:url('../img/institute/curriculum1.jpg');}
+		.curriculum2 {background-image:url('../img/institute/curriculum2.jpg');}
+		.curriculum3 {background-image:url('../img/institute/curriculum3.jpg');}
+		.curriculum4 {background-image:url('../img/institute/curriculum4.jpg');}
+		.curriculum5 {background-image:url('../img/institute/curriculum5.jpg');}
+		.curriculum6 {background-image:url('../img/institute/curriculum6.jpg');}
+		.inner-slider {width:100%;height:80px;background:$text-color-dgray;display:block;
+			p {font-size:rem(14px);color:$text-color-gray;padding:10px 20px;text-align:left;line-height:1.5;}
+		}
+		#slider-counter {position:absolute;bottom:8px;color:#fff;z-index:10;left:20px;font-size:rem(14px);line-height:1.2;color:$text-color-muted;}
+		.owl-nav {position:absolute;right:60px;bottom:60px;width:50px;
+			& > * {background:none;}
+			.owl-prev {width:40px;height:40px;left:0px;margin:0;
+				&:before {content:none;}
+			}
+			.owl-next {width:40px;height:40px;right:0px;margin:0;
+				&:before {content:none;}
+			}
+		}
+		}
+	#drag-slider {
+		margin:rem(80px) 0  0;
+		padding:0;
+		#drag-slider-top {
+			.col {
+				&:nth-child(1) {border:none;text-align:left;}
+				&:nth-child(2) {text-align:right;}
+			}
+		}
+		#drag-slider-title {
+			background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKcAAAARCAMAAACPW0y2AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAZlBMVEUAAACxFTOxFTOxFTOxFTOxFTOxFTP19fX19fX19fX19fWxFTOxFTOxFTOxFTOxFTOxFTOxFTP19fX19fX19fWxFTP19fX19fX19fX19fWxFTP19fX19fX19fX19fWxFTP19fX///88gs5wAAAAH3RSTlMAYMAwQCCA8FCQsPCwUKCQENCg0GDgQOAgEHAwcIDA2VffCgAAAAFiS0dEIcRsDRYAAAAHdElNRQfhCQIRGiwpxJcCAAAC80lEQVRIx82V2XLjIBBFkQA5MVqQY7womYH//8rpS7NIip08TE1qusplQDQ69HIlxP9uTStF2/7Mu5SuY62+3Om73UrnFTgPIbxg+hrCcfO89TDTx2MljZJXtHagsc+W945668tzHWeTZX8Db8knEZKdvZ/X0fNT4eOzE+cphBOW30I4P+AkA9KU/rN3fMeek8jk1tcQnDQ8nu3qwZA5R95UbPQuR7Yjc4XzEsKVVm8hhDse326Vc1FDz4F0dHafOGkV2BKcKhr2KrW4tEfwHKFb4tg1I9+sob+xoX3OMucSD6qGSw2ruTOZU1xDeBfiI6b9fj6GX5UTKZ/xNxCt95Y5Vby2b8BZ93JxuPWcqEa4ogl0vK9jqh4XACd50DnVqAoGYyq4pYtnTipMQjsi7e8U1D3nhD/C6mJwMmcMxp7T7jjhhZ2RpIdjqkWFC9CDyWGwaiJH1Tl4s9Qeaug3do44Ce5N3EM4CHE5nK47TiRCWlQXv4M5tUN6Snkyl+zXeW9bE0tv5IvBcVAcW1yoTZXuauyWma+kjHeTzmmnfXNr4EaJv72kbhK/15ypt5HABQGRqz6itthwPuyjqaQlZkDli1ROUxTLGk/6YEnCLFW25Kbqii7FxJ9PSZ0ecPYWNaoBO1VOSAt6A1b2mpUu0fqMvH8TT18VXFpR9FOyRrVixUmtfjwg7Z84x64bZOyBxBFfl1bFtj4VpcurOs/1muqa05HyPODK9MAMJj2tJVp03k6sWIUT0pnTvuVMr52KUA65j8QnTgGNafecHj1DIpQ+FLGshS39Dh+jH3M6P0ux4fwA5+U5J04nlex8VIkNZ8eJZy5XtK/kvY/jOesn9G1aTAwr63xbLiejFC9+ZE22S/6CFU5o/FU85RySmiA8dsdZv0exnla6xKbq96jlzuACKt8j1NSy9SmeYseJxL8+5xzzSUjXV5wIaLN6p+lj4uyIAKZ0NjPWtcicsUx1jWcx+4Dzn5t+OvneVKd/jPNvTco/QUVpGQYKiEUAAAAASUVORK5CYII=');
+			width:135px;
+			height:17px;
+			display:block;
+			margin-bottom:rem(30px);
+			text-align:left;
+		}
+		#book-readmore a {
+			margin-top:rem(-10px);border:1px solid $text-color-gray;background-color:transparent;height:auto;display:inline-block;width:auto;padding:0 15px;border-radius:15px;color:$text-color-gray;text-align:center;font-size:rem(16px);
+		}
+		@extend %section-margin-base;
+		width:100vw;
+		background-color:#282832;
+	    overflow: hidden;
+		// padding-bottom: 120px;
+		position: relative;
+		z-index: 1;
+		.selection-wrapper {
+		    padding-bottom: 120px;
+		    position: relative;
+		    z-index: 1;
+		    transform-origin: 0 0;
+			padding:rem(70px) 0 rem(90px);
+		    .selection-slider {
+	    	    margin:0 auto;
+			    transform-origin: 0 0;
+			    width:100%;
+				.selection-slider-inner {
+				    display: table;
+				    white-space: nowrap;
+				    overflow: visible;
+				    transform: translate3d(0px, 0px, 0px);
+				    cursor: move;
+				    touch-action: pan-y;
+				    user-select: none;
+					.cardItem {
+					    transform: matrix(1, 0, 0, 1, 0, 0);
+						width:rem(460px);
+						height:rem(270px);
+						background-color:#fff;
+					    display: inline-block;
+					    margin:0 10px;
+					    position: relative;
+					    z-index: 1;
+				    	background-color:#fff;
+				    	.bookImg img {width:100%;}
+				    	&:first-child {
+				    		margin-left:0;margin-right:rem(10px);
+				    	}
+				    	&:last-child {
+				    		marin-right:0;margin-left:rem(10px);
+				    	}
+				    	.cardInner {
+				    		padding:rem(20px);
+				    	}
+				    	.col {border:none;
+				    		&:nth-child(1) {
+								padding-right:rem(20px);width:rem(260px);float:left;
+				    		}
+				    		&:nth-child(2) {
+								float:right !important;padding-left:0;width:rem(160px);
+				    		}
+				    	}
+						&:nth-child(2) {
+							background-color:$institute-bg-color;
+							color:$text-color-gray;
+							.awards {border:1px solid $text-color-gray;}
+						}
+						.newberry.col {width:100%;}
+						.awards {margin-bottom:rem(50px);font-size:rem(14px);background-color:$institute-bg-color;height:auto;display:table;width:auto;padding:0 15px;border-radius:15px;color:$text-color-gray;text-align:center;}
+						
+						.bookContents {
+							white-space: initial;
+							text-align:left;font-size:rem(18px);
+							line-height:1.6;
+							p.bookTitle {
+								color:$institute-text-color;
+							    font-weight: 700;
+							    font-size: rem(18px);
+							    line-height: 1.6;
+							    overflow: hidden;
+							    will-change: transform;
+							}   
+						}
+					}
+				}
+			}
+		}
+		.dragger {   
+			width:100%;
+			display: block;
+		    margin: 80px auto 0 auto;
+		    position: absolute;
+		    right: 0;
+		    bottom: 10px;
+		    left: 0;
+		    transform-origin: 0 0;
+		    height: 40px;
+
+		.handle {
+			position: absolute;
+		    top: -20px;
+		    left: 0px;
+		    z-index: 2;
+		    width: 40px;
+		    height: 40px;
+		    .outer {
+		    	background-color: white;
+			    border-radius: 100%;
+			    content: "";
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    width: 40px;
+			    height: 40px;
+				background-color: rgb(177, 21, 51);
+			    opacity:.4;
+			    transition: transform 250ms ease-in-out;
+			    transition-property: transform,background-color;
+			    z-index:10;
+			}
+			.inner {
+			    background: white;
+			    border-radius: 100%;
+			    content: "";
+			    display: block;
+			    margin: auto;
+			    position: absolute;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    left: 0;
+   			    border-radius: 50%;
+			    background-color: rgb(177, 21, 51);
+			    opacity: 0.8;
+			    width: 18px;
+			    height: 18px;
+			    z-index: 11;
+			}
+			&_line {
+				background: white;
+			    content: "";
+			    display: block;
+			    position: absolute;
+			    top: 0;
+			    left: 20px;
+			    z-index: 1;
+			    height: 1px;
+			    width: calc(100% -  40px);
+			    position:relatiive;
+				&:before {
+					background-color:white;
+					width:rem(5px);
+					height:rem(5px);
+					display:block;
+					position:absolute;
+					top:-2px;
+					left:-2px;
+					content:'';
+					border-radius:50%;
+					z-index:10;
+				}
+				&:after {
+					background-color:white;
+					width:rem(5px);
+					height:rem(5px);
+					display:block;
+					position:absolute;
+					top:-2px;
+					right:-2px;
+					content:'';
+					border-radius:50%;
+					z-index:10;
+				}
+			}
+			}
+		}
+	}
+}
+

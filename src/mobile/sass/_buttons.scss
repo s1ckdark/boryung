@@ -1,0 +1,48 @@
+// Buttons
+//
+//
+
+
+$btn-padding-wide: rem(20px);
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  height: rem(30px);
+  border: 1px solid gray;
+  padding: 0 1.5em;
+  line-height: rem(29px);
+  font-size: $font-size-small;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-igarten {
+  color: $igarten-text-color;
+  border-color: $igarten-text-color;
+  background: transparent;
+  &.active {
+    color: #ffffff;
+    background-color: $igarten-text-color;
+  }
+}
+.btn-april {
+  color: #fff;
+  border-color: $april-text-color;
+  background: $april-text-color;
+}
+
+.btn-white {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+
+.btn-large {
+  height: rem(30px);
+  line-height: rem(28px);
+}
+.btn-wide {
+  padding-left: $btn-padding-wide;
+  padding-right: $btn-padding-wide;
+}

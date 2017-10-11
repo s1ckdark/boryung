@@ -1,0 +1,112 @@
+// Igarten iPlay
+//
+//
+
+.igarten-iplay {
+  @extend %section-margin-base;
+  background: $igarten-bg-color;
+  color: #fff;
+  text-align: center;
+  .top {
+    .heading-1 {
+      margin-bottom: rem(15px);
+      @extend %eng;
+      color: inherit;
+      letter-spacing: .2em;
+    }
+    .iplay-quote {
+      &:before {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAACMklEQVRIiZ3VT2hUVxTH8U+eVlA0WFwoFsV/G4USdHM2WqUoFFzYanShuEqDFlfVuDBCaxHRRaEoSqFd6KbQSo0GRRfioiA4DwmFduMiIqKpQhH8g0TrxHTx3pBnmDfmzW91zrvnd7937rlzb0etVtNCM7ADPfgE2zFQLIiIVn5pmi5DL3ZjPCIWwfQWns04ieUYRT8GW1LeBc7GUezDB/gTXzbGm4Fn5MC9eX4jX/G9CtAu/I4V+A8HcCoi6mXgWbiETXl+DN9irAL003yOORjBlogYmlxXBE/DhQK0H8enCsyha3AFM/EPNkTEcLPapBB/g8/y+Jc2oHNxMYeOobsMWgR/jMN5/AxfV4HmOoHFefxTRNxqVdzY6u9kWw2nsQEL8Bp/4bYWfU7TdKmJEzuKgTRNezAbj3EzIkYmgxfi8zx/K+ttx6S5H8haca6Evaew8De43mRxg+hrbH+C7gIoaQKFRTiLn0vGtxbizpLFbcFQmqZroaNWqw3gi5LiZtqPHwr5R3hYwf8EqxKsr2CCI7KT29Caiv556EvwYUVjJzYW8nUV/bCtrKfv05JCPL8df4LxNoyvCvHLNvz1RNbsqiq+pZfb8A8nyv+bZRrB340kIq7hRcU5ziQ4hH+naBjHribfeytA7+LHBHV0ya62VqpjJ/6YPBARv+Gg7OZrpTtYHRHjjUfikewi6Mf9HEL2C5/ivOz0/lo2Y0R8L3v4r+K5iUNbxzC+ioiVEfEC/gccSIzRq8eV1AAAAABJRU5ErkJggg==');
+      }
+      &:after {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAYAAACaq43EAAACTElEQVRIiZ3WTahVVRgG4Ofse6Ei1DCEsoGKBiJkZMRXoDRrIIp/oIIjB4mBEFiDIsQK+kMhR1qkQwXFHxRCxQg1kbMmikY40PzlQoqhmChk19tg7+NdHM/h3H1e2PDuvb93v2vt9a3vW41msynDWnyEqRjECP7BKazDFW2IiCc8pTQR2/AeJqCB/zCEH/FdRDyGotKMw4VKNKMyVQnHYz4u4eN248x0JW5iOV6otKpvTcHXGEopvdwybuAsZnb7aIUCm7Cig+m72JUNuBtewrmU0mCBDzC9hyDHTx2e7TQ6w16YhG8azWbzD8yqYUz56w9X/DWcr6m/XSjXtC4WZvztPvQvFnqvSyc8n/Fn+9A3ClztQ3gz4/3oRwrs60P4W8Z/wb2a+jsFNuPvmsIzLRIRD/F5Tf2JArew2NhHfVFZiXJswfYaxsdblesU3sTBLoH5oPa3v4yIkYh4H6txo4N+BI8zvrfRVqvhFcxVVpn7uIZDeA7DeFVWs/NaDSmlAbyF2XgGf+F1fFaFHIiIpZ220hB2Z/dbK1PK3/lUo8gREcNoVpeU0iSj1W4YGxltEt3wDtZU/Do+6RHfCd8rOxV8FRG/9zKegb0YwEMswd06jimlT7Gquj2CL1vvulWtVqJNVvbjxbItNAbDAXxhdF2PYVm1DHh6xoNYj9PKJLuEefi1huk0HM1Mf8CCiHjQbtTCHGXyvIFHyr25QZnZYzEcUB4UNiqT8U98GBE/d4rPjQ8qe+q3yiy8PBbDDIuUp4yT2IE9EfFvt+D/AXCJk/4xV0RIAAAAAElFTkSuQmCC');
+      }
+    }
+    .iplay-process {
+      margin: rem($vertical-margin-2) 0;
+      line-height: 1.76;
+      span {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+
+.iplay-illust-slider {
+  height: 100vw;
+  margin-bottom: rem($vertical-margin-1); // dots 영역
+  .item {
+    position: relative;
+    height: 100vw;
+    &.item1 .text {left: 59%; top: 18.4%;}
+    &.item2 .text:nth-child(1) {left: 62%; top: 20%;}
+    &.item2 .text:nth-child(2) {left: 35%; top: 61%;}
+    &.item3 .text {left: 52%; top: 30%;}
+    &.item4 .text {left: 69%; top: 29%;}
+    &.item5 .text {left: 65%; top: 66.4%;}
+    &.item6 .text {left: 33%; top: 72%;}
+  }
+  .text {
+    position: absolute;
+    color: $igarten-text-color;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    span {
+      display: block;
+    }
+  }
+  .owl-dots {
+    margin-top: rem($vertical-margin-1);
+  }
+  .owl-dot {
+    &:after {
+      position: absolute;
+      bottom: rem(15px);
+      left: 0;
+      width: 100px;
+      margin-left: -50px;
+      text-align: center;
+      font-weight: 400;
+      font-size: $font-size-small;
+      line-height: 1;
+      opacity: 0;
+      transform: translate(0, 5px);
+      transition: all .4s;
+    }
+    &:nth-child(1):after,
+    &:nth-child(2):after { content: '섬 테마'; }
+    &:nth-child(3):after,
+    &:nth-child(4):after { content: '바다 테마'; }
+    &:nth-child(5):after,
+    &:nth-child(6):after { content: '탈것 테마'; }
+    &.active {
+      &:after {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+    }
+  }
+}
+
+.iplay-story {
+  width: 100%;
+  padding-top: rem($vertical-margin-2);
+  .wrapper {
+    position: relative;
+    height: rem(13px * $line-height * 3); // 3 줄 높이
+  }
+  .item {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translate(0, 10px);
+    transition: all .4s;
+    &.active {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+}

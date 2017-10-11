@@ -1,0 +1,41 @@
+// Igarten Art
+//
+//
+
+
+.igarten-art {
+  @extend %section-margin-base;
+}
+
+.art-frame {
+  margin-top: rem(72px);
+  box-sizing: border-box;
+  width: 444px;
+  padding: 27px 0;
+  background: url('../img/art/frame.png') no-repeat;
+  background-size: contain;
+}
+.art-slider {
+  width: 390px + (27*2);
+  .animated { // fadeOut slider
+    animation-duration: 1.5s;
+  }
+  img {
+    width: 390px !important;
+    margin: 0 auto;
+  }
+  .text {
+    margin-top: rem(100px);
+    text-align: center;
+    color: $igarten-text-color;
+    font-size: rem(28px);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .owl-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: rem(80px);
+  }
+}

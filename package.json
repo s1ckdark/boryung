@@ -1,0 +1,30 @@
+{
+  "name": "boryung",
+  "version": "1.0.0",
+  "description": "1. `npm install` 실행\r 1. 빌드: `gulp build` 실행\r    1. src 디렉토리에 있는 소스파일을 빌드해 public 디렉토리에 생성합니다.\r 1. 서버: `gulp serve` 실행\r    1. 빌드 후 [BrowserSync](https://www.browsersync.io/)로 서버를 구성합니다.\r    1. 터미널에 보여지는 접근 URL이 자동으로 기본 브라우저에 보여집니다.\r    1. 파일이 수정되면 페이지가 자동으로 새로고침됩니다. (browserSync.stream() 참조)",
+  "main": "index.js",
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "eslint-config-google": "^0.9.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.0",
+    "gulp-filter": "^5.0.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-nunjucks": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "merge-stream": "^1.0.1"
+  }
+}

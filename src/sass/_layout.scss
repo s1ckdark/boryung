@@ -1,0 +1,29 @@
+// Layout - PC
+//
+//
+
+
+body {
+  min-width: $min-width;
+  padding-top: $header-height !important; // gnb.css 가 덮어쓰지 않도록 important 추가
+}
+
+.viewport {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $min-width;
+  margin-right: auto;
+  margin-left: auto;
+  @include media-breakpoint-down(xl) {
+    max-width: $min-width-xs;
+  }
+}
+
+%full-screen {
+  height: calc(100vh - #{$header-height});
+  min-height: 550px;
+}

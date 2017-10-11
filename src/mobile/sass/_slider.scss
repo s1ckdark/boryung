@@ -1,0 +1,135 @@
+// Slider
+//
+//
+
+// owl carousel
+.owl-nav {
+  > * {
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    height: 46px;
+    margin-top: -23px;
+    background: rgba(255,255,255,.4);
+    font-size: 0;
+    color: transparent;
+    text-align: center;
+    @at-root .brand & {
+      background: $brand-bg-color;
+    }
+    @at-root .april & {
+      background: $april-bg-color;
+    }
+    @at-root .mono-nav & {
+      background: rgba(0,0,0,.3);
+    }
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 11px;
+      height: 20px;
+      margin-top: 13px;
+      background-size: contain;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-image: url('../img/icon-arrow-left-w.svg');
+      @at-root .igarten & {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAABx0lEQVRIia3WT4hNURwH8M+bGVIamvwpf14iNGVSuBILJQulbJTMw4YFUWIQRpHFRAYZEiWlZnOVshilLKQoJQ8l0qCkV9QkEmkIWRyvXtM88949fttzzufezj2/77m56e0PxVQpTeQLxUk4gJZcLIiF2Idm3G2KgHJYjw34jcvoywo2Yy8W4SO6S2nyHLKAc3AQk/HsL/apPFgvuArbMArX0VtKk1+VE2oFR2MHVuIbTuH+cBNrAaegEzPxFsfwrtrkkcAl6MBY3MEFDP5rQTWwAZuwDj9xETdHeHhVcDz2Yz4+4Dhe1oINB7YKR2ICnuAkvtSKDQXXYAsacRWp0AF1VRPGYCeW4ytOo1gvVAmewCy8FvZrICtG+Jr/tRqEHLuH2TiLJBYcRDcuCft5BBtlfPvKRTdwSIijdhwVYiozCC+wC0+xAOcwNwaEzziMa5gonILVMSDhQPeiC9+xHXuEPc4EluuBkDZvsELIwakxILwXbrXbmIEzWBYDwg/04LwQ/53YLPR9JrBct4RGGMBadOULxZYYEF5hNx6hDT35QnFeeTDmz2HoRX8FfY3j2rZmBQn3cj8WYymmRadNKU0eC93Vj9Y/RudixE9ARA0AAAAASUVORK5CYII=');
+      }
+    }
+  }
+  .disabled {
+    opacity: .1;
+    cursor: default !important;
+  }
+  .owl-prev {
+    left: 0;
+    &:before {
+      transform: translate(-2px, 0);
+    }
+  }
+  .owl-next {
+    right: 0;
+    &:before {
+      transform: translate(2px, 0) rotate(180deg);
+    }
+  }
+  &.disabled {
+    display: none;
+  }
+}
+
+.owl-dots {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0;
+  .owl-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 4px;
+    border-radius: 50%;
+    background-color: $text-color-silver;
+    cursor: pointer;
+    @at-root .igarten &.active {
+      background-color: $igarten-text-color;
+    }
+    @at-root .april &.active {
+      background-color: $april-text-color;
+    }
+  }
+}
+
+// 타임라인 스타일 dots
+// .owl-carousel.timeline-dots
+.timeline-dots {
+  .owl-dots {
+    position: relative;
+    &:before { // 선
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin-top: -1px;
+      border-bottom: 1px solid rgba(255,255,255,.5);
+    }
+    .owl-dot {
+      position: relative;
+      width: 6px;
+      height: 6px;
+      margin: 0 12px;
+      background-color: #fff;
+      &:before { // 링
+        content: '';
+        position: absolute;
+        display: block;
+        left: -4px;
+        top: -4px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        opacity: 0;
+        transform: scale(0);
+        transition: all .4s;
+      }
+      &.active {
+        background-color: #fff;
+        &:before {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.slider-number {
+  margin-top: rem(5px);
+  text-align: center;
+  font-size: $font-size-small;
+  color: $igarten-text-color;
+  opacity: .5;
+  font-weight: 400;
+}
