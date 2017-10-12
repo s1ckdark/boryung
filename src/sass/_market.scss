@@ -1,20 +1,64 @@
 #market {
-	
 	.marketshare {
 		background-color: rgb(245, 245, 245);
 		.market {
-		width: rem(1600px);
- 		height: rem(1040px);
-		background-image: url('../img/market/bg_marketshare.png');
-		background-size: contain;
-		background-position: 50% 100%;
-		background-repeat: no-repeat;
-		margin:0 auto;
+			position:relative;
+			width: rem(1600px);
+	 		height: rem(1040px);
+			background-image: url('../img/market/bg_marketshare.png');
+			background-size: contain;
+			background-position: 50% 90%;
+			background-repeat: no-repeat;
+			margin:0 auto;
+		.heading-1 {
+			letter-spacing: rem(-2px);
+			color: $hero-bg-color;
+			padding-top:rem(100px);
+		}
+		.heading-2 {
+			color: rgb(17, 17, 17);
+		}
+		.calligraphy-drawing {
+			width: rem(490px);
+			height: rem(92px);
+			// background-image: url('../img/market/calligraphy-drawing.svg');
+		}
+		.text16 {
+			width: rem(680px);
+			height: rem(156px);
+			line-height: rem(28px);
+		}
+		.bar3d {
+			position:absolute;
+			right: rem(190px);
+			bottom: rem(150px);
+			background-image: url('../img/market/3dbar.png');
+			width: rem(318px);
+			height: rem(589px);
+			display: block;
+		}
 		}
 	}
 	.valueadded {
+		padding-top: rem(192px);
+		.heading-2 {
+		color: rgb(17, 17, 17);
+		}
+		.realize {
+			height: rem(414px);
+			width: 100%;
+			margin: rem(80px) 0 rem(200px);
+		}
 		.col:nth-child(1) {
-			width:rem(700px);
+			width: rem(700px);
+			margin-right: rem(50px);
+			position: relative;
+			.rnd-img {position:absolute;top:0;left:0;width: rem(700px);height: rem(414px);background-size: cover;background-position: 50% 50%;}
+			.rnd-img1 {background-image: url('../img/market/rnd-img1.jpg');}
+			.rnd-img2 {background-image: url('../img/market/rnd-img2.jpg');}
+		}
+		.col:nth-child(2) {
+			width: rem(330px);
 		}
 	}
 }

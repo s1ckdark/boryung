@@ -7,7 +7,6 @@
 		width:100vw;
 	}
 	.container.col2.type-a {
-		padding-bottom:rem(50px);
 		.col {
 			position:relative;
 		}
@@ -54,14 +53,14 @@
 			}
 		}
 	}
-	#video-brand1 {
+	#video1 {
 		width: 1080px;
-		height: 687px;
+		height: 607px;
 		display:block;
 		background-color:#121212;
-		padding-bottom:rem(87px);
+		// padding-bottom:rem(87px);
 	}
-	.brand_sceneTween {
+	.sceneTween {
 		background-image: url('../img/background/sceneTween1.png');
 		background-size:cover;
 		width:rem(1600px);

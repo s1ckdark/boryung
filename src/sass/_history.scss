@@ -3,17 +3,53 @@
 //
 #history {
     @extend %section-padding-mixed;
+    .heading-1 {
+    	color: rgb(17, 17, 17);
+    	text-align:center;
+    }
 	.listofcircle {
 		@extend %clearfix;
 		.grid {
 			float:left;
 			width: rem(150px);
-
+			margin: 0 18px;
+			.round-bubble {
+				width: rem(150px);
+				height: rem(150px);
+				position:relative;
+				text-align: center;
+				font-size: rem(60px);
+				letter-spacing: rem(-2.3px);
+				color: $lipstick;
+				line-height: rem(142px);
+				font-weight:600;
+				margin-bottom: rem(30px);
+				.unit {
+					display:inline;
+					font-size: rem(16px);
+					color: $lipstick;
+				}
+				&:before {
+					position:absolute;
+					left:0px;
+					content:'';
+					border-radius:50%;
+					width: rem(150px);
+					height: rem(150px);
+					// background-color: rgb(255, 255, 255);
+					border: 1px solid rgba(208, 36, 44, 0.5);
+				}
+			}
+			 .desc {
+ 				border-right: qpx solid rgb(200, 200, 200);
+			 	@include text16;
+			 }
+			 &:first-child {
+			 	margin-left:0 !important;
+			 }
+			 &:last-child {
+			 	margin-right:0!important;; 
+			 }
 		}
 	}
-    .article {
-    	padding:rem(20px) 0;
-    	width: calc(100% / 6);
-    	display: inline-block;	
-    }
 }

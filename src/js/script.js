@@ -6,9 +6,9 @@ if (typeof WebFont === 'object') {
       urls: ['https://cdnjs.cloudflare.com/ajax/libs/spoqa-han-sans/2.1.1/css/SpoqaHanSans-kr.min.css']
     },
     google: {
-      families: ['Roboto'],
-      text: 'abcdefghijklmnopqrstuvwxyzCV'
-    }
+      families: ['Montserrat'],
+      text: '0123456789'
+    },
   });
 }
 

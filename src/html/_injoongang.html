@@ -17,6 +17,8 @@
     </div>
   </div>
 </section>
+<style type="text/css" id="bg_article">
+</style>
      <script>
       let article = {
         'articles': [{
@@ -122,7 +124,14 @@
         ]
       };
       for (var key in article.articles) {
-        let item = "<div class='grid'><div class='bg_article bg_article"+article.articles[key].num+"'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='readmore'></div></div>";
+        if (article.articles.hasOwnProperty(key)){
+        let item = "<div class='grid bg_article"+article.articles[key].num+"'><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><span class='btn-text'>Read more</span></div></div>";
+        var sheet = $("#bg_article").get(0).sheet;
+        let styles = '.bg_article'+article.articles[key].num+' {';
+        styles += 'background-image: url('+article.articles[key].img+')';
+        styles += '}';
+        sheet.insertRule(styles, 0);
         $('.article_injoonang').append(item);
+      }
       }
     </script>

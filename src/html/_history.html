@@ -43,7 +43,9 @@
         ]
       };
       for (var key in numofboryung.history) {
-        let item = "<div class='grid'><div class='bg_article bg_article'>"+numofboryung.history[key].num+"</div><div class='unit'>"+numofboryung.history[key].unit+"</div><div class='title'>"+numofboryung.history[key].desc+"</div><div class='readmore'></div></div>";
-        $('.listofcircle').append(item);
+        if (numofboryung.history.hasOwnProperty(key)){
+          let item = "<div class='grid'><div class='round-bubble'>"+numofboryung.history[key].num+"<span class='unit'>"+numofboryung.history[key].unit+"</span></div><div class='desc'>"+numofboryung.history[key].desc+"</div></div>";
+          $('.listofcircle').append(item);
+        }
       }
     </script>

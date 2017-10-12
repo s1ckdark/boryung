@@ -3,39 +3,62 @@
 //
 #era {
 	background-color: rgb(51, 51, 51);
-	width:1600px;
+	width: rem(1600px);
 	height:auto;
-	article {
-		background-color: rgb(255, 255, 255);
-		margin: rem(60px) 0;
-		width: rem(900px);
+	.section-header {
+		padding-top: rem(120px);
+		.heading-1 {
+			padding: rem(30px) 0 rem(20px);
+		}
+		.text16 {
+			width: rem(762px);
+			height: rem(120px);
+			padding-bottom: rem(60px);
+			color: $br-gray-color;
+		}
 	}
-	article.article_1962 {
-		width: rem(900px);
-		height: rem(600px);
-	}
-	article.article_1967 {
-		width: rem(900px);
-		height: rem(600px);
-	}
-	article.article_1970 {
-		width: rem(900px);
-		height: rem(600px);
-	}
-	article.article_2b {
-		width: rem(900px);
-		height: rem(260px);
-	}
-	article.article_1975 {
-		width: rem(900px);
-		height: rem(600px);
-	}
-	article.article_1980 {
-		width: rem(900px);
-		height: rem(600px);
-	}
-	article.article_1990 {
-		width: rem(900px);
-		height: rem(600px);
+
+	.container.col2 {
+		&>.col:nth-child(1) {
+			width: rem(900px);
+			article {
+				background-color: rgb(255, 255, 255);
+				margin: rem(60px) 0;
+				width: rem(900px);
+			}
+			article.article_1962 {
+				height: rem(600px);
+			}
+			article.article_1967 {
+				height: rem(600px);
+			}
+			article.article_1970 {
+				height: rem(600px);
+			}
+			article.article_2b {
+				height: rem(260px);
+			}
+			article.article_1975 {
+				height: rem(600px);
+			}
+			article.article_1980 {
+				height: rem(600px);
+			}
+			article.article_1990 {
+				height: rem(600px);
+			}
+
+		}
+		&>.col:nth-child(2) {
+			width: rem(180px);
+			height:100%;
+			.discography {
+				width: rem(1px);
+				height: 100%;
+				background-color: rgb(255, 255, 255);
+				margin:0 auto;
+			}
+
+		}
 	}
 }

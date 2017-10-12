@@ -4,21 +4,21 @@
 #interview {
   margin:0 auto;
   background-color: $black;
-  width: 1600px;
+  width: 100%;
   height: 1050px;
   span.interview_title {
-  	background-image: url('../img/interview/interview_title.svg');
-  	background-size: cover;
-  	width: rem(308px);
-  	height: rem(106px);
-  	display:block;
+    background-image: url('../img/interview/interview_title.svg');
+    background-size: cover;
+    width: rem(308px);
+    height: rem(106px);
+    display:block;
   }
   .section-header {
     height: rem(30px);
     line-height: rem(30px);
     padding: rem(120px) 0 rem(30px);
     margin: 0;
-    h4 {
+    .overline {
       position:relative;
       &:after {
         content:'';
