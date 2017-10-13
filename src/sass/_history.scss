@@ -11,9 +11,9 @@
 		@extend %clearfix;
 		.grid {
 			float:left;
-			width: rem(150px);
-			margin: 0 18px;
+			width: calc(100% / 6);
 			.round-bubble {
+				@extend %eng;
 				width: rem(150px);
 				height: rem(150px);
 				position:relative;
@@ -23,7 +23,7 @@
 				color: $lipstick;
 				line-height: rem(142px);
 				font-weight:600;
-				margin-bottom: rem(30px);
+				margin: 0 auto rem(30px);
 				.unit {
 					display:inline;
 					font-size: rem(16px);
@@ -41,14 +41,22 @@
 				}
 			}
 			 .desc {
- 				border-right: qpx solid rgb(200, 200, 200);
+ 				border-right: 1px solid rgb(200, 200, 200);
+				padding:0 rem(18px);
+				width:calc(100% - 36px);
 			 	@include text16;
+				letter-spacing: rem(-1px);
 			 }
 			 &:first-child {
 			 	margin-left:0 !important;
+			 	padding-left:0 !important;
 			 }
 			 &:last-child {
 			 	margin-right:0!important;; 
+			 	padding-right:0!important;
+			 	.desc {
+			 		border-right:none;
+			 	}
 			 }
 		}
 	}

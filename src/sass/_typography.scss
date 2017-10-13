@@ -28,6 +28,7 @@ body {
   font-size: $font-size-lead;
   @at-root .text + .p-lead {
     margin-top: .8em;
+    @include text16;
   }
 }
 %p-small {
@@ -47,12 +48,29 @@ h1, h2, h3, h4, h5, h6 {
   color: $heading-text-color;
 }
 .heading-1 {
+  line-height: 1.26;
+  color: rgb(17, 17, 17);
   font-size: $heading-1;
+  padding: rem(30px) 0 rem(20px);
+  &.dark {
+    color: $br-gray-color;
+  }
 }
 .heading-2 {
   font-size: $heading-2;
+  color: rgb(17, 17, 17);
+  &.dark {
+    color: $br-gray-color;
+  }
+  .lipstick {
+    color: $lipstick;
+  }
 }
-
+.text {
+  &.dark {
+    color: rgb(255, 255, 255)
+  }
+}
 // 
 // Lists
 //

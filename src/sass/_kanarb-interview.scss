@@ -37,12 +37,6 @@
 		}
 		span.bold {font-weight: bold;margin-left:rem(5px);}
 	}
-	.heading-1 {
-	  font-size: rem(26px);
-	  letter-spacing: -1px;
-	  text-align: left;
-	  color: rgb(17, 17, 17);
-	}
 	.question {
 		font-weight: bold;
 		color: rgb(17, 17, 17);
@@ -55,10 +49,14 @@
 		margin-bottom:rem(20px);
 	}
 	.interview1 {
+		width:100%;
+		height:auto;
+		background-image: url('../img/kanarb-interview/bg_kanarb_interview.jpg');
+		background-size: cover;
+		.inner {
 		margin-left:calc(50% - 45px);
 		height: auto;
 		padding: rem(45px) rem(50px);
-		.inner {
 			width: rem(540px);
 			background-color: rgb(255, 255, 255);
 		}

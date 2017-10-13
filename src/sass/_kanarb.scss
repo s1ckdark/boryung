@@ -1,28 +1,157 @@
 #kanarb {
-	width:rem(1600px);
 	.bestMedicine {
-		width:rem(1600px);
+		width: 100%;
 		height:rem(900px);
 		margin:0 auto;
 		background-image: url(../img/kanarb/kanarb_bg.jpg);
+		background-position: 50% 0%;
+		background-size: cover;
 		.inner {
+			.section-header {
+				padding-top: rem(200px);
+			}
 			margin:rem(200px) auto rem(100px);
 			.listofmedicine {
+				@extend %clearfix;
+				padding-top: rem(50px);
 				.medicine {
-					width:rem(190px);
+					width:calc(100% / 5);
 					height:rem(350px);
-					display:inline-block;
-					.icon {
-						background-color: rgb(255, 255, 255);
-						width: rem(190px);
+					float:left;
+					.cardflip {
+						width: calc(100% - 20px);
 						height: rem(180px);
 						display:block;
+						margin:0 auto;
+						position:relative;
+						.front, .back
+							{
+							  position:absolute;
+							  width:100%;
+							  height:rem(180px);
+							  backface-visibility: hidden;
+							  -webkit-backface-visibility: hidden;
+							  -moz-backface-visibility: hidden;
+							  -ms-backface-visibility: hidden;
+							}
+							.front {
+								.icon {
+									display:block;
+									background-position: 50% 50%;
+									background-size: contain;
+									background-repeat: no-repeat;
+								}
+								.icon_title {
+									color: rgb(51, 51, 51);
+									text-align: center;
+									display:block;
+									font-weight: 600;
+									letter-spacing: rem(-0.6px);
+								}
+								background-color: rgb(255, 255, 255);
+							}
+							.back
+							{
+							  background:url('https://s.cdpn.io/33073/lorempixe1l.jpg');
+							}
+						}
+					.desc {
+						margin:rem(20px) rem(10px) 0;
+						span {
+							display: block;
+							font-size: rem(14px);
+							text-align: left;
+							color: rgb(17, 17, 17);
+						}
+					}
+					&:first-child {
+						.cardflip, .desc {
+							margin-left: 0 !important;
+						}
+						.front {
+							.icon {
+								width: rem(107px);
+								height: rem(93px);
+								margin: rem(30px) auto rem(20px);
+								background-image: url('../img/kanarb/icon-1.svg');
+							}
+						}
+						.back {
+							background-image: url('../img/kanarb/med-1.jpg');
+							background-size:cover;
+							background-position: 50% 50%;
+						}
+					}
+					&:nth-child(2) {
+						.front {
+							.icon {
+								width: rem(121px);
+								height: rem(83px);
+								margin: rem(40px) auto rem(20px);
+								background-image: url('../img/kanarb/icon-2.svg');
+							}
+						}
+						.back {
+							background-image: url('../img/kanarb/med-2.jpg');
+							background-size:cover;
+							background-position: 50% 50%;
+						}
+					}
+					&:nth-child(3) {
+						.front {
+							.icon {
+								width: rem(106px);
+								height: rem(99px);
+								margin: rem(35px) auto rem(10px);
+								background-image: url('../img/kanarb/icon-3.svg');
+							}
+						}
+						.back {
+							background-image: url('../img/kanarb/med-3.jpg');
+							background-size:cover;
+							background-position: 50% 50%;
+						}
+					}
+					&:nth-child(4) {
+						.front {
+							.icon {
+								width: rem(98px);
+								height: rem(86px);
+								margin:rem(38px) auto rem(20px);
+								background-image: url('../img/kanarb/icon-4.svg');
+							}
+						}
+						.back {
+							background-image: url('../img/kanarb/med-4.jpg');
+							background-size:cover;
+							background-position: 50% 50%;
+						}
+					}
+					&:last-child {
+						.cardflip, .desc {
+							margin-left: 0 !important;
+						}
+						.front {
+							.icon {
+								width: rem(90px);
+								height: rem(81px);
+								margin: rem(45px) auto rem(17px);
+								background-image: url('../img/kanarb/icon-5.svg');
+							}
+						}
+						.back {
+							background-image: url('../img/kanarb/med-5.jpg');
+							background-size:cover;
+							background-position: 50% 50%;
+						}
 					}
 				}
 			}
 		}
 	}
 	.container {
+		width: rem(1600px);
+		margin:0 auto;
 		.col:nth-child(1) {
 			background-color: rgb(255, 255, 255);
 			height:900px;
@@ -32,12 +161,19 @@
 		}
 		.col:nth-child(2) {
 			background-image: url('../img/kanarb/bg_kanarb_medicine.png');
+			background-position:50% 50%;
+			background-size: cover;
 			height:900px;
 			.inner {
+				.heading-2 {
+					color: rgb(17, 17, 17);
+					padding-bottom: rem(15px);
+				}
+
 				background-color: rgb(255, 255, 255);
 				width:rem(400px);
 				padding:rem(30px) rem(45px);
-				margin:0 auto;
+				margin: rem(115px) auto;
 				.kanarbMedicine {
 					width: rem(300px);
 					height: rem(257px);
@@ -49,8 +185,9 @@
 		}
 	}
 	#video3 {
-		width: 1600px;
+		width: rem(1600px);
 		height: 820px;
+		margin:0 auto;
 		display:block;
 		background-color:#121212;
 		// padding-bottom:rem(87px);

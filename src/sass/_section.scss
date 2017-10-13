@@ -19,6 +19,10 @@
   margin-bottom: rem($vertical-margin-2);
 }
 
+%section-top-margin-narrow {
+  margin-top: rem($vertical-margin-2);
+}
+
 %section-padding-base {
   padding-top: rem($vertical-margin-1);
   padding-bottom: rem($vertical-margin-1);
@@ -49,10 +53,7 @@ section {
     color: $text-color-muted;
     line-height: 1;
   }
-  .heading-1 {
-    line-height: 1.26;
-  }
-  .text {
+  .text16 {
     margin-top: rem(15px);
   }
   .overline {

@@ -6,8 +6,7 @@ if (typeof WebFont === 'object') {
       urls: ['https://cdnjs.cloudflare.com/ajax/libs/spoqa-han-sans/2.1.1/css/SpoqaHanSans-kr.min.css']
     },
     google: {
-      families: ['Montserrat'],
-      text: '0123456789'
+      families: ['Montserrat']
     },
   });
 }
@@ -54,5 +53,34 @@ $(function(){
       $qna.find('.hidden').show();
     });
   }
+  //we set the backface 
+  TweenMax.set($(".back"), {rotationY:-180});
+
+  $.each($(".cardflip"), function(i,element) {
+    
+    var frontCard = $(this).children(".front"),
+        backCard = $(this).children(".back"),
+        tl = new TimelineMax({paused:true});
+    
+    tl
+      .to(frontCard, 1, {rotationY:180})
+      .to(backCard, 1, {rotationY:0},0)
+      .to(element, .5, {z:50},0)
+      .to(element, .5, {z:0},.5);
+    
+    element.animation = tl;
+    
+  });
+
+  $(".cardflip").hover(elOver, elOut);
+
+  function elOver() {
+      this.animation.play();
+  }
+
+  function elOut() {
+      this.animation.reverse();
+  }
+
 
 });

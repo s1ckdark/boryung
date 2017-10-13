@@ -1,10 +1,11 @@
 #background {
-    @extend %section-margin-narrow;
+    @extend %section-top-margin-narrow;
+    margin-bottom:0;
 	.bg_background {
 		background-image: url('../img/background/background_bg.png');
 		background-position:50% 50%;
 		background-size:contain;
-		width:100vw;
+		width:100%;
 	}
 	.container.col2.type-a {
 		.col {
@@ -61,16 +62,19 @@
 		// padding-bottom:rem(87px);
 	}
 	.sceneTween {
-		background-image: url('../img/background/sceneTween1.png');
+		background-image: url('../img/background/sceneTween-1.jpg');
 		background-size:cover;
-		width:rem(1600px);
+		width:100%;
 		height:rem(750px);
 		display:block;
 		margin:rem(87px) auto 0;
 		background-repeat:no-repeat;
+		&.sceneTween2 {
+			background-image: url('../img/background/sceneTween-2.jpg') !important;
+		}
 	}
 	.story {
-		width:1600px;
+		width:100%;
 		margin:0 auto;
 		background-color: rgb(240, 240, 240);
 		.col:nth-child(1) {
@@ -83,55 +87,37 @@
 			width:100%;
 			height:auto;
 			display:block;
+			padding: rem(30px);
 			margin-bottom:rem(30px);
-			header {
-				padding:0 rem(30px);
-				h4 {
-					padding:rem(30px) 0  rem(10px);
-				}
-				h2 {
-					font-size:rem(26px);
-				    line-height: 1.54;
-				    letter-spacing: -1px;
-					padding:rem(10px) 0 rem(10px);
-					text-align:left;
-					@include subtitle26;
-				}
+			width:460px;
+			.section-header {
+				padding:rem(30px) 0 0;
 			}
 			&.dark {
 				background-color: rgb(34, 34, 34);
-				width:520px;
-				height:320px;
 				border: solid 1px rgba(100, 100, 100, 0.5);
-				header {
-					h2 {
+				.section-header {
+					.heading-2 {
 						color: rgb(255, 255, 255);
 					}
 				}
-				.al {
-					  font-size: rem(16px);
-					  line-height: 1.75;
-					  letter-spacing: normal;
-					  text-align: left;
+				.text {
 					  color: $gray-color;
-					  padding:rem(30px);
+					  @include text16;
 				}
 			}
 			&.white {
 				background-color: rgb(255, 255, 255);
-				width:520px;
-				height:630px;
 				display:block;
 				.voucher {margin:rem(30px) auto rem(50px);background-image: url('../img/background/voucher.jpg');width:rem(202px);height:rem(233px);display:block;background-size:cover;}
 				.drugstore_front {margin:rem(30px) 0 rem(50px);background-image: url('../img/background/drugstore_front.jpg');width:rem(450px);height:rem(284px);display:block;background-size:cover;margin:0 auto;}
-				header {
+				.section-header {
 					h2 {
 						color: $text-muted;
 					}
 				}
-				.al {
-					text-align:left;
-					padding:rem(30px);
+				.text {
+					letter-spacing: rem(-1px);
 					color: $text-muted;
 					@include text16;
 				}
