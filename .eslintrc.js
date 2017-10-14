@@ -45,6 +45,7 @@ module.exports = {
     "Bounce": true,
     "Elastic": true,
     "Strong":true,
+    "SteppedEase":true,
     "Draggable": true,
     "aprilTweens": true,
     "SplitText": true,

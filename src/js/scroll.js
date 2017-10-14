@@ -46,6 +46,7 @@ var controller = new ScrollMagic.Controller();
   var $video3 = $('#video3');
   var $video4 = $('#video4');
   var $video5 = $('#video5');
+  var $twinklebtn = $('.top-indicator .link');
 
   $video1.find('video').attr({
     'src': 'http://cf.c.ooyala.com/ZoYXUwZDE6-emQJWei9s1vfHjU8Kb9Cg/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
@@ -148,28 +149,50 @@ var controller = new ScrollMagic.Controller();
     })
     .addTo(controller);
 
-  // scrollToSection();
-// }
+//twinkle arrow on hero
+  var arrowTween = new TimelineMax({paused:true});
+  arrowTween.staggerTo($twinklebtn, 1, {opacity:0.3,ease:SteppedEase.config(1),repeat:-1,repeatDelay:0.5,delay:-1},0.5);
 
-// // Section Nav 링크 스크롤링
-// function scrollToSection () {
-//   $('.section-nav a, .brand-top-intro .link, .brand-identity a').on('click', function (e) {
-//     e.preventDefault();
+  new ScrollMagic.Scene(
+    {
+      triggerElement: $('#top')[0],
+      duration: $('#top').height(),
+    })
+    .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+        console.log('enter');
+        arrowTween.play();
+        } else {
+        console.log('leave');
+        arrowTween.pause();
+      }
 
-//     var id = $(this).attr('href');
-//     var $id = $(id);
-//     var newpos;
+    })
+    .addIndicators()
+    .addTo(controller);
 
-//     if ($id.length > 0) {
-//       newpos = $id.offset().top - $('#roof').outerHeight(); // header가 내용을 가리지 않게 위치 조정
+  scrollToSection();
 
-//       $('html, body').stop().animate({scrollTop: newpos}, 500);
 
-//       // if supported by the browser we can even update the URL.
-//       // if (window.history && window.history.pushState) {
-//       //   history.pushState('', document.title, id);
-//       // }
-//     }
-//   });
-// }
+// Section Nav 링크 스크롤링
+function scrollToSection () {
+  $('.top-indicator .link').on('click', function (e) {
+    e.preventDefault();
+
+    var id = $(this).attr('href');
+    var $id = $(id);
+    var newpos;
+
+    if ($id.length > 0) {
+      newpos = $id.offset().top - $('#roof').outerHeight(); // header가 내용을 가리지 않게 위치 조정
+
+      $('html, body').stop().animate({scrollTop: newpos}, 500);
+
+      // if supported by the browser we can even update the URL.
+      // if (window.history && window.history.pushState) {
+      //   history.pushState('', document.title, id);
+      // }
+    }
+  });
+}
 

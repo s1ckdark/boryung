@@ -185,8 +185,8 @@
 		}
 	}
 	#video3 {
-		width: rem(1600px);
-		height: 820px;
+		width: 100vw;
+		height: calc(100vw * 9 /16);
 		margin:0 auto;
 		display:block;
 		background-color:#121212;
