@@ -50,6 +50,7 @@ module.exports = {
     "aprilTweens": true,
     "SplitText": true,
     "upTween":true,
-    "handle":true
+    "handle":true,
+    "Back":true
   }
 };

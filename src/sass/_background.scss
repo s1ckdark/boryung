@@ -61,19 +61,33 @@
 		background-color:#121212;
 		// padding-bottom:rem(87px);
 	}
-	.sceneTween {
-		background-image: url('../img/background/sceneTween-1.jpg');
-		background-size:cover;
+	.bg_sceneTween {
+		position:relative;
 		width:100%;
 		height:rem(750px);
-		display:block;
-		margin:rem(87px) auto 0;
-		background-repeat:no-repeat;
-		&.sceneTween2 {
-			background-image: url('../img/background/sceneTween-2.jpg') !important;
+		z-index: -1;
+		.sceneTween {
+			background-size:cover;
+			width:100%;
+			height:rem(750px);
+			display:block;
+			margin:rem(87px) auto 0;
+			background-repeat:no-repeat;
+			position:absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			&.sceneTween1 {
+				background-image: url('../img/background/sceneTween-1.jpg');
+			}
+			&.sceneTween2 {
+				background-image: url('../img/background/sceneTween-2.jpg');
+			}
 		}
 	}
 	.story {
+		z-index:10;
 		width:100%;
 		margin:0 auto;
 		background-color: rgb(240, 240, 240);
@@ -92,6 +106,10 @@
 			width:460px;
 			.section-header {
 				padding:rem(30px) 0 0;
+				margin:0;
+				.heading-2 {
+					padding:rem(30px) 0 rem(20px);
+				}
 			}
 			&.dark {
 				background-color: rgb(34, 34, 34);

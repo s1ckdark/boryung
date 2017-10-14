@@ -19,18 +19,28 @@
 	}
 
 	.container-flex.col2 {
-		&>.col:nth-child(1) {
+		>.col:nth-child(1) {
 			width: rem(900px);
 			position: relative;
 			article {
 				background-color: rgb(255, 255, 255);
 				margin: rem(60px) 0;
+				position: relative;
+				.boldMarketing {
+					display:none;
+				}
+			    .container.col2 {
+					&.col:nth-child(1) {
+						width: rem(320px);
+					}
+					&.col:nth-child(2) {
+						width:rem(470px);
+						height: rem(550px);
+					}
+				}
 			}
 			article.article_1962 {
-				.inner {
-					padding: rem(40px);
-				}
-				height: rem(600px);
+
 			}
 			article.article_1967 {
 				height: rem(600px);
@@ -50,6 +60,7 @@
 			article.article_1990 {
 				height: rem(600px);
 			}
+	
 
 		}
 		&>.col:nth-child(2) {
