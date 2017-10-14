@@ -8,38 +8,38 @@
 *    - TweenMax.min.js
 * */
 
-function tweenSpaceship () {
-  var $spaceship = $('#spaceship');
-  var $lines = $spaceship.find('.spaceship-line');
-  var timeline = new TimelineMax({paused: true});
-  var timeline2 = new TimelineMax({repeat: -1, yoyo: true});
+// function tweenSpaceship () {
+//   var $spaceship = $('#spaceship');
+//   var $lines = $spaceship.find('.spaceship-line');
+//   var timeline = new TimelineMax({paused: true});
+//   var timeline2 = new TimelineMax({repeat: -1, yoyo: true});
 
-  // init
-  $lines.each(function(){
-    var length = $(this).data('length');
-    $(this).css({
-      'stroke-dasharray': length,
-      'stroke-dashoffset': length,
-    });
-  });
+//   // init
+//   $lines.each(function(){
+//     var length = $(this).data('length');
+//     $(this).css({
+//       'stroke-dasharray': length,
+//       'stroke-dashoffset': length,
+//     });
+//   });
 
-  // set timeline
-  timeline2.add(TweenMax.to($spaceship, 1.2, {y: 7, ease: Power1.easeInOut}));
+//   // set timeline
+//   timeline2.add(TweenMax.to($spaceship, 1.2, {y: 7, ease: Power1.easeInOut}));
 
-  timeline.add(TweenMax.fromTo($spaceship, .7, {scale: .65, y: 25, autoAlpha: 1}, {scale: .75, y: 0}));
-  timeline.add(TweenMax.to($lines, .5, {strokeDashoffset: 0}), .2);
-  timeline.add('label1');
-  timeline.add(timeline2);
+//   timeline.add(TweenMax.fromTo($spaceship, .7, {scale: .65, y: 25, autoAlpha: 1}, {scale: .75, y: 0}));
+//   timeline.add(TweenMax.to($lines, .5, {strokeDashoffset: 0}), .2);
+//   timeline.add('label1');
+//   timeline.add(timeline2);
 
-  // bind event
-  $spaceship.closest('a').hover(function(){
-    timeline.play();
-  }, function(){
-    timeline.reverse('label1');
-  });
-}
+//   // bind event
+//   $spaceship.closest('a').hover(function(){
+//     timeline.play();
+//   }, function(){
+//     timeline.reverse('label1');
+//   });
+// }
 
-$(function(){
-  tweenSpaceship();
-});
+// $(function(){
+//   tweenSpaceship();
+// });
 
