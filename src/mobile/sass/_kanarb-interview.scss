@@ -1,0 +1,72 @@
+#kanarb_interview {
+	.interview_title {
+		width:100%;
+		font-size: rem(16px);
+		letter-spacing: -0.8px;
+		text-align: left;
+		color: rgb(51, 51, 51);
+		line-height: rem(34px);
+		span.interview-round {
+			background-color: $lipstick;
+			display:inline-block;
+			width: 100px;
+			height: 36px;
+			border-radius: 100px;
+			font-family: Montserrat;
+			font-size: rem(16px);
+			text-align: center;
+			color: rgb(255, 255, 255);
+			margin-right:rem(10px);
+			q.round-title {
+				width: 90px;
+			    height: 19px;
+			    font-family: Montserrat;
+			    font-size: 16px;
+			    font-weight: bold;
+			    text-align: center;
+			    color: rgb(255, 255, 255);
+			}
+		}
+		&:after {
+			content:'';
+			width:calc(100% - 14px);
+			height:1px;
+			background-color: $lipstick;
+			display:block;
+			margin: -2px 0 0 14px;
+		}
+		span.bold {font-weight: bold;margin-left:rem(5px);}
+	}
+	.question {
+		font-weight: bold;
+		color: rgb(17, 17, 17);
+		span {
+			color: $lipstick;
+		}
+	}
+	.answer {
+		color: rgb(102, 102, 102);
+		margin-bottom:rem(20px);
+	}
+	.interview1 {
+		width:100%;
+		height:auto;
+		background-image: url('../img/kanarb-interview/bg_kanarb_interview.jpg');
+		background-size: cover;
+		.inner {
+		margin-left:calc(50% - 45px);
+		height: auto;
+		padding: rem(45px) rem(50px);
+			width: rem(540px);
+			background-color: rgb(255, 255, 255);
+		}
+		.img {margin:rem(20px) 0 rem(60px);background-image: url('../img/kanarb-interview/interview1.jpg');width:rem(540px);height:rem(180px);}
+	}
+	.interview2 {
+		margin:rem(100px) 0;
+		.interview_title {
+			margin:0 0 rem(60px);
+		}
+		.img {background-image: url('../img/kanarb-interview/interview2.jpg');width:rem(500px);height:rem(750px);}
+	}
+}

@@ -2,23 +2,18 @@
 
 {% block content %}
 
-{% include "_brand.html" %}
-
-{% set section_active = 'igarten' %}
-{% include "_section-nav.html" %}
-{% include "_igarten.html" %}
-
-{% set section_active = 'april' %}
-{% include "_section-nav.html" %}
-{% include "_april.html" %}
-
-{% set section_active = 'institute' %}
-{% include "_section-nav.html" %}
-{% include "_institute.html" %}
-
-{% include "_section-nav.html" %}
+{% include '_top.html' %}
+{% include '_background.html' %}
+{% include '_interview.html' %}
+{% include '_injoongang.html' %}
+{% include '_contribute.html' %}
+{% include '_history.html' %}
+{% include '_era.html' %}
+{% include '_market.html' %}
+{% include '_kanarb.html' %}
+{% include '_kanarb-interview.html' %}
+{% include '_more.html' %}
 {% endblock %}
-
 
 {# 페이지에서만 사용하는 스크립트 #}
 {% block scripts %}

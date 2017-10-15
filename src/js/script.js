@@ -12,18 +12,6 @@ if (typeof WebFont === 'object') {
 }
 
 $(function(){
-  //
-  // hero 
-  //
-  var $hero = $('.hero').children();
-  TweenMax.set('.hero div', {opacity:0,visibility:'hidden'});
-  TweenMax.to($hero.eq(0), 1, {opacity:1, visibility:'visible'}, 1);
-  // TweenMax.to($hero.eq(1), 1, {opacity:1, visibility:'visible'}, 2);
-  TweenMax.to($hero.eq(2), 1, {opacity:1, visibility:'visible'}, 3);
-  // TweenMax.to($hero.eq(3), 1, {opacity:1, visibility:'visible'}, 4);
-
-  // TweenMax.staggerTo('.sceneTween2', 1, {zIndex:'-2', repeat:-1,ease:Linear.easeNone, repeatDelay:5},5);
-
 
  //injoongang 
   var current = 0;
@@ -37,13 +25,27 @@ $(function(){
       TweenMax.to($('.article_arrow'),.5,{className : '= article_arrow'});
     }
  })
-   
+//era
+
+var discoLen = $('#era > .wrapper > .container').height() - 155;
+$('#era > .wrapper > .container > .col').eq(1).css({'height':discoLen});
+// era boldMarketing
+$('.boldbtn').click(function(){
+  var target = $(this).siblings('.boldMarketing');console.log(target);
+  TweenMax.to(target[0], 1, {display:'block'})
+})
+$('.close').click(function(){
+  var target = $(this).parent();
+  TweenMax.to(target[0],1, {display:'none'})
+})
+
 // kanarb_interview scrolling bg img
   var width = $('#viewport').width(), //assumes your image is 1024px wide
   speed = 24, //pixels per second
   duration = width / speed,
   endPosition = width - (speed / 24); //adjust the end position assuming 60fps
-  TweenMax.to($(".interview1"), duration, {css:{backgroundPosition:endPosition + "px 0"}, repeat:-1, ease:Linear.easeNone});
+  TweenMax.to($(".interview1"), duration, {css:{backgroundPosition:endPosition + "px 0"}, force3D:true,repeat:-1, ease:Linear.easeNone});
+  
   //
   // Video play
   //
@@ -107,38 +109,38 @@ $(function(){
       this.animation.reverse();
   }
 
-document.addEventListener('DOMContentLoaded', function() {
+// document.addEventListener('DOMContentLoaded', function() {
 
-  // Hoisting
-  var svgElement  = $(".line-graph-svg"),
-    timeline      = new TimelineMax(),
-    gridLines     = svgElement.find(".grid-lines line"),
-    graphArea     = svgElement.find(".graph .graph-area"),
-    graphLineFlat = svgElement.find(".graph .graph-line-flat"),
-    graphLine     = svgElement.find(".graph .graph-line"),
-    dots          = svgElement.find(".dots circle");
+//   // Hoisting
+//   var svgElement  = $(".line-graph-svg"),
+//     timeline      = new TimelineMax(),
+//     gridLines     = svgElement.find(".grid-lines line"),
+//     graphArea     = svgElement.find(".graph .graph-area"),
+//     graphLineFlat = svgElement.find(".graph .graph-line-flat"),
+//     graphLine     = svgElement.find(".graph .graph-line"),
+//     dots          = svgElement.find(".dots circle");
 
-  // Animate element
-  timeline.staggerFrom(gridLines, 2, { drawSVG: 0, ease: Back.easeOut.config(1.7) }, 0.01)
-  .from(graphLine, 3, {drawSVG: 0, ease: Power1.easeOut}, "-=1.9")
-  .staggerFrom(dots, 0.5, { scale: 0, transformOrigin: "50% 50%", ease: Back.easeOut.config(1.7) }, 0.3, "-=2.7")
-  .from(graphArea, 1, {autoAlpha: 0}, "-=1.4")
+//   // Animate element
+//   timeline.staggerFrom(gridLines, 2, { drawSVG: 0, ease: Back.easeOut.config(1.7) }, 0.01)
+//   .from(graphLine, 3, {drawSVG: 0, ease: Power1.easeOut}, "-=1.9")
+//   .staggerFrom(dots, 0.5, { scale: 0, transformOrigin: "50% 50%", ease: Back.easeOut.config(1.7) }, 0.3, "-=2.7")
+//   .from(graphArea, 1, {autoAlpha: 0}, "-=1.4")
   
-  // Pause on first frame and wait for waypoint
-  // timeline.pause();
+//   // Pause on first frame and wait for waypoint
+//   // timeline.pause();
   
 
-        timeline.play();  
-        // timeline.reverse();
+//         timeline.play();  
+//         // timeline.reverse();
 
-  $(".restart").on('click', function(){
-    timeline.seek(0).play();
-  });
+//   $(".restart").on('click', function(){
+//     timeline.seek(0).play();
+//   });
   
-  $(".reverse").on('click', function(){
-    timeline.reverse();
-  });
-});
+//   $(".reverse").on('click', function(){
+//     timeline.reverse();
+//   });
+// });
   
 
 });

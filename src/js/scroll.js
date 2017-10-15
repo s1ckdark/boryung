@@ -46,6 +46,8 @@ var controller = new ScrollMagic.Controller();
   var $video3 = $('#video3');
   var $video4 = $('#video4');
   var $video5 = $('#video5');
+  var $video6 = $('#video6');
+  var $video7 = $('#video7');
   var $twinklebtn = $('.top-indicator .link');
 
   $video1.find('video').attr({
@@ -84,14 +86,32 @@ var controller = new ScrollMagic.Controller();
     'poster': ''
   }); //겔포스 수사반장 2편
   
-   $video5.find('video').attr({
+   $video7.find('video').attr({
     'src': 'http://cf.c.ooyala.com/d5aXYwZDE6Pj8CH-O-8bARx9OvW9NvXF/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
     'controls':true,
     'controlsList':'nodownload',
     'preload':'auto',
     'loop':false,
     'poster': ''
-  }); //겔포스 수사반장 1편
+  }); //겔포스 수사반장 1편   
+
+   $video6.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/5ud2oxZDE6RIyA9OeE2NrjiiqvIj8ush/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //용각산 1970년대
+
+    $video5.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/k3aHYwZDE6pHASeJKdfJ7b7g6q0ugOUm/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_ ',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //용각산 30년편
   
 
   // // scroll auto play
@@ -149,10 +169,18 @@ var controller = new ScrollMagic.Controller();
   //   })
   //   .addTo(controller);
 
-//twinkle arrow on hero
+//twinkle arrow, hero tween on hero
   var arrowTween = new TimelineMax({paused:true});
   arrowTween.staggerTo($twinklebtn, 1, {opacity:0.3,ease:SteppedEase.config(1),repeat:-1,repeatDelay:0.5,delay:-1},0.5);
 
+  var $hero = $('.hero').children();
+  var heroAni = new TimelineMax({paused:true, repeat:-1});
+  heroAni.fromTo($hero.eq(1), 1, {autoAlpha:1,sclae:1,y:'-100'}, {autoAlpha:0,scale:0,y:'0'},2)
+         .fromTo($hero.eq(0), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1}, 3)
+         .fromTo($hero.eq(2), 1, {autoAlpha:1,sclae:1}, {opacity:.6,scale:1,ease: Expo.easeOut}, 2)
+         .fromTo($hero.eq(3), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1,ease: Expo.easeOut}, 2)
+
+ 
   new ScrollMagic.Scene(
     {
       triggerElement: $('#top')[0],
@@ -160,11 +188,11 @@ var controller = new ScrollMagic.Controller();
     })
     .on('enter leave', function(event){  
       if (event.type === 'enter') {
-        console.log('enter');
         arrowTween.play();
+        heroAni.play();
         } else {
-        console.log('leave');
         arrowTween.pause();
+        heroAni.pause();
       }
 
     })

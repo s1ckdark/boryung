@@ -59,6 +59,7 @@ section {
 }
   .overline {
     position:relative;
+    z-index:30;
     &:after {
       content:'';
       position:absolute;
