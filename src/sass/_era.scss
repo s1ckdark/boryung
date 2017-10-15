@@ -8,10 +8,7 @@
 	.overline {
 		@extend %eng;
 		text-transform: uppercase;
-		position:absolute;
-		top:rem(30px);
-		left:rem(30px);
-
+		z-index:30;
 	}
 	.section-header {
 		padding-top: rem(120px);
@@ -32,9 +29,12 @@
 				background-color: rgb(255, 255, 255);
 				margin: rem(60px) 0;
 				position: relative;
-				.section-header {
+				.slider-header {
 					.overline {
 						color: rgb(17, 17, 17);
+						position:absolute;
+						top: rem(50px);
+						left: rem(30px);
 					}	
 				}
 				.boldbtn {
@@ -44,9 +44,7 @@
 					background-color: rgb(34, 34, 34);
 					height:rem(50px);
 					color: rgb(255,255,255);
-				}
-				.boldMarketing {
-					display:none;
+					z-index: 30;
 				}
 				.img {
 					background-position: 50% 50%;
@@ -56,9 +54,9 @@
 					background-repeat: no-repeat;
 				}
 			}
-			article.article_1962 {
-				height: rem(600px);
-			}
+			// article.article_1962 {
+			// 	height: rem(600px);
+			// }
 			article.article_1967 {
 				height: rem(600px);
 				.img1967-1 {
@@ -68,29 +66,44 @@
 					background-image:url('../img/era/1967-2.jpg');
 				}
 			}
-			article.article_1970 {
-				height: rem(600px);
-			}
+			// article.article_1970 {
+			// 	height: rem(600px);
+			// }
 			article.article_2b {
 				height: rem(260px);
 			  	.container {
-	    		&.col2 {
-					.col:nth-child(1) {
-						width:rem(500px);
-						height: rem(200px);
-						margin:rem(30px) rem(40px);
-						.slider-header {
-							margin:rem(10px) 0 rem(15px);
+		    		&.col2 {
+						.col:nth-child(1) {
+							width:rem(500px);
+							height: rem(200px);
+							margin:rem(30px) rem(40px);
+							.slider-header {
+								margin:rem(10px) 0 rem(15px);
+							}
+						}
+						.col:nth-child(2) {
+							width:rem(320px);
+							height: rem(260px);
+							// margin:rem(30px);
+							background: $lipstick;
+						    text-align: center;
+							.btn2b {
+								background: rgb(255,255,255);
+								color: $lipstick;
+								text-align:center;
+								width:rem(230px);
+								height:rem(50px);
+								font-size:rem(16px);
+								display:inline-block;
+								margin:0 auto;
+								@extend %eng;
+								&:nth-child(1) {
+									margin:rem(65px) auto rem(30px);
+								}
+							}
 						}
 					}
-					.col:nth-child(2) {
-						width:rem(320px);
-						height: rem(260px);
-						// margin:rem(30px);
-						background: $lipstick;
-					}
 				}
-		}
 			}
 			article.article_1975 {
 				height: rem(600px);
@@ -101,12 +114,12 @@
 					background-image:url('../img/era/1975-2.jpg');
 				}
 			}
-			article.article_1980era {
-				height: rem(600px);
-			}
-			article.article_1990era {
-				height: rem(600px);
-			}
+			// article.article_1980era {
+			// 	height: rem(600px);
+			// }
+			// article.article_1990era {
+			// 	height: rem(600px);
+			// }
 			article.article_1990 {
 				height: rem(600px);
 				.img1990-1 {
@@ -116,21 +129,122 @@
 					background-image:url('../img/era/1990-2.jpg');
 				}
 			}
-	
-
 		}
-		&.col:nth-child(2) {
+		.col:nth-child(2) {
 			width: rem(180px);
 			height:100%;
-			.discography {
-				width: rem(1px);
-				height: 100%;
-				background-color: rgb(255, 255, 255);
-				margin:0 auto;
+			position:relative;
+			.disco_heading {
+				width:rem(170px);
+				color: $lipstick;
+				font-size:rem(18px);
+				text-align:right;
+				margin: rem(65px) 0 0;
 			}
+			.disco {
+				position:absolute;
+				width: rem(3px);
+				height: 100%;
+				background-color: rgb(100, 100, 100);
+				right:0px;
+			}
+			.historytext {
+				width:rem(160px);
+				margin-right:rem(10px);
+				div {
+					display:block;
+					position:relative;
+					&:after {
+						content:'';
+						position:absolute;
+						width:rem(12px);
+						height:rem(12px);
+						border-radius:100%;
+						right:rem(-27px);
+					    top: rem(5px);
+					    background-color: rgb(51, 51, 51);
+					}
+					p {
+						margin-bottom:rem(10px);
+						font-size:rem(14px);
+						text-align:right;
+						color: rgb(245,245,245);
+						line-height: rem(20px);
+						.num {
+							font-size:rem(28px);
+							line-height: rem(28px);
+						}
+					}
+					&.h1962 {
+						&:after {
+  							border:2px solid rgb(245,245,245);  
+						}
+					}
+					&.h1967 {
+						margin-top:rem(240px);
+						&:after {
+  							border:2px solid $lipstick;  
+						}
+					}
+					&.h1970 {
+						margin-top:rem(200px);
+						&:after {
+  							border:2px solid rgb(245,245,245);  
+						}
+					}
+					&.h2b {
+						p {
+							@extend %eng;
+							font-size:rem(24px);
+							color:$lipstick;
+							margin-right:rem(10px);
+						}
+						margin-top:rem(115px);
+						&:before {
+							content:'';
+							position:absolute;
+							width:rem(30px);
+							height:rem(30px);
+							border-radius:100%;
+							right:rem(-34px);
+						    top: rem(-2px);
+						    background-color: rgb(51, 51, 51);
+						    border:2px solid $lipstick; 
+						}
+						&:after {
+  							border:4px solid $lipstick;  
+						}
+					}
+					&.h1975 {
+						margin-top:rem(220px);
+						&:after {
+  							border:2px solid $lipstick;  
+						}
+					}
+					&.h1980era {
+						margin-top:rem(240px);
+						&:after {
+  							border:2px solid rgb(245,245,245);  
+						}
+					}
+					&.h1990era {
+						margin-top:rem(220px);
+						&:after {
+  							border:2px solid rgb(245,245,245);  
+						}
+					}
+					&.h1990 {
+						margin-top:rem(100px);
+						&:after {
+  							border:2px solid $lipstick  
+						}
+					}
 
+				}
+			}
 		}
 	}
+
 	.owl-item {
 		width:rem(900px) !important;
 	}
@@ -149,6 +263,67 @@
 					margin:rem(30px);
 				}
 			}
+		}
+	}
+	.boldMarketing {
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		width:100%;
+		height: rem(600px);
+		background-color: rgb(255,255,255);
+		z-index:31;
+		display:none;
+		.slider-header {
+			margin:rem(60px) 0 rem(15px);
+			letter-spacing:rem(-2px);
+		}
+		.video {
+			width:rem(530px);
+			height:rem(397px);
+		}
+		.close {
+			background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA1CAQAAABL72v7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8SKy/BHN1eAAABOUlEQVRYw82YXRKDIAyEE0/lcfBkcpzcij7UKiJKgmSnPnVost+g/GxCskqSJIHcHgmSJMnKkraRZY4+IFq/v6Z9bPWY2QEimmjxg+UgWrgcGPcaS12uDXqAiPjuj9GgHTUWVtfiVsAo0Ak1BnavwdrAt6AL6h3sOZetCb2gKqoP1s7h3kR7PL9JtsXyWwF93ANKJ6Kf/SOqLWR5zQ3Us5ht8TRR94LWVapA1UXte0+Fugr3bHIlqoBFClaQAVXAzCATqgIznfyTPpRojpRLR9sVY0JJyL4RUbD5RuC3Us+qWIG/x+CIlahiHy099vu/TgvYGQg72WH3FewWhnkLmGOC+UCYu4V5dlglAquvYFUjrBaGVfiwvgWsGwPrMXmBrrCj9ejSfDz3Ax1BRHM8DM+0GS2ndmoGix/snCNVmpr70AAAAABJRU5ErkJggg==');
+			background-size:cover;
+			width:rem(30px);
+			height:rem(30px);
+			position:absolute;
+			top:rem(30px);
+			right:rem(30px);
+		}
+		.container {
+    		&.col2 {
+				.col:nth-child(1) {
+					width:rem(274px);
+					height:rem(538px);
+					margin:rem(30px) rem(0px) rem(30px) rem(30px);
+				}
+				.col:nth-child(2) {
+					width:rem(530px);
+					height:rem(538px);
+					margin:rem(30px);
+				}
+			}
+		}
+	}
+	.owl-nav {position:absolute;top:50%;margin-top:rem(-20px);right:rem(65px);width:rem(420px);
+		& > * {background:none;}
+		.owl-prev {
+			width:rem(21px);
+			height:rem(40px);
+			left:0px;margin:0;
+			background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAoCAQAAAC7+nluAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8VGDsq4nqWAAAAYElEQVQ4y2NgIAL8n//////zxCr8//8/0Qr/7ydW4fn/AqMKMRX2E6swYeAVvv+vQKxCg8GqkIGBaIUMTIQUkOeAIa6YUHKhsWJiMwwDAwnZcFQxTsWECnhkxUQohVVGAGdsgtkryZ5xAAAAAElFTkSuQmCC');
+			background-size:cover;
+			&:before {content:none;}
+		}	
+		.owl-next {
+			width:rem(21px);
+			height:rem(40px);
+			right:0px;margin:0;
+			background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAoCAQAAAC7+nluAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8VGiZ70nTNAAAAVElEQVQ4y2P4f/7////zGYgB/yGAGMX/9xOt+L/A//OjiilV3E+K4oQho9jg//uhq5iJoFpiAdEOGEiFxEbs4FDYT6zC+aMKsSkloYAnodogujICACuxgmmPD5YkAAAAAElFTkSuQmCC');			background-size:cover;
+			&:before {content:none;}
 		}
 	}
 }

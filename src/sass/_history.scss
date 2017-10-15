@@ -39,6 +39,36 @@
 					// background-color: rgb(255, 255, 255);
 					border: 1px solid rgba(208, 36, 44, 0.5);
 				}
+				&:hover {
+					@extend %eng;
+					width: rem(150px);
+					height: rem(150px);
+					position:relative;
+					text-align: center;
+					font-size: rem(60px);
+					letter-spacing: rem(-2.3px);
+					color: rgb(255,255,255);
+					line-height: rem(142px);
+					font-weight:600;
+					margin: 0 auto rem(30px);
+					.unit {
+						display:inline;
+						font-size: rem(16px);
+						color: rgb(255,255,255);
+					}
+					&:before {
+						position:absolute;
+						left:0px;
+						content:'';
+						border-radius:50%;
+						width: rem(150px);
+						height: rem(150px);
+						background-color: $lipstick;
+						// background-color: rgb(255, 255, 255);
+						border: 1px solid rgba(208, 36, 44, 0.5);
+						z-index:-1;
+					}
+				}
 			}
 			 .desc {
  				border-right: 1px solid rgb(200, 200, 200);

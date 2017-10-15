@@ -36,3 +36,13 @@ $btn-padding-wide: rem(60px);
   display:inline-block;
   border-radius: 100px;
 }
+
+.more-arrow {
+  background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAATCAQAAAAzbkVEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8TCAjbfXVjAAAAf0lEQVQoz4WRURGEMAxEwwwCKqESagEHSKiEcwBOkAAOKqE4OAcvEsL3zU2X/c2bZHdj9iNWiinRcLICCk4nKaQSnPrMTrBr5CCoCkh0XOYh47g2Wwg6aRZ2biu2TbipRdc0NmrNsi1jD41g1U18xuNKcLwE1BV9hxW9lvz/pgclV1d4JeMymQAAAABJRU5ErkJggg==');
+  background-size: cover;
+  background-repeat:no-repeat;
+  width:rem(12px);
+  height:rem(14px);
+  object-fit: contain;
+  display:inline-block;
+}

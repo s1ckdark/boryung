@@ -11,21 +11,31 @@ $(function(){
   // brand article slider
   //
   var $articleSlider = $('.article-slider').owlCarousel({
-    loop: false,
-    nav: false,
-    dots: false,
-    autoWidth: true,
+    loop: true,
+    dots:false,
+    dotsData: true,
+    lazyLoad: true,
+    items:1,
+    nav: true,
     margin: 20,
-  });
-  $('#article-prev').on('click', function(e){
-    e.preventDefault();
-    $articleSlider.trigger('prev.owl.carousel');
-  });
-  $('#article-next').on('click', function(e){
-    e.preventDefault();
-    $articleSlider.trigger('next.owl.carousel');
+    navText: ['<span class="owl-prev"></span>','<span class="owl-next"></span>'],
   });
 
+
+// $('#institute-curriculum-slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+//     if (!e.namespace)  {
+//       return;
+//     }
+//     var carousel = e.relatedTarget;
+//     $('#slider-counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+//   }).owlCarousel({
+//     loop:true,
+//     nav: true,
+//     dots: false,
+//     lazyLoad: true,
+//     items:1,
+//     navText: ['<span class="prev-circle-arrow"></span>','<span class="next-circle-arrow"></span>'],
+//   });
   // brand interview slider
   //
 //   var $interviewSlider = $('#interview-slider').owlCarousel({

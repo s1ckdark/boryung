@@ -7,39 +7,21 @@
 * - TweenMax: https://greensock.com
 *    - TweenMax.min.js
 * */
+  //
+  // hero 
+  //
 
-// function tweenSpaceship () {
-//   var $spaceship = $('#spaceship');
-//   var $lines = $spaceship.find('.spaceship-line');
-//   var timeline = new TimelineMax({paused: true});
-//   var timeline2 = new TimelineMax({repeat: -1, yoyo: true});
+function imageTween(ele) {
+  var $target = $(ele).children(), timeline = new TimelineMax({paused: true, repeat:-1, repeatDelay:1});
+  // init
+  $target.each(function(i){
+    var time = i + 1;
+    timeline.fromTo($target[i], .1, {autoAlpha:0,ease: Power1.easeInOut}, {autoAlpha:1,ease: Power1.easeInOut},time);
+  });
 
-//   // init
-//   $lines.each(function(){
-//     var length = $(this).data('length');
-//     $(this).css({
-//       'stroke-dasharray': length,
-//       'stroke-dashoffset': length,
-//     });
-//   });
-
-//   // set timeline
-//   timeline2.add(TweenMax.to($spaceship, 1.2, {y: 7, ease: Power1.easeInOut}));
-
-//   timeline.add(TweenMax.fromTo($spaceship, .7, {scale: .65, y: 25, autoAlpha: 1}, {scale: .75, y: 0}));
-//   timeline.add(TweenMax.to($lines, .5, {strokeDashoffset: 0}), .2);
-//   timeline.add('label1');
-//   timeline.add(timeline2);
-
-//   // bind event
-//   $spaceship.closest('a').hover(function(){
-//     timeline.play();
-//   }, function(){
-//     timeline.reverse('label1');
-//   });
-// }
-
-// $(function(){
-//   tweenSpaceship();
-// });
-
+  timeline.play();
+}
+imageTween('.bg_sceneTween');
+imageTween('.contribute_img.img1');
+imageTween('.contribute_img.img2');
+imageTween('.rnd-imgTweem');
