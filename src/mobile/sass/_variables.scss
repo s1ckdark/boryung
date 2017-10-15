@@ -1,17 +1,26 @@
-// Variables - Mobile
+// Variables - PC
 //
 //
 
 
 // Color
 //
+$black: rgb(40, 40, 40);
+$hero-bg-color: rgb(34, 34, 34);
+$blue-color: rgb(117, 168, 208);
+$br-gray-color: rgb(238, 238, 238);
+$gray-color: rgb(245, 245, 245);
+$lipstick: rgb(208, 36, 44);
+$text-muted : rgb(102, 102, 102);
+
+$text-color: $text-muted;
+$text-color-dark: $gray-color;
 
 $brand-text-color:    #b11533;
 $brand-bg-color:      $brand-text-color;
 
 $igarten-text-color:  #1c3f94;
 $igarten-bg-color:    $igarten-text-color;
-$igarten-bg-color2:   #1e5ad2; // sectioin top
 
 $april-text-color:    #a3bd0b;
 $april-bg-color:      $april-text-color;
@@ -20,43 +29,45 @@ $institute-text-color:    #b11533;
 $institute-bg-color:      $institute-text-color;
 $institute-header-color:  #282832;
 
+
+
+
 $text-color-silver:   #c8c8c8;
 $text-color-muted:    #969696;
-$text-color:          #646464;
-$text-color-dark:     #323232;
+
 $text-color-gray: 	  #f5f5f5;
 $text-color-dgray: 	  #282832;
+$text-color-char:  	  #4e4e4e;
 
 $body-bg:             #fff;
-$bg-gray1:            #f5f5f5;
+$bg-gray1:            $text-color-gray;
 $bg-gray2:            #e6e6e6;
 $bg-gray3:            #d2d2d2;
-
-$bg-navy1:            #23222f; // 루트번스타인 섹션 배경
-$bg-navy2:            #161323; // 루트번스타인 인터뷰 배경
-
+	
 $border-color-gray:   #dadada;
 
-$viewport : 100vw;
+
 // Typography
 //
 $font-family:         'Spoqa Han Sans', sans-serif;
-$font-family-eng:     'Roboto', sans-serif;
+$font-family-eng:     'Montserrat', sans-serif;
 $font-weight:         300;
-$line-height:         1.5;
+$line-height:         1.777;
 $line-height-small:   1.5;
 $letter-spacing:      -.05em;
-$font-size-base:      15px; // 디자인 기준 폰트 사이즈, rem 함수 기준
+// font-size 아래 이외 폰트는 변수를 사용하지 않고 직접 입력함. 66, 56, 45, 42, 34, 32, 30, 28, 26, 24, 20, 16 등등..
+$font-size-base:      16px; // 디자인 기준 폰트 사이즈, rem 함수 기준
 $font-sizes: (
-  xs: $font-size-base
+  xs: 16px,
+  xl: $font-size-base
 );
 
-$font-size-smaller:   rem(11px);
-$font-size-small:     rem(13px);
-$font-size-lead:      rem(18px);
+$font-size-smaller:   rem(12px);
+$font-size-small:     rem(14px);
+$font-size-lead:      rem(22px);
 
-$heading-1:           rem(21px);
-$heading-2:           rem(18px);
+$heading-1:           rem(38px);
+$heading-2:           rem(26px);
 $heading-font-weight: 400;
 $heading-text-color:  $text-color-dark;
 $heading-line-height: 1.26;
@@ -72,8 +83,8 @@ $breakpoints: (
   //sm:   425px,
   //md:   800px,
   //lg:  1024px,
-  //xl:  1100px,
-  //xxl: 1400px
+  xl:  1100px,
+  xxl: 1400px
 );
 
 

@@ -21,36 +21,21 @@ body {
   font-weight: $font-weight;
   line-height: $line-height;
   letter-spacing: $letter-spacing;
-  -ms-text-size-adjust: 100%; // 방향 전화에 따른 폰트 사이즈 변경 방지
-  -webkit-text-size-adjust: 100%;
 }
 
 .p-lead {
   margin-bottom: .4em;
   font-size: $font-size-lead;
-  font-weight: 400;
   @at-root .text + .p-lead {
     margin-top: .8em;
-  }
-  &.brand span {
-    border-bottom: 1px solid $brand-text-color;
-    color: $brand-text-color;
-  }
-  &.igarten span {
-    border-bottom: 1px solid $igarten-text-color;
-    color: $igarten-text-color;
-  }
-  &.april span {
-    border-bottom: 1px solid $april-text-color;
-    color: $april-text-color;
-  }
-  &.institute span {
-    border-bottom: 1px solid $institute-text-color;
-    color: $institute-text-color;
+    @include text16;
   }
 }
 %p-small {
   font-size: $font-size-small;
+}
+%p-smaller {
+  font-size: $font-size-smaller;
 }
 
 
@@ -63,14 +48,30 @@ h1, h2, h3, h4, h5, h6 {
   color: $heading-text-color;
 }
 .heading-1 {
+  line-height: 1.26;
+  color: rgb(17, 17, 17);
   font-size: $heading-1;
+  padding: rem(30px) 0 rem(20px);
+  &.dark {
+    color: $br-gray-color;
+  }
 }
 .heading-2 {
   font-size: $heading-2;
+  color: rgb(17, 17, 17);
+  &.dark {
+    color: $br-gray-color;
+  }
+  .lipstick {
+    color: $lipstick;
+  }
 }
-
-
-//
+.text {
+  &.dark {
+    color: rgb(255, 255, 255)
+  }
+}
+// 
 // Lists
 //
 //ol, ul {
@@ -89,33 +90,27 @@ h1, h2, h3, h4, h5, h6 {
 //
 blockquote {
   position: relative;
-  line-height: 1.46;
-  text-align: center;
-  .by {
-    margin-top: .5em;
-    font-size: $font-size-small;
-  }
   &:before,
   &:after {
     position: relative;
     display: inline-block;
-    width: rem(15px);
-    height: rem(10px);
+    width: rem(20px);
+    height: rem(15px);
     vertical-align: baseline;
     background-repeat: no-repeat;
     background-size: contain;
   }
   &:before {
     content: '';
-    top: 0;
-    margin-bottom: rem(5px);
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAACEklEQVRIiZXVS4hOcRjH8c97MsqlSJHUuGThsrBxWSALZcol1OwspmyEBVukR3NYYKVJpliIrFwWkmJjspgtsjAWipSiXBoZpjEui3NOnY4zr/f8Vs//+T+///ff/33O87b6+/u10WocwT5cxdFqQUTUGtM0nYE+HMzPWRARo9OmAM3GWRxCgttI292sAuvBZSzBB/RGxCjUAZfjHlZhFAdws0NQK7/YyTx1C4ci4lNRUwWuwCMswhtsx8tOYLkuyZ4QAmci4k+5oAychwc57D224VWnpDRNT5RhEXG6ri4pxVewNI/7GsI2ogA8xJmpalt5l+7A/Tx3F3s7hcku/RRr8AtrIuLF/4DD2JjnejFX1qnvMITPbYC780uSdfMNdGMcTyLiSRW4EiP5egyzKgf+xCCO43sN8B525fEEplf2n+NwRAyTPcee0mYVBl2yj/9xzf4M9JTWVRjZUw+ladpbALfWFNVpHQZqcnWQqrpwPU3TxQk2dAiE/VhWWq9v4J2JYwnmNDC1ZB1daFMDL+xM8kOaaEkpXtDQ2538v+YflTv1a0PvZIIvDU1PS/FwQ+/rBHcaGMZlo6vQAH438F9PZN/YWIeGUzm00Ddc7ND7EecS/MBm9VOkrEGcryYj4qhs2rTTJ6yNiMmiaZ5hPq7J5mbxHzYh+8224PBUp0XEbtnAH5GNQvkZH3EBCyPiLfwFg2mEAVKBINYAAAAASUVORK5CYII=');
+    top: -.5em;
+    margin-right: .3em;
+    background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAQAAABOkSfeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCAoOFxKypRH2AAABK0lEQVQoz13QPUhbURiA4edeU9HWinFSKxRFBJ0cdHGS66Igbg5SujuUgpuDKCjSwdlNcBbczCDKjRCHCIKzi0h/RLuUkHQQkgaHpCH3ftt5eOE75wSx5rzxxVdHdrRPhzXrTqKNTBPGnJi0ZT+RfXRs2q49GuGEgk7zrhLZqIKsxeiCRtgrJytKZW/lDFloZIT4ZtSBguRsm3Do/P8xiAf9ULfsvZ9u1Jve71GnZd2eXEf/yFiVUXEG7nxyC1Z0qciB+/znqBjEl+baFpZM+Y5TS23613RoJnGzPptgNqE9doK4LkjgbwOo6UhoOUxl9Ld+o316Q9UUlcBLSsuhYooa78+nNB/EAx50teCPD17Q55d3La0YDj0bd6OGqthIc2nJmKIqaq6MROVX6HNMw/CETJMAAAAASUVORK5CYII=');
   }
   &:after {
     content: '';
-    top: 0;
-    margin-top: rem(5px);
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAACGElEQVRIiZXUTYhOURzH8c9zDU2IGKKUKAsvC8ZWyEIslGSymlhRJs1YeSmOnhsipUwRUcrOgma8zIKyUDMJWcxiUMpbIcpLzUuZMhb3TG5Pd8xzf3V7/ufc/+9+z3PO//wr1WpVVAPOoRVNqGAUb3AU3QoUQgBpmq7HBazCNIzhB+6iLYQwDEn0LcYXHMS8CIOpWIEu3CkCRtglPEZzhInfmIs9+Jam6RqoVKvVBnyOoMnUiY6auUM4W4d3CPMTHK4TBgcwMzduRHWC3FrNQGeC3XUayI6gPTfeEqH1ameCpSUMsC4XN5f0zklk1VlGs3Lx9JJeCT6W9HzNxe9LescS3C9p6s3FPbL7Vq9+JTiD4RKmZ7n4La6X8D5N8EFWqaN1GH7jec1ce8HcRHo03mluYRP6J4CM6wFG8i9DCEPYKGsKRYseysXd+QrtxWqsjU+jrKBa0RJzrhYtO/bJjjRNq3HhizCIn/HPQF8I4VXRlXgRH1iJHTHux70iYA78PQeQpmlX7vUp/jXvIlVwHlPwB/vjb11K03Qztsfh7RBCz2TAY7LWBcfRVwK2DDfi8B32jr8rAlYiII3jyzhdArYcD7EQn7A1bnUhsAk3c7CTaCsB24UnWIKX2BBCeJ3PyRfNNlzDAlnL2ie7BvWAmmQ70SI754s4EkIYrM0dB86WVdcATsj2f6Q2+T8KsvO+gs4QwsBEiX8Bh/eG0sSgAXsAAAAASUVORK5CYII=');
+    top: -.3em;
+    margin-left: .3em;
+    background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAQAAABOkSfeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCAoOGBtM4bWdAAABKklEQVQoz13PO0scYRQG4Ge/XWWJuEjEQpII/oSAgiKxmKCVldbWlpYGhNj4B5LCwk5IY6PgCtqMnQFJwMJCBTUsmigp4rrGCxovxRqZmbc7Dy+Hc3IxrRb1Krj13bAT9ZQs6Nfgn00j0WEuLjnS7H8uvFZF0U8vn/VaZzCXqNHkC5hN1Ciaz8VnSpK58gK/taX0NmRqFEFLRhuCWobuwZ+MPgSrGToD5YxeBh/9TdFXMK2a0m/BrkH7T+M5lkHFezsJLediyOvR7sqSG6+e7wu6vXFuSdBRAHfWMSv4nHjj3oYNnzSaiY7rG2HQqh1dLlO39VtT8TaqhScYsOiXoUztnbJTQ1GNgIIpK7b0OUiU8j6I/dAbbdcPZtqocX0qqW2Txkzojvbq4yP47lIy1zLjPwAAAABJRU5ErkJggg==');
   }
 }
 
@@ -137,34 +132,4 @@ a {
 //
 %eng {
   font-family: $font-family-eng;
-  font-weight: 700;
-}
-
-.colored-brand {
-  color: $brand-text-color !important;
-  &.bordered span {
-    display: inline-block;
-    border-bottom: 1px solid $brand-text-color;
-  }
-}
-.colored-igarten {
-  color: $igarten-text-color !important;
-  &.bordered span {
-    display: inline-block;
-    border-bottom: 1px solid $igarten-text-color;
-  }
-}
-.colored-april {
-  color: $april-text-color !important;
-  &.bordered span {
-    display: inline-block;
-    border-bottom: 1px solid $april-text-color;
-  }
-}
-.colored-institute {
-  color: $institute-text-color !important;
-  &.bordered span {
-    display: inline-block;
-    border-bottom: 1px solid $institute-text-color;
-  }
 }

@@ -1,4 +1,4 @@
-// Styles - Mobile
+// Styles - PC
 //
 //
 
@@ -10,46 +10,27 @@
 
 @import "typography";
 @import "buttons";
+@import "grid";
 @import "slider";
 @import "video";
 @import "utilities";
 
-// 프로젝트 메인 컨텐츠 스타일
 @import 'layout';
 @import 'main';
 
-// 청담러닝
-@import 'brand-top';
-@import 'brand-intro';
-@import 'brand-articles';
-@import 'brand-robert';
-@import 'brand-interview';
-@import 'brand-solution';
-@import 'brand-qna';
 
-// 섹션 공통
+@import 'top';
+@import 'background';
+@import 'interview';
+@import 'injoongang';
+@import 'contribute';
+@import 'era';
+@import 'history';
+@import 'articles';
+@import 'market';
+@import 'kanarb-interview';
+@import 'kanarb';
+
+
 @import 'section';
-@import 'section-nav';
-@import 'section-top';
-@import 'section-more';
-
-// 아이가르텐 섹션
-@import 'igarten-talk';
-@import 'igarten-iplay';
-@import 'igarten-art';
-@import 'igarten-quiz';
-
-// 에이프릴 섹션
-@import 'april-ctp';
-@import 'april-sample';
-@import 'april-practice';
-@import 'april-books';
-@import 'april-illustrations';
-
-// 어학원 섹션
-@import 'institute-common'; 
-@import 'institute-remark'; 
-@import 'institute-overview'; 
-@import 'institute-curriculum'; 
-@import 'institute-interview'; 
-@import 'institute-qa'; 
+@import 'more';
