@@ -12,11 +12,12 @@
   //
 
 function imageTween(ele) {
-  var $target = $(ele).children(), timeline = new TimelineMax({paused: true, repeat:-1, repeatDelay:1});
+  var $target = $(ele).children(), timeline = new TimelineMax({delay:-1,paused: true, repeat:-1, repeatDelay:2});
   // init
   $target.each(function(i){
-    var time = i + 1;
-    timeline.fromTo($target[i], .1, {autoAlpha:0,ease: Power1.easeInOut}, {autoAlpha:1,ease: Power1.easeInOut},time);
+    var time = i + 1, imgTween = new TimelineMax({yoyo:true});
+    imgTween.fromTo($target[i], 1, {zIndex:1,ease:Power4.easeIn}, {zIndex:2,ease:Power4.easeOut}, time);
+    timeline.add(imgTween);
   });
 
   timeline.play();
@@ -25,3 +26,10 @@ imageTween('.bg_sceneTween');
 imageTween('.contribute_img.img1');
 imageTween('.contribute_img.img2');
 imageTween('.rnd-imgTweem');
+
+// function drawsvg(ele) {
+//   var $target =$(ele);
+
+// }
+
+TweenMax.staggerFrom("#line path", 2, {drawSVG:"50% 50%",transformOrigin:"0% 100%"}, 0.1);

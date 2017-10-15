@@ -10,8 +10,7 @@
 	.listofcircle {
 		@extend %clearfix;
 		.grid {
-			float:left;
-			width: calc(100% / 6);
+			width: 100vw;
 			.round-bubble {
 				@extend %eng;
 				width: rem(150px);

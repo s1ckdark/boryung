@@ -7,7 +7,7 @@
   position: relative;
   background-color:$hero-bg-color;
   width:100vw;
-  height:calc(100vw * 9 / 16);
+  height:100vh;
   @extend %full-screen;
   > .wrapper {
     z-index: 1;
@@ -43,9 +43,8 @@
       &.title {
         width: rem(503px);
         height: rem(324px);
-        background: url('../img/hero/hero_title.png') 0 0/cover no-repeat;
-        left: calc(50% - 250px);
-        top: calc(50% - 162px);
+        background: url('../img/hero/hero_title.png') 50% 20%/60vw no-repeat;
+        left: calc(50% - 30vwx);
       }
       &.kanarb {
         width: rem(497px);
@@ -66,10 +65,10 @@
     .text {
       left: 0px;
       font-weight: 400;
-      font-size: rem(18px);
+      font-size: rem(15px);
       line-height: rem(32px);
-      text-align: left;
-      color: $text-color;
+      text-align: center;
+      color: $br-gray-color;
     }
   }
 

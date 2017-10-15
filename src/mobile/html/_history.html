@@ -3,7 +3,7 @@
     <header class="section-header">
       <h2 class="heading-1">숫자로 보는 보령 60년</h2>
     </header>
-    <div class="listofcircle"></div>
+    <div class="listofcircle owl-carousel article-slider"></div>
   </div>
 </section>
   
@@ -44,7 +44,7 @@
       };
       for (var key in numofboryung.history) {
         if (numofboryung.history.hasOwnProperty(key)){
-          let item = "<div class='grid'><div class='round-bubble'>"+numofboryung.history[key].num+"<span class='unit'>"+numofboryung.history[key].unit+"</span></div><div class='desc'>"+numofboryung.history[key].desc+"</div></div>";
+          let item = "<div class='item grid'><div class='round-bubble'>"+numofboryung.history[key].num+"<span class='unit'>"+numofboryung.history[key].unit+"</span></div><div class='desc'>"+numofboryung.history[key].desc+"</div></div>";
           $('.listofcircle').append(item);
         }
       }

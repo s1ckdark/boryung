@@ -30,13 +30,16 @@ $(function(){
 var discoLen = $('#era > .wrapper > .container').height() - 155;
 $('#era > .wrapper > .container > .col').eq(1).css({'height':discoLen});
 // era boldMarketing
+TweenMax.set('.boldMarketing',{autoAlpha:0})
 $('.boldbtn').click(function(){
-  var target = $(this).siblings('.boldMarketing');console.log(target);
-  TweenMax.to(target[0], 1, {display:'block'})
+  var target = $(this).siblings('.boldMarketing');
+  TweenMax.to(target[0], 1, {autoAlpha:1,ease:Power1.easeIn})
 })
 $('.close').click(function(){
   var target = $(this).parent();
-  TweenMax.to(target[0],1, {display:'none'})
+  TweenMax.fromTo(this,1,{y:'+5'}, {y:'-5',onComplete:function(){
+  TweenMax.to(target[0],1, {autoAlpha:0})    
+  }})
 })
 
 // kanarb_interview scrolling bg img

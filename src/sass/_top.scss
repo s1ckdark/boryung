@@ -35,6 +35,7 @@
       &.orangedot {
         opacity: 0;
         background: url('../img/hero/map_orangedot.png') 50% 50%/cover no-repeat;
+        z-index:9;
       }
     }
     &--obj {
@@ -46,6 +47,7 @@
         background: url('../img/hero/hero_title.png') 0 0/cover no-repeat;
         left: calc(50% - 250px);
         top: calc(50% - 162px);
+        z-index:30;
       }
       &.kanarb {
         width: rem(497px);
@@ -53,6 +55,9 @@
         background: url('../img/hero/kanarb.png') 0 0/cover no-repeat;
         left: calc(50% - 249px);
         top: calc(50% - 211px);
+        z-index:10;
+        opacity:0;
+        visibility:hidden;
       }
     }
   }

@@ -171,14 +171,13 @@ var controller = new ScrollMagic.Controller();
 
 //twinkle arrow, hero tween on hero
   var arrowTween = new TimelineMax({paused:true});
-  arrowTween.staggerTo($twinklebtn, 1, {opacity:0.3,ease:SteppedEase.config(1),repeat:-1,repeatDelay:0.5,delay:-1},0.5);
+  arrowTween.staggerTo($twinklebtn, 1, {opacity:0.3,ease:SteppedEase.config(1),y:'+20',repeat:-1,delay:-1},0.5);
 
   var $hero = $('.hero').children();
-  var heroAni = new TimelineMax({paused:true, repeat:-1});
-  heroAni.fromTo($hero.eq(1), 1, {autoAlpha:1,sclae:1,y:'-100'}, {autoAlpha:0,scale:0,y:'0'},2)
-         .fromTo($hero.eq(0), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1}, 3)
-         .fromTo($hero.eq(2), 1, {autoAlpha:1,sclae:1}, {opacity:.6,scale:1,ease: Expo.easeOut}, 2)
-         .fromTo($hero.eq(3), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1,ease: Expo.easeOut}, 2)
+  var heroAni = new TimelineMax({paused:true, repeat:-1,repeatDelay:5});
+  heroAni.to($hero.eq(1),1, {autoAlpha:1,scale:1,ease: Back.easeInOut},3)
+         .fromTo($hero.eq(2), 1, {autoAlpha:1,sclae:1}, {opacity:0,scale:0,ease: Back.easeOut,delay:2}, 1)
+         .fromTo($hero.eq(3), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1,ease: Back.easeInOut,zIndex:0}, 2)
 
  
   new ScrollMagic.Scene(
@@ -199,9 +198,61 @@ var controller = new ScrollMagic.Controller();
     .addIndicators()
     .addTo(controller);
 
+
+var bar3d = new TimelineMax({pause:true});
+bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
+     .fromTo('.bar3d .ship.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.bar3d .chip.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1.5)
+     .fromTo('.bar3d .vehicle.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},2)
+     .fromTo('.bar3d .medicine.circle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},2.5)
+
+ 
+  new ScrollMagic.Scene(
+    {
+      triggerElement: $('.market')[0],
+      duration: $('.market').height(),
+    })
+     .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+        bar3d.play();
+        } else {
+        bar3d.pause();
+      }
+
+    })
+    .addIndicators()
+    .addTo(controller);
+
+var chartLine = new TimelineMax({paused:true});
+chartLine.staggerFrom("#line path", 2, {drawSVG:"50% 50%",onComplete:function(){chartBubble.play()}}, 0.1);
+
+var chartBubble = new TimelineMax({pause:true});
+chartBubble.fromTo('.retangle_bubble.s2011',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
+     .fromTo('.retangle_bubble.s2012',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.retangle_bubble.s2013',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.retangle_bubble.s2014',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.retangle_bubble.s2015',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.retangle_bubble.s2016',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.kanarbSales .circle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1);
+
+
+ 
+  new ScrollMagic.Scene(
+    {
+      triggerElement: $('.bg_medicine'),
+      duration: $('.bg_medicine').height(),
+    })
+     .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+        chartLine.play();
+        } else {
+        chartLine.pause();
+      }
+    })
+    .addIndicators()
+    .addTo(controller);
+
   scrollToSection();
-
-
 // Section Nav 링크 스크롤링
 function scrollToSection () {
   $('.top-indicator .link').on('click', function (e) {

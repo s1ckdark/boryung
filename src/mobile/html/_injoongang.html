@@ -1,19 +1,15 @@
 <section id="injoongang" class="ja_section_wrap" ja-section-title="중앙일보 속 김승호 회장 이야기">
   <div class="wrapper">
-    <div class="container col2 type-b">
-      <div class="col">
-            <header>
-              <h4 class="title">중앙일보 속 김승호 회장 이야기</h4>
-            </header>
-      </div>
-      <div class="col">
+        <header>
+          <h4 class="title">중앙일보 속<br> 김승호 회장 이야기</h4>
+        </header>
         <p class="text">
           김승호 회장은 2011년 2월부터 20차례에 걸쳐 중앙일보에 ‘멈추지 않는 자전거’라는 제목으로 경영 회고록을 연재했다. 보령의 성장과정과 김 회장의 경영 철학, 사회공헌 이야기가 담백하게 담겨 있다. 
         </p>
       </div>
     </div>
     <div class="injoonang">
-        <div class="article_injoonang"></div>
+        <div class="article_injoonang article-slider owl-carousel"></div>
         <div class="article_arrow"></div>
     </div>
   </div>
@@ -146,7 +142,7 @@
       };
       for (var key in article.articles) {
         if (article.articles.hasOwnProperty(key)){
-        let item = "<div class='grid bg_article"+article.articles[key].num+"'><div class='overlay'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='"+article.articles[key].url+"' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+        let item = "<div class='item grid bg_article"+article.articles[key].num+"'><div class='overlay'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='"+article.articles[key].url+"' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
         let sheet = $("#bg_article").get(0).sheet;
         let styles = '.bg_article'+article.articles[key].num+' {';
         styles += 'background-image: url('+article.articles[key].img+')';
