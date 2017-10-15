@@ -10,7 +10,7 @@ $(function(){
 
   // brand article slider
   //
-  var $articleSlider = $('#article-slider').owlCarousel({
+  var $articleSlider = $('.article-slider').owlCarousel({
     loop: false,
     nav: false,
     dots: false,

@@ -56,6 +56,7 @@ section {
   .text16 {
     margin-top: rem(15px);
   }
+}
   .overline {
     position:relative;
     &:after {
@@ -67,5 +68,7 @@ section {
       height:2px;
       background-color: $lipstick;
     }
+    &.dark {
+      color:rgb(17,17,17);
+    }
   }
-}

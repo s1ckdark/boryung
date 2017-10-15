@@ -94,60 +94,60 @@ var controller = new ScrollMagic.Controller();
   }); //겔포스 수사반장 1편
   
 
-  // scroll auto play
-  new ScrollMagic.Scene(
-    {
-      triggerElement: $video1[0],
-      duration: $video1.height(),
-    })
-    .on('enter leave', function(event){
-      var $video = $video1;
-      var video = $video.find('video')[0];
-      var timer;
-      var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
-      if (event.type === 'enter') {
-        timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
-          if (!isPlaying) {
-            $video.find('.play').click(); // play
-          }
-        }, 600);
-      } else {
-        if (timer) {
-          clearTimeout(timer);
-        }
-        if (isPlaying) {
-          video.pause(); // pause
-        }
-      }
-    })
-    .addTo(controller);
-  new ScrollMagic.Scene(
-    {
-      triggerElement: $video2[0],
-      duration: $video2.height(),
-    })
-    .on('enter leave', function(event){
-      var $video = $video2;
-      var video = $video.find('video')[0];
-      var timer;
-      if (event.type === 'enter') {
-        timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
-          var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+  // // scroll auto play
+  // new ScrollMagic.Scene(
+  //   {
+  //     triggerElement: $video1[0],
+  //     duration: $video1.height(),
+  //   })
+  //   .on('enter leave', function(event){
+  //     var $video = $video1;
+  //     var video = $video.find('video')[0];
+  //     var timer;
+  //     var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+  //     if (event.type === 'enter') {
+  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
+  //         if (!isPlaying) {
+  //           $video.find('.play').click(); // play
+  //         }
+  //       }, 600);
+  //     } else {
+  //       if (timer) {
+  //         clearTimeout(timer);
+  //       }
+  //       if (isPlaying) {
+  //         video.pause(); // pause
+  //       }
+  //     }
+  //   })
+  //   .addTo(controller);
+  // new ScrollMagic.Scene(
+  //   {
+  //     triggerElement: $video2[0],
+  //     duration: $video2.height(),
+  //   })
+  //   .on('enter leave', function(event){
+  //     var $video = $video2;
+  //     var video = $video.find('video')[0];
+  //     var timer;
+  //     if (event.type === 'enter') {
+  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
+  //         var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
 
-          if (!isPlaying) {
-            $video.find('.play').click(); // play
-          }
-        }, 300);
-      } else {
-        if (timer) {
-          clearTimeout(timer);
-        }
-        if (video.played) {
-          video.pause(); // pause
-        }
-      }
-    })
-    .addTo(controller);
+  //         if (!isPlaying) {
+  //           $video.find('.play').click(); // play
+  //         }
+  //       }, 300);
+  //     } else {
+  //       if (timer) {
+  //         clearTimeout(timer);
+  //       }
+  //       if (video.played) {
+  //         video.pause(); // pause
+  //       }
+  //     }
+  //   })
+  //   .addTo(controller);
 
 //twinkle arrow on hero
   var arrowTween = new TimelineMax({paused:true});

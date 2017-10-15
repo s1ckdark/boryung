@@ -5,65 +5,121 @@
 	background-color: rgb(51, 51, 51);
 	width: 100%;
 	height:auto;
+	.overline {
+		@extend %eng;
+		text-transform: uppercase;
+		position:absolute;
+		top:rem(30px);
+		left:rem(30px);
+
+	}
 	.section-header {
 		padding-top: rem(120px);
-		.overline {
-			@extend %eng;
-			text-transform: uppercase;
-		}
 		.text16 {
 			width: rem(762px);
 			height: rem(120px);
 			color: $br-gray-color;
 		}
 	}
-
-	.container-flex.col2 {
-		>.col:nth-child(1) {
+	.slider-header {
+		margin:rem(100px) 0 rem(15px);
+	}
+	.container.col2 {
+		.col:nth-child(1) {
 			width: rem(900px);
 			position: relative;
 			article {
 				background-color: rgb(255, 255, 255);
 				margin: rem(60px) 0;
 				position: relative;
+				.section-header {
+					.overline {
+						color: rgb(17, 17, 17);
+					}	
+				}
+				.boldbtn {
+					position:absolute;
+					bottom:rem(60px);
+					left:rem(30px);
+					background-color: rgb(34, 34, 34);
+					height:rem(50px);
+					color: rgb(255,255,255);
+				}
 				.boldMarketing {
 					display:none;
 				}
-			    .container.col2 {
-					&.col:nth-child(1) {
-						width: rem(320px);
-					}
-					&.col:nth-child(2) {
-						width:rem(470px);
-						height: rem(550px);
-					}
+				.img {
+					background-position: 50% 50%;
+					background-size:contain;
+					width:rem(470px);
+					height:rem(538px);
+					background-repeat: no-repeat;
 				}
 			}
 			article.article_1962 {
-
+				height: rem(600px);
 			}
 			article.article_1967 {
 				height: rem(600px);
+				.img1967-1 {
+					background-image:url('../img/era/1967-1.jpg');
+				}
+				.img1967-2 {
+					background-image:url('../img/era/1967-2.jpg');
+				}
 			}
 			article.article_1970 {
 				height: rem(600px);
 			}
 			article.article_2b {
 				height: rem(260px);
+			  	.container {
+	    		&.col2 {
+					.col:nth-child(1) {
+						width:rem(500px);
+						height: rem(200px);
+						margin:rem(30px) rem(40px);
+						.slider-header {
+							margin:rem(10px) 0 rem(15px);
+						}
+					}
+					.col:nth-child(2) {
+						width:rem(320px);
+						height: rem(260px);
+						// margin:rem(30px);
+						background: $lipstick;
+					}
+				}
+		}
 			}
 			article.article_1975 {
 				height: rem(600px);
+				.img1975-1 {
+					background-image:url('../img/era/1975-1.jpg');
+				}
+				.img1975-2 {
+					background-image:url('../img/era/1975-2.jpg');
+				}
 			}
-			article.article_1980 {
+			article.article_1980era {
+				height: rem(600px);
+			}
+			article.article_1990era {
 				height: rem(600px);
 			}
 			article.article_1990 {
 				height: rem(600px);
+				.img1990-1 {
+					background-image:url('../img/era/1990-1.png');
+				}
+				.img1990-2 {
+					background-image:url('../img/era/1990-2.jpg');
+				}
 			}
 	
 
 		}
-		&>.col:nth-child(2) {
+		&.col:nth-child(2) {
 			width: rem(180px);
 			height:100%;
 			.discography {
@@ -73,6 +129,26 @@
 				margin:0 auto;
 			}
 
+		}
+	}
+	.owl-item {
+		width:rem(900px) !important;
+	}
+    .item
+    {
+    	&.container {
+    		&.col2 {
+				.col:nth-child(1) {
+					width:rem(320px);
+					height:rem(538px);
+					margin:rem(30px) rem(20px) rem(30px) rem(30px);
+				}
+				.col:nth-child(2) {
+					width:rem(470px);
+					height:rem(538px);
+					margin:rem(30px);
+				}
+			}
 		}
 	}
 }
