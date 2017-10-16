@@ -2,7 +2,6 @@
 // brand-era
 //
 #era {
-	background-color: rgb(51, 51, 51);
 	width: 100%;
 	height:auto;
 	.overline {
@@ -13,15 +12,20 @@
 	.section-header {
 		padding-top: rem(120px);
 		.text16 {
-			width: rem(762px);
-			height: rem(120px);
-			color: $br-gray-color;
+			width: 80vw;
+			color: rgb(102, 102, 102);
 		}
 	}
 	.slider-header {
 		margin:rem(100px) 0 rem(15px);
 	}
-	.container.col2 {
+	.container {
+		color: $br-gray-color;
+		background-color: rgb(51, 51, 51);
+		.disco_heading {
+			padding-top:rem(50px);
+			text-align:center;
+		}
 		.col:nth-child(1) {
 			width: rem(900px);
 			position: relative;
@@ -130,16 +134,11 @@
 				}
 			}
 		}
-		.col:nth-child(2) {
-			width: rem(180px);
-			height:100%;
-			position:relative;
 			.disco_heading {
-				width:rem(170px);
+				width:100%;
 				color: $lipstick;
 				font-size:rem(18px);
-				text-align:right;
-				margin: rem(65px) 0 0;
+				margin:0 auto;
 			}
 			.disco {
 				position:absolute;
@@ -148,26 +147,29 @@
 				background-color: rgb(100, 100, 100);
 				right:0px;
 			}
-			.historytext {
-				width:rem(160px);
-				margin-right:rem(10px);
+			article.box {
+				width:50vw;
+				height: rem(50px);
+				margin:0 auto rem(100px);
+				padding:rem(30px);
 				div {
 					display:block;
 					position:relative;
+					border: solid 1px rgb(136, 136, 136);
 					&:after {
-						content:'';
-						position:absolute;
-						width:rem(12px);
-						height:rem(12px);
-						border-radius:100%;
-						right:rem(-27px);
-					    top: rem(5px);
-					    background-color: rgb(51, 51, 51);
+						// content:'';
+						// position:absolute;
+						// width:rem(12px);
+						// height:rem(12px);
+						// border-radius:100%;
+						// right:rem(-27px);
+					 //    top: rem(5px);
+					 //    background-color: rgb(51, 51, 51);
 					}
 					p {
 						margin-bottom:rem(10px);
 						font-size:rem(14px);
-						text-align:right;
+						text-align:center;
 						color: rgb(245,245,245);
 						line-height: rem(20px);
 						.num {
@@ -176,94 +178,58 @@
 						}
 					}
 					&.h1962 {
-						&:after {
-  							border:2px solid rgb(245,245,245);  
-						}
+			
 					}
 					&.h1967 {
-						margin-top:rem(240px);
-						&:after {
-  							border:2px solid $lipstick;  
-						}
+						border-radius:50%;
+						background-color: $lipstick;
+						width:30vw;
+						height:30vw;
+						margin:0 auto;
 					}
 					&.h1970 {
-						margin-top:rem(200px);
-						&:after {
-  							border:2px solid rgb(245,245,245);  
-						}
+						
 					}
 					&.h2b {
+						border-radius:50%;
+						background-color: $lipstick;
+						width:30vw;
+						height:30vw;
+						margin:0 auto;
 						p {
 							@extend %eng;
 							font-size:rem(24px);
-							color:$lipstick;
-							margin-right:rem(10px);
-						}
-						margin-top:rem(115px);
-						&:before {
-							content:'';
-							position:absolute;
-							width:rem(30px);
-							height:rem(30px);
-							border-radius:100%;
-							right:rem(-34px);
-						    top: rem(-2px);
-						    background-color: rgb(51, 51, 51);
-						    border:2px solid $lipstick; 
-						}
-						&:after {
-  							border:4px solid $lipstick;  
 						}
 					}
 					&.h1975 {
-						margin-top:rem(220px);
-						&:after {
-  							border:2px solid $lipstick;  
-						}
+						border-radius:50%;
+						background-color: $lipstick;
+						width:30vw;
+						height:30vw;
+						margin:0 auto;
+				
 					}
 					&.h1980era {
-						margin-top:rem(240px);
-						&:after {
-  							border:2px solid rgb(245,245,245);  
-						}
+				
 					}
 					&.h1990era {
-						margin-top:rem(220px);
-						&:after {
-  							border:2px solid rgb(245,245,245);  
-						}
+				
 					}
 					&.h1990 {
-						margin-top:rem(100px);
-						&:after {
-  							border:2px solid $lipstick  
-						}
+					
 					}
 
 				}
 			}
-		}
+		
 	}
 
 	.owl-item {
-		width:rem(900px) !important;
+		width:100%;
 	}
     .item
     {
-    	&.container {
-    		&.col2 {
-				.col:nth-child(1) {
-					width:rem(320px);
-					height:rem(538px);
-					margin:rem(30px) rem(20px) rem(30px) rem(30px);
-				}
-				.col:nth-child(2) {
-					width:rem(470px);
-					height:rem(538px);
-					margin:rem(30px);
-				}
-			}
-		}
+
 	}
 	.boldMarketing {
 		position:absolute;

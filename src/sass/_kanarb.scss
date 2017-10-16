@@ -57,11 +57,14 @@
 						}
 					.desc {
 						margin:rem(20px) rem(10px) 0;
+						border-left: solid 1px rgb(51, 51, 51);
 						span {
+							padding:0 0 0 rem(10px);
 							display: block;
 							font-size: rem(14px);
 							text-align: left;
 							color: rgb(17, 17, 17);
+							b {padding-right:rem(5px);}
 						}
 					}
 					&:first-child {
@@ -174,10 +177,10 @@
 					    height:rem(334px);
 					    margin:0 auto;
 					    display:block;
-					    top:rem(188px);
-					    left:rem(288px);
+					    top:rem(20px);
+					    left:rem(60px);
 					    // position:relative;
-					    -webkit-transform:translate3d(-50%,-50%,0);   
+					    // -webkit-transform:translate3d(-50%,-50%,0);   
 					}
 					.retangle_bubble {
 						position:absolute;
@@ -190,9 +193,14 @@
 						color:rgb(255,255,255);
 						&:after {
 							position:absolute;
+							bottom:rem(-11px);
+							left:50%;
 							content:'';
 							width: 21px;
 							height: 12px;
+							background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAdCAQAAADmpk8KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhChAKDwZoCRGVAAAAtklEQVQoz52PyxnCIBAGh2gVnkwNNJDObCmpQFLA1iCevKYDPRDDIws+uLD83zC7a+zAQOu4I3BpIwbss0WI6YCxQYzQAXMDmQPy2SIeXwG8+GCpe0Z4I7VpZgATan1xMdGit1qzLlVqbX6xKIt78bll79neESmn2d4mZvniYvYWcHqdIpNef2FJZgF747wu3OuW+Df1FchU3H9ZZMEBTpa6JbSY8qhEXNlGOfZaJocyON0fPk9euvU4uQ863+kAAAAASUVORK5CYII=');
+							background-repeat: no-repeat;
+							background-size:contain;
 						}
 						&.s2011 {
 							left:rem(35px);
@@ -218,10 +226,6 @@
 							bottom:rem(300px);
 							left:rem(400px);
 						}
-						&.s2017 {
-							bottom:rem(0px);
-							left:rem(30px);
-						}
 					}
 					.circle_bubble {
 						position:absolute;
@@ -234,16 +238,18 @@
 						text-align:center;
 						color:rgb(255,255,255);
 						right:0px;
-						top:rem(-100px);
+						top:rem(-80px);
 						&:after {
 							position:absolute;
-							bottom:rem(-12px);
+							bottom:rem(-11px);
 							left:50%;
-							margin-top:rem(-9px);
 							content:'';
-							width:rem(21px);
-							height:rem(12px);
-						}
+							width:rem(19px);
+							height:rem(11px);
+							background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAZBAMAAAAcd2n/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAADQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCz///8X4oquAAAADnRSTlMAr2Agz4Aw359Qj+8QcN6Fei0AAAABYktHRA8YugDZAAAAB3RJTUUH4QoQCgsRj7ZRVgAAAIVJREFUCNctzssNgmAQhdGLgsFoDBUQKyBUQKzAWIIVGCogVECowBKsxQoIvmFza3Ae/13Md5YD+kbkjgyFY4/KUSK2voHE8AFWhi+ARlELOkUruCp6wU4hRSR9KBaCp2IpeClwJA+GG3kyXMizYcOfFSknx5qzYysP+/IsYLgHVGVAqucPQj5YkyxUYpIAAAAASUVORK5CYII=');
+							background-repeat: no-repeat;
+							background-size:contain;
+						}	
 					}
 				}
 			}
@@ -262,7 +268,7 @@
 				background-color: rgb(255, 255, 255);
 				width:rem(400px);
 				padding:rem(30px) rem(45px);
-				margin: rem(115px) auto;
+				margin: rem(50px) auto;
 				.kanarbMedicine {
 					width: rem(300px);
 					height: rem(257px);
@@ -297,6 +303,11 @@
 		    color: rgb(255,255,255);
 		    text-align:center;
 		    background-color: transparent !important;
+		    &.play {
+		    	&:after {
+		    		content:none;
+		    	}
+		    }
 			i {
 			    width: rem(130px);
 			    height: rem(130px);

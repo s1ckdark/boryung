@@ -8,7 +8,8 @@
     	text-align:center;
     }
 	.listofcircle {
-		@extend %clearfix;
+		@extend %clearfix; 
+		position:relative;
 		.grid {
 			width: 100vw;
 			.round-bubble {

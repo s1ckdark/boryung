@@ -14,6 +14,8 @@
 		}
 	}
 	.injoonang {
+			position:relative;
+			height:rem(480px);
 		.article_injoonang {
 			@extend %clearfix;
 			display:flex;
@@ -21,10 +23,9 @@
 			height:rem(480px);
 			overflow:hidden;
 			.grid {
-				float:left;
 				position:relative;
-				width: rem(346px);
-				height: rem(223px);
+				width: 80vw;
+				height: calc(80vw * 320 / 500);
 				display:block;
 				text-align: center;
 				margin-bottom:20px;

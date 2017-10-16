@@ -42,19 +42,79 @@
 // 구조1: subtitle + heading-1
 // 구조2: heading-1 + text
 .section-header {
-  margin-bottom: rem($vertical-margin-3);
-  text-align: center;
+  text-align:center;
+  margin-bottom: rem(20px);
   .sub-title {
-    margin-bottom: rem(10px);
-    font-size: 1rem;
+    margin-bottom: rem(15px);
+    font-size: rem(16px);
     color: $text-color-muted;
     line-height: 1;
   }
-  .heading-1 {
-    line-height: $heading-line-height;
-  }
-  .text {
+  .text16 {
     margin-top: rem(15px);
-    text-align: center;
+  }
+}
+  .overline {
+    position:relative;
+    z-index:30;
+    text-align:center;
+    font-size:rem(13px);
+    line-height:rem(14px);
+    &:after {
+      content:'';
+      position:absolute;
+      top:-10px;
+      margin:0 auto;
+      display:block;
+      width:rem(20px);
+      height:2px;
+      background-color: $lipstick;
+      left:50%;
+      margin-left:rem(-10px);
+    }
+    &.dark {
+      color:rgb(17,17,17);
+    }
+  }
+
+.toggle_block {
+  width: 100vw;
+  height: calc(100vw * 80 / 640);
+  background-color: rgb(238, 238, 238);
+  display:block;
+  .toggle_text {
+    text-align:center;
+    color: $lipstick;
+    font-size:rem(13px);
+  }
+  p {
+    display:none;
+  }
+  &.active {
+    background-color: transparent;
+    height:100% !important;
+    p {
+      display:block !important;
+    }
+    .toggle_text {display:none;}
+  }
+}
+
+.toggle_layer_block {
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(238, 238, 238);
+  display:none! important;
+  .toggle_text {
+    text-align:center;
+    color: $lipstick;
+    font-size:rem(13px);
+  }
+  &.active {
+    height:100vh !important;
+    display:block;
+    .toggle_text {display:none;}
   }
 }

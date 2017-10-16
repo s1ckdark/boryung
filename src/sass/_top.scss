@@ -14,30 +14,30 @@
     position: relative;
     height: 100%;
   }
-
   .hero {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    &--map {
-      position:absolute;
-      left:calc(50% - 590.5px);
-      top:calc(50% - 354.5px);
-      background-size: contain !important;
-      width:1181px;
-      height:709px;
-      display:block;
-      &.greydot {
-        z-index: 1;
-        background: url('../img/hero/map_greydot.png') 50% 50%/cover no-repeat;
+      // bottom: rem(50px);
+      // position:absolute;
+      #canvas {
+        left:calc(50% - 600px) !important;
+        top:calc(50% - 360px) !important;;
+        position:absolute;
       }
-      &.orangedot {
-        opacity: 0;
-        background: url('../img/hero/map_orangedot.png') 50% 50%/cover no-repeat;
-        z-index:9;
-      }
-    }
+
+      // &--map {
+      // background-size: contain !important;
+      // width:1181px;
+      // height:709px;
+      // display:block;
+      // &.greydot {
+      //   z-index: 1;
+      //   background: url('../img/hero/map_greydot.png') 50% 50%/cover no-repeat;
+      // }
+      // &.orangedot {
+      //   opacity: 0;
+      //   background: url('../img/hero/map_orangedot.png') 50% 50%/cover no-repeat;
+      //   z-index:9;
+      // }
+    // }
     &--obj {
       position:absolute;
       background-size: cover;
@@ -60,7 +60,7 @@
         visibility:hidden;
       }
     }
-  }
+}
 
   .top-intro  {
     position: absolute;
@@ -74,7 +74,7 @@
       font-size: rem(18px);
       line-height: rem(32px);
       text-align: left;
-      color: $text-color;
+      color: $br-gray-color;
     }
   }
 

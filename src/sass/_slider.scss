@@ -44,18 +44,56 @@
   }
 }
 
-.owl-dots {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0;
-  .owl-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 7px;
-    border-radius: 50%;
-    background-color: $text-color-silver;
-    cursor: pointer;
+  .owl-nav {position:absolute;top:50%;margin-top:rem(-20px);left:0px;width:rem(920px);
+    & > * {background:none;}
+    .owl-prev {
+      position:absolute;
+      width:rem(21px);
+      height:rem(40px);
+      left:-40px;margin:0;
+      background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAoCAQAAAC7+nluAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8VGDsq4nqWAAAAYElEQVQ4y2NgIAL8n//////zxCr8//8/0Qr/7ydW4fn/AqMKMRX2E6swYeAVvv+vQKxCg8GqkIGBaIUMTIQUkOeAIa6YUHKhsWJiMwwDAwnZcFQxTsWECnhkxUQohVVGAGdsgtkryZ5xAAAAAElFTkSuQmCC');
+      background-size:cover;
+      &:before {content:none;}
+    } 
+    .owl-next {
+      position:absolute;
+      width:rem(21px);
+      height:rem(40px);
+      right:-40px;margin:0;
+      background-image:url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAoCAQAAAC7+nluAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8VGiZ70nTNAAAAVElEQVQ4y2P4f/7////zGYgB/yGAGMX/9xOt+L/A//OjiilV3E+K4oQho9jg//uhq5iJoFpiAdEOGEiFxEbs4FDYT6zC+aMKsSkloYAnodogujICACuxgmmPD5YkAAAAAElFTkSuQmCC');     background-size:cover;
+      background-size:cover;
+      &:before {content:none;}
+    }
   }
-}
-
+        .circle-num {
+          display:inline-block;
+          font-size:20px;
+          border:1px solid $br-gray-color;
+          width:40px;
+          height:40px;
+          border-radius:50%;
+          display:block;
+          color: rgb(255,255,255);
+          text-align:center;
+          background-color: rgb(200,200,200);
+          @extend %eng;
+          line-height:1.8;
+        }
+        .active .circle-num {
+          color:$br-gray-color;
+          background-color: $lipstick;
+        }
+        .owl-dots {
+          position:absolute;
+          top:rem(100px);
+          left:0;right:0;
+          margin:0 auto;
+          left:rem(30px);
+          .owl-dot {
+            display:inline-block;
+            width:40px;
+            height:40px;
+            background-color:transparent;
+            margin-right: rem(5px);
+          }
+        }

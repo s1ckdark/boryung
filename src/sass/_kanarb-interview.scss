@@ -50,15 +50,24 @@
 	}
 	.interview1 {
 		width:100%;
-		height:auto;
-		background-image: url('../img/kanarb-interview/bg_kanarb_interview.jpg');
-		background-size: cover;
+		height:100%;
+		position:relative;
+		overflow:hidden;
+		.bg_kanarb {
+			top:0;left:0;right:0;bottom:0;
+			position:absolute;
+			background-image: url('../img/kanarb-interview/bg_kanarb_interview.jpg');
+			background-size: cover;
+			z-index:-1;
+			height:100%;
+		}
 		.inner {
+		z-index:10;
 		margin-left:calc(50% - 45px);
-		height: auto;
+		height: 100%;
 		padding: rem(45px) rem(50px);
-			width: rem(540px);
-			background-color: rgb(255, 255, 255);
+		width: rem(540px);
+		background-color: rgb(255, 255, 255);
 		}
 		.img {margin:rem(20px) 0 rem(60px);background-image: url('../img/kanarb-interview/interview1.jpg');width:rem(540px);height:rem(180px);}
 	}

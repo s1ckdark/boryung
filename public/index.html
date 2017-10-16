@@ -36,7 +36,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1508096395162">
+  <link rel="stylesheet" href="./css/style.css?v=1508150928079">
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -125,15 +125,21 @@
   <div id="viewport" class="viewport">
     <section id="top" class="ja_section_wrap" ja-section-title="보령제약 인트로">
       <div class="wrapper">
-        <div id="hero" class="hero">
-          <div class="hero--obj title"></div>
-          <div class="hero--obj kanarb"></div>
-          <div class="hero--map greydot"></div>
-          <div class="hero--map orangedot"></div>
+        <!--     <div id="hero" class="hero">
+      <div class="hero--obj title"></div>
+      <div class="hero--obj kanarb"></div>
+      <div class="hero--map greydot"></div>
+      <div class="hero--map orangedot"></div>
+    </div> -->
+        <div id="animation_container" class="hero">
+          <canvas id="canvas" width="1200" height="720" style="position: absolute; display: none; background-color:rgba(34, 34, 34, 1.00);"></canvas>
+          <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:720px; position: absolute; left: 0px; top: 0px; display: none;">
+          </div>
         </div>
+        <div id='_preload_div_' style='display: inline-block; height:720px; width: 1200px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;'> <span style='display: inline-block; height: 100%; vertical-align: middle;'></span> <img src=img/hero/_preloader.gif?1508131847145 style='vertical-align: middle; max-height: 100%' /></div>
         <div class="top-intro">
           <p class="text">
-            첫 무대는 종로5가의 한 귀퉁이였다. <br>지금은 세계 신약 시장이다. <br>도전 메시지는 그때나 지금이나 변함이 없다. <br>‘지도’를 바꾸는 것이다. <br>종로5가를 ‘약국거리’로 만들었고, <br>다국적 제약회사가 주름잡던 고혈압 치료제 시장에 <br>뛰어들면서 ‘새로운 지도’를 그리고 있다.
+            첫 무대는 종로5가의 한 귀퉁이였다. <br>지금은 세계 신약 시장이다. <br>도전 메시지는 그때나 지금이나 변함이 없다. <br>‘지도’를 바꾸는 것이다. <br>종로5가를 ‘약국거리’로 만들었고, <br>다국적 제약회사가 주름잡던 고혈압 치료제 시장에 <br>뛰어들면서 ‘새로운 지도’를 그리고 있다.<br>보령제약그룹의 60년 이야기다.
           </p>
         </div>
         <div class="top-indicator">
@@ -182,7 +188,7 @@
                   <h2 class="heading-2">“없는 약이 없고 값이 저렴해서”</h2>
                 </header>
                 <p class="text">
-                  서울 강남에서, 지방에서 종로5가 약국거리를 찾는 단골손님이 <br>꽤 있다. 이유는 간단하다. “없는 약이 없고” “약값이 저렴하며” <br>“친절 하게 설명을 잘해줘서”다. 60년 전 보령약국의 성공 포인트가 <br>그대로 이어지고 있다. 청년 김승호는 손님이 찾는 약이 없으면 <br>자전거를 타고 서울 곳곳을 뒤져 이튿날엔 반드시 그 약을 구해 놓았다.
+                  서울 강남에서, 지방에서 종로5가 약국거리를 찾는 단골손님이 <br>꽤 있다. 이유는 간단하다. “없는 약이 없고” “약값이 저렴하며” <br>“친절 하게 설명을 잘해줘서”다. 60년 전 보령약국의 성공 포인트가 <br>그대로 이어지고 있다. 청년 김승호는 손님이 찾는 약이 없으면 <br>자전거를 타고 곳을 뒤져 이튿날엔 반드시 그 약을 구해 놓았다.
                 </p>
               </div>
               <div class="innerBox white">
@@ -191,8 +197,8 @@
                   <h2 class="heading-2">경영학 교재가 된 약국 전표</h2>
                 </header>
                 <p class="text">
-                  보령약국은 1962년부터 전표(傳票)제를 도입했다. 약품이 팔릴 <br>때마다 약사에게 그 품목과 수량, 가격을 기입하도록 하고, 관리부서는 <br>이를 넘겨받아 창구로 보내는 방식이다. 처음엔 귀찮아했지만 <br>전표제가 정착되면서 재고 파악이 정확해졌고, 무엇보다 잘 팔리는 <br>제품군을 선별해 상품 관리의 효율성을 높였다. 이 모습을 발견한 <br>서울대 상학과 교수가 “획기적인 시스템 경영 도입 사례”라며
-                  <br>수업 교재로 인용하기도 했다.
+                  보령약국은 1962년부터 전표(傳票)제를 도입했다. 약품이 팔릴 <br>때마다 약사에게 그 품목과 수량, 가격을 기입하도록 하고, <br>관리부서는 이를 넘겨받아 창구로 보내는 방식이다. <br>전표제가 정착되면서 재고 파악이 정확해졌고, 무엇보다 잘 팔리는 <br>제품군을 선별해 상품 관리의 효율성을 높였다. 이 모습을 발견한 <br>서울대 상학과 교수가 “획기적인 시스템 경영 도입 사례”라며 <br>수업 교재로
+                  인용하기도 했다.
                 </p>
               </div>
             </div>
@@ -202,7 +208,7 @@
                   <h2 class="heading-2">제약산업의 성장판이 되다</h2>
                 </header>
                 <p class="text">
-                  보령은 1963년 동영제약(현 보령제약)을 인수하면서 제약회사로 <br>발돋움한다. 한미약품의 모태인 ‘임성기약국’도 67년 종로5가에서 <br>창업했다. 전남 목포를 근거로 하던 의약품 유통회사 백제약방<br>(현 백제약품)은 이곳에 서울지점을 열었다. 1897년 동화약방 <br>설립으로 태동한 국내 제약산업이 한해 22조원 규모로 성장하는데 <br>종로5가가 성장판 역할을 톡톡히 셈이다.
+                  보령은 1963년 동영제약(현 보령제약)을 인수하면서 제약회사로 <br>발돋움한다. 한미약품의 모태인 ‘임성기약국’도 67년 종로5가에서 <br>창업했다. 전남 목포를 근거로 하던 의약품 유통회사 백제약방<br>(현 백제약품)은 이곳에 서울지점을 열었다. 1897년 동화약방 <br>설립으로 태동한 국내 제약산업이 한해 22조원 규모로 성장하는데 <br>종로5가가 성장판 역할을 톡톡히 한 셈이다.
                 </p>
                 <div class="drugstore_front"></div>
               </div>
@@ -381,7 +387,7 @@
       };
       for (var key in article.articles) {
         if (article.articles.hasOwnProperty(key)) {
-          let item = "<div class='grid bg_article" + article.articles[key].num + "'><div class='overlay'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+          let item = "<div class='item grid'><div class='bg_article bg_article" + article.articles[key].num + "'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
           let sheet = $("#bg_article").get(0).sheet;
           let styles = '.bg_article' + article.articles[key].num + ' {';
           styles += 'background-image: url(' + article.articles[key].img + ')';
@@ -393,6 +399,9 @@
     </script>
     <section id="contribute" class="ja_section_wrap" ja-section-title="사회공헌">
       <div class="wrapper">
+        <header class="section-header">
+          <h4 class="heading-1">세상을 밝히는 ‘따뜻한 손길’</h4>
+        </header>
         <div class="article">
           <div class="container col2">
             <div class="col">
@@ -408,7 +417,7 @@
               </header>
               <p class="text">
                 보령제약의 사보 ‘보령’은 1984년부터 오지에서 인술을 펼치고 있는 의료인들 이야기를 연재했다. 이것이 인연이 돼 이듬해 대한의사협회와 함께 ‘보령의료봉사상’을 만들었다. ‘울지 마 톤즈’의 주인공 고 이태석 신부, 한센인들의 아버지로 불리는 고 차윤근 박사 등 337명이 상을 받았다. 올해로 33회째, 보령은 꾸준히 이 행사를 후원하고 있다. 2002년엔 한국암연구재단과 공동으로 ‘보령암학술상’을 제정했다. 국내 유일의 종양학 분야 학술상으로
-                지금까지 송용상 서울대병원 교수, 김경미 성균관의대 교수 등이 수상했다.
+                지금까지 16명의 학자들이 상을 받았다.
               </p>
             </div>
           </div>
@@ -472,7 +481,7 @@
           {
             'num': '600',
             'unit': '억',
-            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 효능을 인정받아 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
+            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 지난해보다 30% 이상 성장했다. 카나브는 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
           }
         ]
       };
@@ -559,10 +568,10 @@
               <div class="container col2">
                 <div class="col">
                   <header class="slider-header">
-                    <h4 class="heading-2">보령의 60년 성장사는 <span class="lipstick">‘두 개의 B’로 압축된다</span></h4>
+                    <h4 class="heading-2">보령의 60년 성장사는 <span class="lipstick">‘두 개의 B’</span>로 압축된다</h4>
                   </header>
                   <p class="text">
-                    제약업에 진출한 보령은 ‘용각산’ ‘겔포스’ 같은 히트상품을 내놓았다. 출시한지 40~50년이 지난 지금도 여전히 인기를 얻고 있는 브랜드들이다. 보령의 성공 키워드는 ‘두 개의 B’로 요약해서 설명된다. 먼저 시대와 함께 호흡하는 상품을 내놓았다(Breathe with the Era). 그리고 과감한 마케팅(Bold Marketing)으로 승부수를 던졌다.
+                    제약업에 진출한 보령은 ‘용각산’ ‘겔포스’ 같은 히트상품을 내놓았다. 출시한지 40~50년이 지난 지금도 여전히 인기를 얻고 있는 브랜드들이다. 보령의 성공 키워드는 ‘두 개의 B’로 요약된다. 먼저 시대와 함께 호흡하는 상품을 내놓았다. 그러면서 과감한 마케팅(Bold Marketing)과 간결한 메시지(Brief and Concise Message)로 승부했다.
                   </p>
                 </div>
                 <div class="col">
@@ -639,7 +648,7 @@
                 <div class="item container col2" data-dot="<span class='circle-num'>1</span>">
                   <div class="col">
                     <header class="slider-header">
-                      <h4 class="heading-2">만성신부전증 환자들의 버팀돌이 되다</h4>
+                      <h4 class="heading-2">만성신부전증 환자들의<br> 버팀돌이 되다</h4>
                     </header>
                     <p class="text">
                       국내 투석 환자는 매해 8~9%씩 증가하고 있다. <br>대한신장학회에 따르면 2014년 말 현재 <br>투석 치료가 필요한 환자는 8만여 명으로, <br>1986년(2534명)에 비해 30배 이상 늘었다. <br>투석은 연구개발 비용과 기간이 많이 들어 <br>국내 제약사들이 진출을 꺼리던 분야다. 보령은 <br>90년대 초반 투석 사업에 뛰어들었다. “외국계의 잠식에서 벗어나고 합리적인 약값을 제시해 <br>환자들의
@@ -714,13 +723,13 @@
           <div class="wrapper">
             <header class="section-header">
               <p class="heading-1">고혈압 치료제 시장 지도를</p>
-              <div class="calligraphy-drawing"><img src="../img/market/calligraphy-drawing.png"></div>
+              <div class="calligraphy-drawing"></div>
             </header>
             <p class="heading-2">
               <span>글로벌 바이오·제약 시장이 얼마나 크길래</span>
             </p>
             <p class="text16">
-              글로벌 바이오·제약 시장은 1200조원대 규모로 파악된다. 자동차(600조원)와 반도체(400조원)·조선(250조원) 시장을 합친 것과 비슷하다. 경제가 성장하고 고령화 가속화하는 한편, 만성질환·신종질병이 증가하면서 제약 시장은 최근 7년간(2009~2015년) 연 평균 5.2%씩 성장했다. 2021년에는 1700조원에 이를 전망이다. 하지만 미국과 독일·영국·스위스·일본계 20개 메이저 제약기업들이 시장의 60%를 차지하고 있는 게 현실이다.
+              글로벌 바이오·제약 시장은 1200조원대 규모로 파악된다. 자동차(600조원)와 반도체(400조원)·조선(250조원) 시장을 합친 것과 비슷하다. 경제가 성장하고 고령화 가속화하는 한편, 만성질환·신종질병이 증가하면서 제약 시장은 최근 7년간(2009~2015년) 연 평균 5.2%씩 성장했다. 2021년에는 1700조원에 이를 전망이다. 하지만 미국과 독일·영국·스위스·일본계 20개 메이저 제약기업들이 시장의 60%를 차지하고 있다.
             </p>
             <div class="bar3d">
               <div class="ship"></div>
@@ -769,7 +778,7 @@
         <div class="wrapper">
           <div class="container col2">
             <div class="col">
-              <header>
+              <header class="section-header">
                 <h2 class="heading-2">특허 받은 신약이 얼마나 많은 부가가치를 창출하나</h2>
               </header>
               <p class="text16">
@@ -834,9 +843,9 @@
                   </div>
                 </div>
                 <div class='desc'>
-                  <span class="year">1999년</span>
-                  <span class="effect">위암 항암제</span>
-                  <span class="subdesc">국내 신약 1호</span>
+                  <span class="year"><b>허가연도</b>1999년</span>
+                  <span class="effect"><b>효능·효과</b>위암 항암제</span>
+                  <span class="subdesc"><b>주요 내용</b>국내 신약 1호</span>
                 </div>
               </div>
               <div class="medicine">
@@ -915,54 +924,51 @@
                 <div class="retangle_bubble s2016">445억원</div>
                 <div class="circle_bubble s2017">600억원</div>
                 <svg id="line" width="450px" height="334px" viewBox="0 0 450 334" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="boryung" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="web_main" transform="translate(-192.000000, -14656.000000)">
-            <g id="12_graphic_3" transform="translate(75.000000, 14462.000000)">
-                <g id="Group-19" transform="translate(56.000000, 80.000000)">
-                    <g id="Page-1" transform="translate(0.000000, 92.000000)">
-                        <g id="Group-178">
-                            <path d="M142.487571,295.5895 L70.135006,347.840587" id="Stroke-59" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M214.840136,266.915123 L142.487571,295.5895" id="Stroke-61" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M287.192701,192.361743 L214.840136,266.915123" id="Stroke-63" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M359.545266,199.371035 L287.192701,192.361743" id="Stroke-65" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M431.897832,128.003697 L359.545266,199.371035" id="Stroke-67" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M504.250397,29.2363985 L431.897832,128.003697" id="Stroke-69" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M142.487571,295.5895 L70.135006,347.840587" id="Stroke-71" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M214.840136,266.915123 L142.487571,295.5895" id="Stroke-73" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M287.192701,192.361743 L214.840136,266.915123" id="Stroke-75" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M359.545266,199.371035 L287.192701,192.361743" id="Stroke-77" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M431.897832,128.003697 L359.545266,199.371035" id="Stroke-79" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M504.250397,29.2363985 L431.897832,128.003697" id="Stroke-81" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
-                            <path d="M74.5737889,348.943202 C74.5737889,352.577545 71.6308248,355.523929 67.9972226,355.523929 C64.3617411,355.523929 61.418777,352.577545 61.418777,348.943202 C61.418777,345.309798 64.3617411,342.366234 67.9972226,342.366234 C71.6308248,342.366234 74.5737889,345.309798 74.5737889,348.943202" id="Fill-83" fill="#D0242C"></path>
-                            <path d="M71.3332396,348.943202 C71.3332396,350.786219 69.8373269,352.282437 67.9975045,352.282437 C66.1520443,352.282437 64.6589504,350.786219 64.6589504,348.943202 C64.6589504,347.103004 66.1520443,345.606786 67.9975045,345.606786 C69.8373269,345.606786 71.3332396,347.103004 71.3332396,348.943202" id="Fill-85" fill="#FFFFFF"></path>
-                            <path d="M149.065265,296.204622 C149.065265,299.838966 146.122301,302.785349 142.488699,302.785349 C138.853217,302.785349 135.910253,299.838966 135.910253,296.204622 C135.910253,292.571219 138.853217,289.627654 142.488699,289.627654 C146.122301,289.627654 149.065265,292.571219 149.065265,296.204622" id="Fill-87" fill="#D0242C"></path>
-                            <path d="M145.824622,296.204622 C145.824622,298.047639 144.328709,299.543857 142.488887,299.543857 C140.643426,299.543857 139.150333,298.047639 139.150333,296.204622 C139.150333,294.364425 140.643426,292.868207 142.488887,292.868207 C144.328709,292.868207 145.824622,294.364425 145.824622,296.204622" id="Fill-89" fill="#FFFFFF"></path>
-                            <path d="M221.41783,266.913525 C221.41783,270.547869 218.474866,273.494252 214.841264,273.494252 C211.205782,273.494252 208.262818,270.547869 208.262818,266.913525 C208.262818,263.280122 211.205782,260.336557 214.841264,260.336557 C218.474866,260.336557 221.41783,263.280122 221.41783,266.913525" id="Fill-91" fill="#D0242C"></path>
-                            <path d="M218.177187,266.913525 C218.177187,268.756542 216.681274,270.25276 214.841452,270.25276 C212.995991,270.25276 211.502898,268.756542 211.502898,266.913525 C211.502898,265.073328 212.995991,263.57711 214.841452,263.57711 C216.681274,263.57711 218.177187,265.073328 218.177187,266.913525" id="Fill-93" fill="#FFFFFF"></path>
-                            <path d="M293.770301,192.360145 C293.770301,195.994489 290.827337,198.940872 287.193735,198.940872 C283.558253,198.940872 280.615289,195.994489 280.615289,192.360145 C280.615289,188.726742 283.558253,185.783177 287.193735,185.783177 C290.827337,185.783177 293.770301,188.726742 293.770301,192.360145" id="Fill-95" fill="#D0242C"></path>
-                            <path d="M290.529752,192.360145 C290.529752,194.203162 289.033839,195.69938 287.194017,195.69938 C285.348557,195.69938 283.855463,194.203162 283.855463,192.360145 C283.855463,190.519948 285.348557,189.02373 287.194017,189.02373 C289.033839,189.02373 290.529752,190.519948 290.529752,192.360145" id="Fill-97" fill="#FFFFFF"></path>
-                            <path d="M364.830856,198.517477 C364.830856,202.15182 361.887892,205.098204 358.25429,205.098204 C354.618808,205.098204 351.675844,202.15182 351.675844,198.517477 C351.675844,194.884073 354.618808,191.940509 358.25429,191.940509 C361.887892,191.940509 364.830856,194.884073 364.830856,198.517477" id="Fill-99" fill="#D0242C"></path>
-                            <path d="M361.590307,198.517477 C361.590307,200.360494 360.094394,201.856712 358.254572,201.856712 C356.409112,201.856712 354.916018,200.360494 354.916018,198.517477 C354.916018,196.677279 356.409112,195.181061 358.254572,195.181061 C360.094394,195.181061 361.590307,196.677279 361.590307,198.517477" id="Fill-101" fill="#FFFFFF"></path>
-                            <path d="M438.904943,129.383845 C438.904943,133.018188 435.961979,135.964572 432.328376,135.964572 C428.692895,135.964572 425.749931,133.018188 425.749931,129.383845 C425.749931,125.750442 428.692895,122.806877 432.328376,122.806877 C435.961979,122.806877 438.904943,125.750442 438.904943,129.383845" id="Fill-103" fill="#D0242C"></path>
-                            <path d="M435.664299,129.383845 C435.664299,131.226862 434.168387,132.72308 432.328564,132.72308 C430.483104,132.72308 428.99001,131.226862 428.99001,129.383845 C428.99001,127.543647 430.483104,126.04743 432.328564,126.04743 C434.168387,126.04743 435.664299,127.543647 435.664299,129.383845" id="Fill-105" fill="#FFFFFF"></path>
-                            <path d="M510.83448,29.2348008 C510.83448,32.8691441 507.891516,35.815528 504.257914,35.815528 C500.622432,35.815528 497.679468,32.8691441 497.679468,29.2348008 C497.679468,25.6013973 500.622432,22.6578329 504.257914,22.6578329 C507.891516,22.6578329 510.83448,25.6013973 510.83448,29.2348008" id="Fill-107" fill="#D0242C"></path>
-                            <path d="M507.593931,29.2348008 C507.593931,31.0778179 506.098018,32.5740358 504.258196,32.5740358 C502.412736,32.5740358 500.919642,31.0778179 500.919642,29.2348008 C500.919642,27.3946031 502.412736,25.8983852 504.258196,25.8983852 C506.098018,25.8983852 507.593931,27.3946031 507.593931,29.2348008" id="Fill-109" fill="#FFFFFF"></path>
+            <g id="boryung" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="web_main" transform="translate(-192.000000, -14656.000000)">
+                    <g id="12_graphic_3" transform="translate(75.000000, 14462.000000)">
+                        <g id="Group-19" transform="translate(56.000000, 80.000000)">
+                            <g id="Page-1" transform="translate(0.000000, 92.000000)">
+                                <g id="Group-178">
+                                    <path d="M142.487571,295.5895 L70.135006,347.840587" id="Stroke-59" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M214.840136,266.915123 L142.487571,295.5895" id="Stroke-61" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M287.192701,192.361743 L214.840136,266.915123" id="Stroke-63" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M359.545266,199.371035 L287.192701,192.361743" id="Stroke-65" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M431.897832,128.003697 L359.545266,199.371035" id="Stroke-67" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M504.250397,29.2363985 L431.897832,128.003697" id="Stroke-69" stroke="#E5E5E5" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M142.487571,295.5895 L70.135006,347.840587" id="Stroke-71" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M214.840136,266.915123 L142.487571,295.5895" id="Stroke-73" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M287.192701,192.361743 L214.840136,266.915123" id="Stroke-75" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M359.545266,199.371035 L287.192701,192.361743" id="Stroke-77" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M431.897832,128.003697 L359.545266,199.371035" id="Stroke-79" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M504.250397,29.2363985 L431.897832,128.003697" id="Stroke-81" stroke="#D0242C" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M74.5737889,348.943202 C74.5737889,352.577545 71.6308248,355.523929 67.9972226,355.523929 C64.3617411,355.523929 61.418777,352.577545 61.418777,348.943202 C61.418777,345.309798 64.3617411,342.366234 67.9972226,342.366234 C71.6308248,342.366234 74.5737889,345.309798 74.5737889,348.943202" id="Fill-83" fill="#D0242C"></path>
+                                    <path d="M71.3332396,348.943202 C71.3332396,350.786219 69.8373269,352.282437 67.9975045,352.282437 C66.1520443,352.282437 64.6589504,350.786219 64.6589504,348.943202 C64.6589504,347.103004 66.1520443,345.606786 67.9975045,345.606786 C69.8373269,345.606786 71.3332396,347.103004 71.3332396,348.943202" id="Fill-85" fill="#FFFFFF"></path>
+                                    <path d="M149.065265,296.204622 C149.065265,299.838966 146.122301,302.785349 142.488699,302.785349 C138.853217,302.785349 135.910253,299.838966 135.910253,296.204622 C135.910253,292.571219 138.853217,289.627654 142.488699,289.627654 C146.122301,289.627654 149.065265,292.571219 149.065265,296.204622" id="Fill-87" fill="#D0242C"></path>
+                                    <path d="M145.824622,296.204622 C145.824622,298.047639 144.328709,299.543857 142.488887,299.543857 C140.643426,299.543857 139.150333,298.047639 139.150333,296.204622 C139.150333,294.364425 140.643426,292.868207 142.488887,292.868207 C144.328709,292.868207 145.824622,294.364425 145.824622,296.204622" id="Fill-89" fill="#FFFFFF"></path>
+                                    <path d="M221.41783,266.913525 C221.41783,270.547869 218.474866,273.494252 214.841264,273.494252 C211.205782,273.494252 208.262818,270.547869 208.262818,266.913525 C208.262818,263.280122 211.205782,260.336557 214.841264,260.336557 C218.474866,260.336557 221.41783,263.280122 221.41783,266.913525" id="Fill-91" fill="#D0242C"></path>
+                                    <path d="M218.177187,266.913525 C218.177187,268.756542 216.681274,270.25276 214.841452,270.25276 C212.995991,270.25276 211.502898,268.756542 211.502898,266.913525 C211.502898,265.073328 212.995991,263.57711 214.841452,263.57711 C216.681274,263.57711 218.177187,265.073328 218.177187,266.913525" id="Fill-93" fill="#FFFFFF"></path>
+                                    <path d="M293.770301,192.360145 C293.770301,195.994489 290.827337,198.940872 287.193735,198.940872 C283.558253,198.940872 280.615289,195.994489 280.615289,192.360145 C280.615289,188.726742 283.558253,185.783177 287.193735,185.783177 C290.827337,185.783177 293.770301,188.726742 293.770301,192.360145" id="Fill-95" fill="#D0242C"></path>
+                                    <path d="M290.529752,192.360145 C290.529752,194.203162 289.033839,195.69938 287.194017,195.69938 C285.348557,195.69938 283.855463,194.203162 283.855463,192.360145 C283.855463,190.519948 285.348557,189.02373 287.194017,189.02373 C289.033839,189.02373 290.529752,190.519948 290.529752,192.360145" id="Fill-97" fill="#FFFFFF"></path>
+                                    <path d="M364.830856,198.517477 C364.830856,202.15182 361.887892,205.098204 358.25429,205.098204 C354.618808,205.098204 351.675844,202.15182 351.675844,198.517477 C351.675844,194.884073 354.618808,191.940509 358.25429,191.940509 C361.887892,191.940509 364.830856,194.884073 364.830856,198.517477" id="Fill-99" fill="#D0242C"></path>
+                                    <path d="M361.590307,198.517477 C361.590307,200.360494 360.094394,201.856712 358.254572,201.856712 C356.409112,201.856712 354.916018,200.360494 354.916018,198.517477 C354.916018,196.677279 356.409112,195.181061 358.254572,195.181061 C360.094394,195.181061 361.590307,196.677279 361.590307,198.517477" id="Fill-101" fill="#FFFFFF"></path>
+                                    <path d="M438.904943,129.383845 C438.904943,133.018188 435.961979,135.964572 432.328376,135.964572 C428.692895,135.964572 425.749931,133.018188 425.749931,129.383845 C425.749931,125.750442 428.692895,122.806877 432.328376,122.806877 C435.961979,122.806877 438.904943,125.750442 438.904943,129.383845" id="Fill-103" fill="#D0242C"></path>
+                                    <path d="M435.664299,129.383845 C435.664299,131.226862 434.168387,132.72308 432.328564,132.72308 C430.483104,132.72308 428.99001,131.226862 428.99001,129.383845 C428.99001,127.543647 430.483104,126.04743 432.328564,126.04743 C434.168387,126.04743 435.664299,127.543647 435.664299,129.383845" id="Fill-105" fill="#FFFFFF"></path>
+                                    <path d="M510.83448,29.2348008 C510.83448,32.8691441 507.891516,35.815528 504.257914,35.815528 C500.622432,35.815528 497.679468,32.8691441 497.679468,29.2348008 C497.679468,25.6013973 500.622432,22.6578329 504.257914,22.6578329 C507.891516,22.6578329 510.83448,25.6013973 510.83448,29.2348008" id="Fill-107" fill="#D0242C"></path>
+                                    <path d="M507.593931,29.2348008 C507.593931,31.0778179 506.098018,32.5740358 504.258196,32.5740358 C502.412736,32.5740358 500.919642,31.0778179 500.919642,29.2348008 C500.919642,27.3946031 502.412736,25.8983852 504.258196,25.8983852 C506.098018,25.8983852 507.593931,27.3946031 507.593931,29.2348008" id="Fill-109" fill="#FFFFFF"></path>
+                                </g>
+                            </g>
                         </g>
                     </g>
                 </g>
             </g>
-        </g>
-    </g>
-</svg>
+        </svg>
               </div>
               <header class="section-header">
                 <h4 class="heading-2">세계 제약업계가 ‘카나브’에 주목하는 이유는</h4>
               </header>
               <p class="text16">
-                보령제약이 2010년 판매 허가를 받은 ‘카나브’는 국내 신약 15호다. <br>국산 신약으로 가장 먼저 글로벌 시장에서 성공 가능성을 제시했다는 데서 <br>주목 받는다. 92년 개발을 시작했으니 후보 물질 발굴, 임상시험 등을 거쳐 <br>세상에 나오기까지 꼭 18년 걸린 셈이다. 투자금액은 500억원에 이른다. <br>카나브는 올해 300억원대 매출이 예상된다. 노바티스·사노피·베링거인겔하임 <br>같은 다국적
+                보령제약이 2010년 판매 허가를 받은 ‘카나브’는 국내 신약 15호다. <br>국산 신약으로 가장 먼저 글로벌 시장에서 성공 가능성을 제시했다는 데서 <br>주목 받는다. 92년 개발을 시작했으니 후보 물질 발굴, 임상시험 등을 거쳐 <br>세상에 나오기까지 꼭 18년 걸린 셈이다. 투자금액은 500억원에 이른다. <br>카나브는 올해 600억원대 매출이 예상된다. 노바티스·사노피·베링거인겔하임 <br>같은 다국적
                 제약사를 누르고 국내 ARB 계열 고혈압 치료제 시장 1위다.
               </p>
             </div>
@@ -974,8 +980,8 @@
                 <h4 class="heading-2">카나브는 정말 칸이 될 수 있을까</h4>
               </header>
               <p class="text16">
-                고혈압 치료제는 혈관을 확장시켜 혈압을 낮추는 역할을 한다. <br>크게 봐서 ARB(안지오텐신Ⅱ수용체차단제) 계열과 CCB(칼슘<br>채널차단제) 계열이 시장을 주도하고 있다. ARB 계열의 세계 <br>시장 규모는 40조~50조원대, 비만 인구 증가와 인구 고령화 <br>영향으로 매해 두 자릿수씩 성장하고 있다. 카나브(Kanarb)는 <br>‘ARB 계열의 황제(kahn)’라는 뜻이다. 신약 하나로 세계 제약 <br>시장
-                지도를 바꾸겠다는 의지를 담았다. ARB 계열 고혈압 <br>치료제를 판매하는 기존 다국적 제약사는 7곳이다. 카나브가 <br>경쟁사 제품보다 혈압을 낮춰주는 효과가 20% 이상 뛰어나다는 임상결과가 발표되기도 했다. 2017년 10월 현재까지 <br>전 세계 51개국에 4억1300만 달러어치를 수출(계약 포함)했다.
+                고혈압 치료제는 혈관을 확장시켜 혈압을 낮추는 역할을 한다. <br>크게 봐서 ARB(안지오텐신Ⅱ수용체차단제) 계열과 CCB(칼슘<br>채널차단제) 계열이 시장을 주도하고 있다. <br>ARB 계열은 혈관을 수축시키는 안지오텐신II 호르몬을 차단해 혈압을 낮추는 물질이다. ARB 계열의 세계 시장 규모는 40조~50조원대, 비만 인구 증가와 인구 고령화 영향으로 매해 두 자릿수씩<br> 성장하고 있다. 카나브(Kanarb)는
+                ‘ARB 계열의 황제(kahn)’라는 뜻이다. <br>신약 하나로 세계 제약 시장 지도를 바꾸겠다는 의지를 담았다. <br>ARB 계열 고혈압 치료제를 판매하는 다국적 제약사는 7곳이다.<br> 카나브가 경쟁사 제품보다 혈압을 낮춰주는 효과가 20% 이상 뛰어나다는 임상결과가 발표되기도 했다.<br> 2017년 10월 현재까지 전 세계 51개국에 4억1300만 달러어치를 수출(계약 포함)했다.
               </p>
             </div>
           </div>
@@ -983,7 +989,7 @@
       </div>
       <div id="video3" class="video-play">
         <a href="javascript:void(0)" style="background-image: url('./img/video/poster3.jpg');"></a>
-        <a href="javascript:void(0)" id="videoIndicator">
+        <a href="javascript:void(0)" id="videoIndicator" class="play">
      <i><span>고혈압 치료제<br>‘카나브’가<br>생산되기까지</span></i>
     </a>
         <video></video>
@@ -991,19 +997,20 @@
     </section>
     <section id="kanarb_interview" class="brand-solution ja_section_wrap" ja-section-title="사회공헌">
       <div class="interview1">
+        <div class="bg_kanarb"></div>
         <div class="inner">
           <div class="title">
-            <p class="interview_title"><span class="interview-round"><q class='round-title'>interview</q></span>보령제약 비임상연구팀장 <span class="bold">이주한</span></p>
+            <p class="interview_title"><span class="interview-round"><q class='round-title'>interview</q></span>카나브 개발 주역 <span class="bold">이주한</span> 보령제약 비임상연구팀장</p>
           </div>
           <div class="img"></div>
           <header class="section-header">
-            <h2 class="heading-2">“마감 90일 남기고 기적이 일어났다”</h2>
+            <h2 class="heading-2">“마감 90일 남기고 기적 같이 후보물질 발견” </h2>
           </header>
           <p class="question">
             <span>Q</span> 신약 개발은 낙타가 바늘구멍 통과하기만큼이나 어렵다는데…
           </p>
           <p class="answer">
-            “92년 고혈압 신약 개발에 뛰어든 이후 6년 동안 성과가 나오지 않았다. ‘이제 그만 하면 됐다’고 그만두어야 할 시점에 연구팀이 ‘90일만 더 해보겠다’고 고집을 부렸다. 그 90일 동안 별 짓을 다했다. 그러다가 지금 카나브의 원료가 된 신약 후보 물질 ‘BRA-657’을 찾아냈다. BRA-657이 기존 약보다 약효가 더 좋고 약효 지속 시간도 더 길다는 걸 확인한 순간, 연구실에 환소성이 터져 나왔다.”
+            “92년 고혈압 신약 개발에 뛰어든 이후 6년 동안 성과가 나오지 않았다. ‘이제 그만 하면 됐다’고 그만두어야 할 시점에 연구팀이 ‘90일만 더 해보겠다’고 고집을 부렸다. 그 90일 동안 별 짓을 다했다. 그러다가 지금 카나브의 원료가 된 신약 후보 물질 ‘BRA-657’을 찾아냈다. BRA-657이 기존 약보다 약효가 더 좋고 약효 지속 시간도 더 길다는 걸 확인한 순간, 연구실에 환호성이 터져 나왔다.”
           </p>
           <p class="question">
             <span>Q</span> 고혈압 치료제인 카나브는 항암제 같은 혁신 신약은 아니지 않나.
@@ -1022,12 +1029,12 @@
       <div class="interview2">
         <div class="wrapper">
           <div class="title">
-            <p class="interview_title"><span class="interview-round"><q class='round-title'>interview</q></span>스텐달 CEO<span class="bold">카를로스 아레나스</span></p>
+            <p class="interview_title"><span class="interview-round"><q class='round-title'>interview</q></span>카나브 수입하는 <span class="bold">카를로스 아레나스</span> 멕시코 스텐달 CEO</p>
           </div>
           <div class="container col2 type-d">
             <div class="col">
               <header class="section-header">
-                <h2 class="heading-2">“출시 2년 만에 점유율 5%…성공을 확신한다”</h2>
+                <h2 class="heading-2">“출시 2년 만에 점유율 5%&#183&#183&#183 성공을 확신한다”</h2>
               </header>
               <p class="answer">고혈압 치료제 ‘카나브’는 전 세계 50여 국에 진출했다. 한국산 고혈압 신약과 가장 먼저 손을 잡은 회사가 멕시코의 중견 제약회사 스텐달(Stendhal)이다. 카를로스 아레나스 위드필드 최고경영자(CEO)로부터 현지 반응을 들어봤다.</p>
               <p class="question">
@@ -1046,13 +1053,14 @@
                 <span>Q</span> 보령제약 카나브를 도입한 계기는 무엇인가.
               </p>
               <p class="answer">
-                “사내에 의사·과학자·법률가 등으로 구성된 종합개발팀을 운영 중이다. 이 부서에서 고혈압 환자를 위한 치료 옵션을 찾던 중 2011년 보령제약과 협력 계약을 맺었다. 6개월간 270여 명을 대상으로 진행한 임상시험에서도 효능과 안전성을 입증 받았다.”
+                “사내에 의사·과학자·법률가 등으로 구성된 종합개발팀을 운영 중이다. 이 부서에서 고혈압 환자를 위한 치료 옵션을 찾던 중 2011년 보령제약과 협력 계약을 했다. 6개월간 270여 명을 대상으로 진행한 임상시험에서도 효능과 안전성을 입증 받았다.”
               </p>
               <p class="question">
                 <span>Q</span> 멕시코에서 카나브의 현 지위는.
               </p>
               <p class="answer">
-                “사내에 의사·과학자·법률가 등으로 구성된 종합개발팀을 운영 중이다. 이 부서에서 고혈압 환자를 위한 치료 옵션을 찾던 중 2011년 보령제약과 협력 계약을 맺었다. 6개월간 270여 명을 대상으로 진행한 임상시험에서도 효능과 안전성을 입증 받았다.”
+                “멕시코에선 ‘한국에서 온 ARB’라는 뜻을 가진 ‘아라코(ARAHKOR·ARB+Heart+Korea)’로 판매되고 있다. ARB 계열 고혈압 치료제의 시장 규모는 소매가 기준으로 2억 달러대에 이른다. 아라코는 2015년 출시돼 7만 유닛(약 140만 정), 금액으로는 150만 달러의 성과를 올렸다. 당초 목표(4만 유닛)보다 2배 가까운 호실적을 낸 것이다. 현재 ARB 계열 시장에서 5%의 점유율을 차지하고 있다. 올해는 270만 달러의 매출을
+                예상한다.”
               </p>
               <p class="question">
                 <span>Q</span> 다국적 제약회사와 경쟁하면서 어떻게 시장 개척에 성공했나.
@@ -1090,12 +1098,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
     <script src="./js/lib/DrawSVGPlugin.min.js"></script>
     <script src="./js/lib/SplitText.min.js"></script>
-    <script src="./js/script.js?v=1508096395162"></script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="./js/script.js?v=1508150928079"></script>
 </body>
 
 </html>

@@ -2,7 +2,6 @@
 //
 //
 #more { 
-  margin-top: rem($vertical-margin-1);
   .more {
     position: relative;
     display: inline-block;
@@ -11,8 +10,8 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    width:100%;
-    height:300px;
+    width:100vw;
+    height:50vw;
     color: #ffffff;
     background-size: cover;
     background-position: 50% 50%;

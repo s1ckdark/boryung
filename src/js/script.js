@@ -43,12 +43,12 @@ $('.close').click(function(){
 })
 
 // kanarb_interview scrolling bg img
-  var width = $('#viewport').width(), //assumes your image is 1024px wide
-  speed = 24, //pixels per second
-  duration = width / speed,
-  endPosition = width - (speed / 24); //adjust the end position assuming 60fps
-  TweenMax.to($(".interview1"), duration, {css:{backgroundPosition:endPosition + "px 0"}, force3D:true,repeat:-1, ease:Linear.easeNone});
-  
+  // var width = $('#viewport').width(), //assumes your image is 1024px wide
+  // speed = 24, //pixels per second
+  // duration = width / speed,
+  // endPosition = width - (speed / 24); //adjust the end position assuming 60fps
+  // TweenMax.to($(".interview1"), duration, {scale:1.5, force3D:true,repeat:-1});
+  TweenMax.fromTo('.bg_kanarb', 8, {scale:1}, {scale:1.1, yoyo:true, repeat:-1, ease:Linear.easeNone})
   //
   // Video play
   //

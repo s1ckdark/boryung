@@ -17,21 +17,6 @@ $btn-padding-wide: rem(20px);
   outline: none;
 }
 
-.btn-igarten {
-  color: $igarten-text-color;
-  border-color: $igarten-text-color;
-  background: transparent;
-  &.active {
-    color: #ffffff;
-    background-color: $igarten-text-color;
-  }
-}
-.btn-april {
-  color: #fff;
-  border-color: $april-text-color;
-  background: $april-text-color;
-}
-
 .btn-white {
   color: #fff;
   border-color: #fff;
@@ -45,4 +30,19 @@ $btn-padding-wide: rem(20px);
 .btn-wide {
   padding-left: $btn-padding-wide;
   padding-right: $btn-padding-wide;
+}
+
+.btn-corner-rounded {
+  display:inline-block;
+  border-radius: 100px;
+}
+
+.more-arrow {
+  background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhChAOLwuENeFWAAAAcElEQVRIx+2RUQ2AMAwFDzIBDQomYUhACTjFAkre5mAooCTbF2T97btrm4JTisrKSl5m9poYhnH6Crd0qKq+bTEUQ/EDxaRIbHDsHEBhm5Sx5lWgzB0wAIG174SmqZ1/GPjAv4endzy4hkIBtuV6jtyiBN58C+r4egAAAABJRU5ErkJggg==');
+  background-size: cover;
+  background-repeat:no-repeat;
+  width:rem(12px);
+  height:rem(12px);
+  object-fit: contain;
+  display:inline-block;
 }

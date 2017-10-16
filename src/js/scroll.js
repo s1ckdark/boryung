@@ -114,60 +114,61 @@ var controller = new ScrollMagic.Controller();
   }); //용각산 30년편
   
 
-  // // scroll auto play
-  // new ScrollMagic.Scene(
-  //   {
-  //     triggerElement: $video1[0],
-  //     duration: $video1.height(),
-  //   })
-  //   .on('enter leave', function(event){
-  //     var $video = $video1;
-  //     var video = $video.find('video')[0];
-  //     var timer;
-  //     var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
-  //     if (event.type === 'enter') {
-  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
-  //         if (!isPlaying) {
-  //           $video.find('.play').click(); // play
-  //         }
-  //       }, 600);
-  //     } else {
-  //       if (timer) {
-  //         clearTimeout(timer);
-  //       }
-  //       if (isPlaying) {
-  //         video.pause(); // pause
-  //       }
-  //     }
-  //   })
-  //   .addTo(controller);
-  // new ScrollMagic.Scene(
-  //   {
-  //     triggerElement: $video2[0],
-  //     duration: $video2.height(),
-  //   })
-  //   .on('enter leave', function(event){
-  //     var $video = $video2;
-  //     var video = $video.find('video')[0];
-  //     var timer;
-  //     if (event.type === 'enter') {
-  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
-  //         var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+  // scroll auto play
+  new ScrollMagic.Scene(
+    {
+      triggerElement: $video1[0],
+      duration: $video1.height(),
+    })
+    .on('enter leave', function(event){
+      var $video = $video1;
+      var video = $video.find('video')[0];
+      var timer;
+      var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+      if (event.type === 'enter') {
+        timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
+          if (!isPlaying) {
+            $video.find('.play').click(); // play
+          }
+        }, 600);
+      } else {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        if (isPlaying) {
+          video.pause(); // pause
+        }
+      }
+    })
+    .addTo(controller);
 
-  //         if (!isPlaying) {
-  //           $video.find('.play').click(); // play
-  //         }
-  //       }, 300);
-  //     } else {
-  //       if (timer) {
-  //         clearTimeout(timer);
-  //       }
-  //       if (video.played) {
-  //         video.pause(); // pause
-  //       }
-  //     }
-  //   })
-  //   .addTo(controller);
+  new ScrollMagic.Scene(
+    {
+      triggerElement: $video2[0],
+      duration: $video2.height(),
+    })
+    .on('enter leave', function(event){
+      var $video = $video2;
+      var video = $video.find('video')[0];
+      var timer;
+      if (event.type === 'enter') {
+        timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
+          var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+
+          if (!isPlaying) {
+            $video.find('.play').click(); // play
+          }
+        }, 300);
+      } else {
+        if (timer) {
+          clearTimeout(timer);
+        }
+        if (video.played) {
+          video.pause(); // pause
+        }
+      }
+    })
+    .addTo(controller);
 
 //twinkle arrow, hero tween on hero
   var arrowTween = new TimelineMax({paused:true});
@@ -175,8 +176,10 @@ var controller = new ScrollMagic.Controller();
 
   var $hero = $('.hero').children();
   var heroAni = new TimelineMax({paused:true, repeat:-1,repeatDelay:5});
-  heroAni.to($hero.eq(1),1, {autoAlpha:1,scale:1,ease: Back.easeInOut},3)
-         .fromTo($hero.eq(2), 1, {autoAlpha:1,sclae:1}, {opacity:0,scale:0,ease: Back.easeOut,delay:2}, 1)
+  heroAni.to($hero.eq(1),1, {autoAlpha:1,scale:1,ease: Back.easeInOut},0)
+         .to($hero.eq(1),1, {autoAlpha:0,scale:1,ease: Back.easeInOut},2)
+         .to($hero.eq(2), 1, {autoAlpha:1,sclae:1}, 1)
+         .to($hero.eq(2), 1, {opacity:0,scale:0,ease: Back.easeOut,delay:2},2)
          .fromTo($hero.eq(3), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1,ease: Back.easeInOut,zIndex:0}, 2)
 
  
@@ -188,14 +191,11 @@ var controller = new ScrollMagic.Controller();
     .on('enter leave', function(event){  
       if (event.type === 'enter') {
         arrowTween.play();
-        heroAni.play();
         } else {
         arrowTween.pause();
-        heroAni.pause();
       }
 
     })
-    .addIndicators()
     .addTo(controller);
 
 
@@ -220,11 +220,10 @@ bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
       }
 
     })
-    .addIndicators()
     .addTo(controller);
 
 var chartLine = new TimelineMax({paused:true});
-chartLine.staggerFrom("#line path", 2, {drawSVG:"50% 50%",onComplete:function(){chartBubble.play()}}, 0.1);
+chartLine.staggerFrom("#line path", 2, {drawSVG:"0% 100%",onComplete:function(){chartBubble.play()}}, 0.1);
 
 var chartBubble = new TimelineMax({pause:true});
 chartBubble.fromTo('.retangle_bubble.s2011',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
@@ -235,8 +234,6 @@ chartBubble.fromTo('.retangle_bubble.s2011',1,{scale:0},{scale:1,ease:Back.easeO
      .fromTo('.retangle_bubble.s2016',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
      .fromTo('.kanarbSales .circle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1);
 
-
- 
   new ScrollMagic.Scene(
     {
       triggerElement: $('.bg_medicine'),
@@ -249,7 +246,6 @@ chartBubble.fromTo('.retangle_bubble.s2011',1,{scale:0},{scale:1,ease:Back.easeO
         chartLine.pause();
       }
     })
-    .addIndicators()
     .addTo(controller);
 
   scrollToSection();

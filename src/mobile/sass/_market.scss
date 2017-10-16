@@ -3,8 +3,7 @@
 		background-color: rgb(245, 245, 245);
 		.market {
 			position:relative;
-			width: rem(1600px);
-	 		height: rem(1040px);
+			width: 100%;
 			background-image: url('../img/market/bg_marketshare.png');
 			background-size: contain;
 			background-position: 50% 90%;
@@ -12,30 +11,32 @@
 			margin:0 auto;
 		.heading-1 {
 			letter-spacing: rem(-2px);
-			color: $hero-bg-color;
-			padding-top:rem(100px);
+			color: $lipstick;
+			padding:rem(50px) 0 0;
+			font-weight:bold;
 		}
 		.heading-2 {
 			color: rgb(17, 17, 17);
+			padding:rem(30px) 0 (20px);
 		}
 		.calligraphy-drawing {
 			width: rem(490px);
 			height: rem(92px);
-			// background-image: url('../img/market/calligraphy-drawing.svg');
 		}
 		.text16 {
-			width: rem(680px);
-			height: rem(156px);
+			width:100%;
 			line-height: rem(28px);
+			padding-bottom:rem(50px);
 		}
 		.bar3d {
-			position:absolute;
-			right: rem(190px);
-			bottom: rem(150px);
+			position:relative;
+			bottom:rem(30px);
 			background-image: url('../img/market/3dbar.png');
-			width: rem(318px);
-			height: rem(589px);
+			width: 60vw;
+			height: calc(60vw * 589 / 318);
 			display: block;
+			background-size:cover;
+			margin-left:20vw;
 			.text {
 				font-size: rem(14px);
 				font-weight: bold;
@@ -129,21 +130,8 @@
 		.heading-2 {
 		color: rgb(17, 17, 17);
 		}
-		.realize {
-			height: rem(414px);
+		& > .wrapper > .article {
 			width: 100%;
-			margin: rem(80px) 0 rem(200px);
-		}
-		.col:nth-child(1) {
-			width: rem(700px);
-			margin-right: rem(50px);
-			position: relative;
-			.rnd-img {position:absolute;top:0;left:0;width: rem(700px);height: rem(414px);background-size: cover;background-position: 50% 50%;}
-			.rnd-img1 {background-image: url('../img/market/rnd-img1.jpg');}
-			.rnd-img2 {background-image: url('../img/market/rnd-img2.jpg');}
-		}
-		.col:nth-child(2) {
-			width: rem(330px);
 			.circle_bubble {
 				width: rem(130px);
 				height: rem(130px);
@@ -220,6 +208,16 @@
 				    }
 				}
 			}
+		.realize {
+			.article:nth-child(1) {
+				width: 100vw;
+				height:calc(100vw * 414 / 700);
+				position: relative;
+				.rnd-img {position:absolute;top:0;left:0;width: 100vw;height:calc(100vw * 414 / 700);background-size: cover;background-position: 50% 50%;}
+				.rnd-img1 {background-image: url('../img/market/rnd-img1.jpg');}
+				.rnd-img2 {background-image: url('../img/market/rnd-img2.jpg');}
+			}
 		}
-	}
+	}	
+}
 }

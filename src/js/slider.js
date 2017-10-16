@@ -12,14 +12,13 @@ $(function(){
   //
   var $articleSlider = $('.article-slider').owlCarousel({
     loop: true,
-    dots:false,
+    dots:true,
     dotsData: true,
     lazyLoad: true,
     items:1,
     nav: true,
-    margin: 20,
-    navText: ['<span class="owl-prev"></span>','<span class="owl-next"></span>'],
-  });
+    margin: 20
+    });
 
 
 // $('#institute-curriculum-slider').on('initialized.owl.carousel changed.owl.carousel', function(e) {

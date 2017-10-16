@@ -56,7 +56,7 @@ $line-height:         1.777;
 $line-height-small:   1.5;
 $letter-spacing:      -.05em;
 // font-size 아래 이외 폰트는 변수를 사용하지 않고 직접 입력함. 66, 56, 45, 42, 34, 32, 30, 28, 26, 24, 20, 16 등등..
-$font-size-base:      16px; // 디자인 기준 폰트 사이즈, rem 함수 기준
+$font-size-base:      15px; // 디자인 기준 폰트 사이즈, rem 함수 기준
 $font-sizes: (
   xs: 16px,
   xl: $font-size-base
@@ -66,8 +66,8 @@ $font-size-smaller:   rem(12px);
 $font-size-small:     rem(14px);
 $font-size-lead:      rem(22px);
 
-$heading-1:           rem(38px);
-$heading-2:           rem(26px);
+$heading-1:           rem(26px);
+$heading-2:           rem(18px);
 $heading-font-weight: 400;
 $heading-text-color:  $text-color-dark;
 $heading-line-height: 1.26;
