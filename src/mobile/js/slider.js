@@ -13,10 +13,8 @@ $(function(){
   $('.article-slider').owlCarousel({
     loop: true,
     nav: true,
-    dots: false,
-    items: 1,
-    stagePadding: 60,
-    margin: 60,
+    dots: true,
+    items: 1
   });
 
   // // brand interview slider

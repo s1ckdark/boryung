@@ -42,26 +42,18 @@ $article-height: rem(160px);
 
 .article-slider {
   overflow: hidden;
-  position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom:0;
   width: auto;
   font-weight: 400;
-  .article {
-    width: 270px;
-    height: $article-height;
-    border: 1px solid $border-color-gray;
-    &:hover {
-      border-color: $brand-text-color;
-    }
-  }
+  margin:0 auto;
 }
 
 .article {
   box-sizing: border-box;
-  padding: 20px;
+  padding: rem(40px); 
   .date {
     color: $text-color-muted;
     font-size: $font-size-smaller;

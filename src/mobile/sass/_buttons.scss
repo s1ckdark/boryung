@@ -46,3 +46,26 @@ $btn-padding-wide: rem(20px);
   object-fit: contain;
   display:inline-block;
 }
+
+.down-arrow {
+  background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH0AAAA6CAQAAAA31J56AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhChAWLigtfFOtAAACMElEQVRo3t2ZWxWDMBBEIwEJlYCESqiESEACDpCAhEqoBCRUAhKmP+3pg2wIbMJOut/0MDeP2R3qnEOHGQBwx8X9deGMOwBgRuecQ4/P6qzlFQT3X6S9e+74u0ZriYXAxx/O2WFZVzTWQjNjNwtwACF0YPoneDSYQpAutB4AZrTWkjOBt09r+63BocFVgD9by84CPgfpXpda2HnAW0tXgnuB69PK0QkPDdbyFeC9wNQtV2heXaGKSvQwH3pYuhfV+T0a3DaaN9pwG8BUk9/jtItC6oH1NDvV2d10S8gKF6VjYUj0RrISm9mWPpXUEckq23SC88ocRFXhgIK9M2k9za6AOdfh92JA0W0Rf7gpejGZw01xO2YNN8kBRfUSwnBz2OjF5fcHGzBPuNkZUFSvpGh2ZufPOtyYuo5luMkSUIoIKLzyFBPG8eGGaK481mw4DNZATqGAooQ/4BDSfjkobT3U34tKhhsxoHhr6pfAQmOG9fiUJjK735N5+gr8JMDvkBoJKCdr0pDcbPvEFZBTRWe4nYyfRdKED4Ind4m/l/pFb02WIl7RiSkCigpemr9usbtKFFBU8JuNSjTJO10zW4Xf5PdVenoUXjrAl58nWQOKCj/BtqgDigp+JdyIzdCrXstR8ogS+Vf8H8Cdi5gYBPDWWnFe+CkRnDOgqOCbJPg6m1kC/rgCXrunR+GHCHhvra40vNTFvbWyI+CXs1tdAUUF/93s6gsoKvj3MDNaefoDqCxv3xF0j5MAAAAASUVORK5CYII=');
+  background-size: contain;
+  background-repeat:no-repeat;
+  width:rem(15px);
+  height:rem(7px);
+  object-fit: contain;
+  display:inline-block;
+  line-height:1;
+  position:absolute;
+
+}
+
+.close {
+  background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA1CAQAAABL72v7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8SKy/BHN1eAAABOUlEQVRYw82YXRKDIAyEE0/lcfBkcpzcij7UKiJKgmSnPnVost+g/GxCskqSJIHcHgmSJMnKkraRZY4+IFq/v6Z9bPWY2QEimmjxg+UgWrgcGPcaS12uDXqAiPjuj9GgHTUWVtfiVsAo0Ak1BnavwdrAt6AL6h3sOZetCb2gKqoP1s7h3kR7PL9JtsXyWwF93ANKJ6Kf/SOqLWR5zQ3Us5ht8TRR94LWVapA1UXte0+Fugr3bHIlqoBFClaQAVXAzCATqgIznfyTPpRojpRLR9sVY0JJyL4RUbD5RuC3Us+qWIG/x+CIlahiHy099vu/TgvYGQg72WH3FewWhnkLmGOC+UCYu4V5dlglAquvYFUjrBaGVfiwvgWsGwPrMXmBrrCj9ejSfDz3Ax1BRHM8DM+0GS2ndmoGix/snCNVmpr70AAAAABJRU5ErkJggg==');
+  background-size:cover;
+  width:rem(15px);
+  height:rem(15px);
+  position:absolute;
+  top:rem(20px);
+  right:rem(20px);
+}

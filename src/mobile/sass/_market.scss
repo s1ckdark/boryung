@@ -26,17 +26,19 @@
 		.text16 {
 			width:100%;
 			line-height: rem(28px);
-			padding-bottom:rem(50px);
+			padding-bottom:rem(150px);
 		}
 		.bar3d {
 			position:relative;
 			bottom:rem(30px);
 			background-image: url('../img/market/3dbar.png');
-			width: 60vw;
-			height: calc(60vw * 589 / 318);
+			width: rem(205px);
+			height: calc(205px * 589 / 318);
 			display: block;
-			background-size:cover;
-			margin-left:20vw;
+			background-size:205px;
+			margin-left:rem(-50px);
+			background-repeat: no-repeat;
+			left:50%;
 			.text {
 				font-size: rem(14px);
 				font-weight: bold;
@@ -46,6 +48,7 @@
 			.icon {
 			    background-size:cover;
 			    margin:0 auto;
+			    background-repeat:no-repeat;
 			}
 			.retangle_bubble {
 				position:absolute;
@@ -54,6 +57,7 @@
 				border-radius: 4px;
 			    background-color: #333333;
 			    padding:rem(15px) 0;
+			    transform: scale(0.6);
 				&:before {
 					content:'';
 					position:absolute;
@@ -63,10 +67,11 @@
 					display:block;
 					right:rem(-21px);
 					top: rem(30px);
+					background-repeat:no-repeat;
 				}
 				&.ship {
-					bottom: rem(85px);
-					left: rem(-200px);
+					bottom: rem(40px);
+				    left: rem(-130px);
 					.icon {
 						width: rem(52px);
 						height: rem(52px);
@@ -74,8 +79,8 @@
 					}
 				}
 				&.chip {
-					bottom: rem(200px);
-					left: rem(-110px);
+					bottom: rem(115px);
+					left: rem(-90px);
 					.icon {
 						width: rem(50px);
 						height: rem(50px);
@@ -83,8 +88,8 @@
 					}
 				}
 				&.vehicle {
-					bottom: rem(320px);
-					left: rem(-20px);
+					bottom: rem(200px);
+					left: rem(-30px);
 					.icon {
 						margin:rem(5px) auto 0;
 						width: rem(53px);
@@ -100,6 +105,7 @@
 			    background-color: $lipstick;
 				text-align:center;
 				margin:0 auto;
+				transform: scale(0.8);
 				&:before {
 					content:'';
 					position:absolute;
@@ -109,10 +115,11 @@
 					display:block;
 					right:rem(-23px);
 					top: rem(65px);
+					background-repeat: no-repeat;
 				}
 				&.medicine {
 				    top: rem(-70px);
-				    right: rem(100px);
+				    left: rem(0px);
 		    		.icon {
 						width: rem(66px);
 						height: rem(58px);

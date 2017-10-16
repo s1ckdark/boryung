@@ -3,26 +3,27 @@
 //
 #injoongang {
     @extend %section-margin-mixed;
-    .type-b {
-    	.title {
-		font-size: rem(26px);
-	    letter-spacing: rem(-1px);
-		color: rgb(17, 17, 17);
+    .section-header {
+    	.heading-2 {
+			color: rgb(17, 17, 17);
 		}
-		.text {
-			@include text16;
-		}
+	}	
+	.text {
+		@include text16;
+		color:$text-muted;
 	}
 	.injoonang {
-			position:relative;
-			height:rem(480px);
+		position:relative;
 		.article_injoonang {
 			@extend %clearfix;
 			display:flex;
 			flex-wrap: wrap;
-			height:rem(480px);
+			width:80vw;
+			height:calc(80vw * 320 / 500);
 			overflow:hidden;
+			margin:0 auto;
 			.grid {
+				margin:0 auto;
 				position:relative;
 				width: 80vw;
 				height: calc(80vw * 320 / 500);
@@ -70,23 +71,7 @@
 						color: $br-gray-color;
 					}
 				}
-				&:nth-child(3n-1) {
-					margin:0 21px;
-					
-				}
 			}
-		}
-		.article_arrow {
-	        display: block;
-	        width: 24px;
-	        height: 16px;
-	        margin: rem(15px) auto 0;
-	        background: url('../img/hero/icon-arrow-down.svg') 50% 50% no-repeat;
-            transition: transform 150ms ease;
-	        &.up {
-	        	transform: rotate( -180deg );            
-			    transition: transform 150ms ease;
-	        }
 		}
 	}
 }

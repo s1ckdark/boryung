@@ -59,10 +59,8 @@
 				}
 			}
 			// article.article_1962 {
-			// 	height: rem(600px);
 			// }
 			article.article_1967 {
-				height: rem(600px);
 				.img1967-1 {
 					background-image:url('../img/era/1967-1.jpg');
 				}
@@ -71,12 +69,11 @@
 				}
 			}
 			// article.article_1970 {
-			// 	height: rem(600px);
 			// }
 			article.article_2b {
-				height: rem(260px);
+				height:calc(100vh - 55);
 			  	.container {
-		    		&.col2 {
+		    	
 						.col:nth-child(1) {
 							width:rem(500px);
 							height: rem(200px);
@@ -110,7 +107,6 @@
 				}
 			}
 			article.article_1975 {
-				height: rem(600px);
 				.img1975-1 {
 					background-image:url('../img/era/1975-1.jpg');
 				}
@@ -119,13 +115,12 @@
 				}
 			}
 			// article.article_1980era {
-			// 	height: rem(600px);
+		
 			// }
 			// article.article_1990era {
-			// 	height: rem(600px);
+		
 			// }
 			article.article_1990 {
-				height: rem(600px);
 				.img1990-1 {
 					background-image:url('../img/era/1990-1.png');
 				}
@@ -147,15 +142,19 @@
 				background-color: rgb(100, 100, 100);
 				right:0px;
 			}
-			article.box {
+			article {
+				div.toggle_open {
+					text-align:center;
+				}
+				&.box {
 				width:50vw;
-				height: rem(50px);
-				margin:0 auto rem(100px);
+				margin:rem(50px) auto;
 				padding:rem(30px);
-				div {
+				div.toggle_open {
 					display:block;
 					position:relative;
 					border: solid 1px rgb(136, 136, 136);
+					padding:rem(20px) 0;
 					&:after {
 						// content:'';
 						// position:absolute;
@@ -168,58 +167,63 @@
 					}
 					p {
 						margin-bottom:rem(10px);
-						font-size:rem(14px);
+						font-size:rem(15px);
 						text-align:center;
 						color: rgb(245,245,245);
 						line-height: rem(20px);
-						.num {
-							font-size:rem(28px);
-							line-height: rem(28px);
-						}
 					}
-					&.h1962 {
+					p.text {
+						color: rgb(102, 102, 102);
+					}
+					.h1962 {
 			
 					}
-					&.h1967 {
-						border-radius:50%;
-						background-color: $lipstick;
-						width:30vw;
-						height:30vw;
-						margin:0 auto;
-					}
-					&.h1970 {
+
+					.h1970 {
 						
 					}
-					&.h2b {
-						border-radius:50%;
-						background-color: $lipstick;
-						width:30vw;
-						height:30vw;
-						margin:0 auto;
+					
+					.h1980era {
+				
+					}
+					.h1990era {
+				
+					}
+					.h1990 {
+					
+					}
+
+				}
+			}
+			&.circle {
+				border-radius:50%;
+				background-color: $lipstick;
+				width:30vw;
+				height:30vw;
+				margin:rem(50px) auto;
+					p {
+						margin-bottom:rem(10px);
+						font-size:rem(15px);
+						text-align:center;
+						color: rgb(245,245,245);
+						line-height: rem(20px);
+						padding:rem(35px) 0;
+					}
+					.h1967 {
+						
+					}
+					.h2b {
 						p {
 							@extend %eng;
 							font-size:rem(24px);
 						}
 					}
-					&.h1975 {
-						border-radius:50%;
-						background-color: $lipstick;
-						width:30vw;
-						height:30vw;
-						margin:0 auto;
+					.h1975 {
 				
 					}
-					&.h1980era {
-				
-					}
-					&.h1990era {
-				
-					}
-					&.h1990 {
-					
-					}
+					.h1990 {
 
-				}
+					}
 			}
 		
 	}
@@ -237,8 +241,6 @@
 		left:0;
 		right:0;
 		bottom:0;
-		width:100%;
-		height: rem(600px);
 		background-color: rgb(255,255,255);
 		z-index:31;
 		display:none;
@@ -249,15 +251,6 @@
 		.video {
 			width:rem(530px);
 			height:rem(397px);
-		}
-		.close {
-			background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADUAAAA1CAQAAABL72v7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg8SKy/BHN1eAAABOUlEQVRYw82YXRKDIAyEE0/lcfBkcpzcij7UKiJKgmSnPnVost+g/GxCskqSJIHcHgmSJMnKkraRZY4+IFq/v6Z9bPWY2QEimmjxg+UgWrgcGPcaS12uDXqAiPjuj9GgHTUWVtfiVsAo0Ak1BnavwdrAt6AL6h3sOZetCb2gKqoP1s7h3kR7PL9JtsXyWwF93ANKJ6Kf/SOqLWR5zQ3Us5ht8TRR94LWVapA1UXte0+Fugr3bHIlqoBFClaQAVXAzCATqgIznfyTPpRojpRLR9sVY0JJyL4RUbD5RuC3Us+qWIG/x+CIlahiHy099vu/TgvYGQg72WH3FewWhnkLmGOC+UCYu4V5dlglAquvYFUjrBaGVfiwvgWsGwPrMXmBrrCj9ejSfDz3Ax1BRHM8DM+0GS2ndmoGix/snCNVmpr70AAAAABJRU5ErkJggg==');
-			background-size:cover;
-			width:rem(30px);
-			height:rem(30px);
-			position:absolute;
-			top:rem(30px);
-			right:rem(30px);
 		}
 		.container {
     		&.col2 {
