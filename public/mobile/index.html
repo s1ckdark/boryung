@@ -37,7 +37,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1508150928079">
+  <link rel="stylesheet" href="./css/style.css?v=1508152850349">
   <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="../js/common.js"></script>
@@ -185,24 +185,35 @@
     </div>
     <!-- //상단공통 -->
     <section id="top" class="ja_section_wrap" ja-section-title="보령제약 인트로">
-      <div class="wrapper">
-        <div id="hero" class="hero">
-          <div class="hero--obj title"></div>
-          <div class="hero--obj kanarb"></div>
-          <div class="hero--map greydot"></div>
-          <div class="hero--map orangedot"></div>
-        </div>
-        <div class="top-intro">
-          <p class="text">
-            첫 무대는 종로5가의 한 귀퉁이였다. <br>지금은 세계 신약 시장이다. <br>도전 메시지는 그때나 지금이나 <br>변함이 없다. ‘지도’를 바꾸는 것이다. <br>종로5가를 ‘약국거리’로 만들었고, <br>다국적 제약회사가 주름잡던 <br>고혈압 치료제 시장에 뛰어들면서 <br>‘새로운 지도’를 그리고 있다.
-          </p>
-        </div>
-        <div class="top-indicator">
-          <a href="#background" class="link">
-        <span class="sr-only">이어보기</span>
-      </a>
+      <!-- <div class="wrapper"> -->
+      <!--     <div id="hero" class="hero">
+      <div class="hero--obj title"></div>
+      <div class="hero--obj kanarb"></div>
+      <div class="hero--map greydot"></div>
+      <div class="hero--map orangedot"></div>
+    </div> -->
+      <div class="box" style="background:#222;">
+        <div class="motion1-wrapper">
+          <div class="wrap">
+            <div id="animation_container" style="background-color:rgba(34, 34, 34, 1.00); width:1200px; height:720px">
+              <canvas id="canvas" width="1200" height="720" style="position: absolute; display: block; background-color:rgba(34, 34, 34, 1.00);"></canvas>
+              <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:720px; position: absolute; left: 0px; top: 0px; display: block;">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="top-intro">
+        <p class="text">
+          첫 무대는 종로5가의 한 귀퉁이였다. <br>지금은 세계 신약 시장이다. <br>도전 메시지는 그때나 지금이나 <br>변함이 없다. ‘지도’를 바꾸는 것이다. <br>종로5가를 ‘약국거리’로 만들었고, <br>다국적 제약회사가 주름잡던 <br>고혈압 치료제 시장에 뛰어들면서 <br>‘새로운 지도’를 그리고 있다.
+        </p>
+      </div>
+      <div class="top-indicator">
+        <a href="#background" class="link">
+        <span class="sr-only">이어보기</span>
+      </a>
+      </div>
+      <!-- </div> -->
     </section>
     <section id="background" class="ja_section_wrap" ja-section-title="대한민국 '약국 1번가'">
       <div class="bg_background">
@@ -217,85 +228,85 @@
           </div>
           <div class="col">
             <p class="text">
-              1957년 10월 1일 서울 종로구 종로5가 124번지(현 종로 203). 육군 장교로 제대한 청년 김승호(현 보령제약<br>그룹 회장)는 전 재산이던 집 한 채를 팔아 세 평 반짜리 약국을 개업했다. 고향 이름을 따서 ‘보령(保寧)’이라고 <br>간판을 걸었다. 60년이 흐른 지금 종로5가는 ‘약국거리’로 통한다. 대형 약국만 20여 곳, 이곳을 드나드는 <br>고객이 하루 수만 명에 이른다. 약국거리의 뿌리로 인정받으면서
-              보령약국은 2013년 ‘서울미래유산’으로 지정됐다.
+              1957년 10월 1일 서울 종로구 종로5가 124번지(현 종로 203). 육군 장교로 제대한 청년 김승호(현 보령제약그룹 회장)는 전 재산이던 집 한 채를 팔아 세 평 반짜리 약국을 개업했다. 고향 이름을 따서 ‘보령(保寧)’이라고 간판을 걸었다. 60년이 흐른 지금 종로5가는 ‘약국거리’로 통한다. 대형 약국만 20여 곳, 이곳을 드나드는 고객이 하루 수만 명에 이른다. 약국거리의 뿌리로 인정받으면서 보령약국은 2013년 ‘서울미래유산’으로
+              지정됐다.
             </p>
           </div>
-          <div id="video1" class="video-play">
-            <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster1.jpg');"></a>
-            <video></video>
-          </div>
         </div>
-      </div>
-      <div class="bg_sceneTween">
-        <div class="sceneTween sceneTween1"></div>
-        <div class="sceneTween sceneTween2"></div>
-      </div>
-      <div class="story">
-        <div class="wrapper">
-          <div class="container">
-            <header class="section-header">
-              <h4 class="overline">종로 약국 거리</h4>
-            </header>
-            <div class="toggle_block">
-              <div class="toggle_text heading-2">“없는 약이 없고 값이 저렴해서”</div>
-              <p class="text">
-                서울 강남에서, 지방에서 종로5가 약국거리를 찾는 단골손님이 <br>꽤 있다. 이유는 간단하다. “없는 약이 없고” “약값이 저렴하며” <br>“친절 하게 설명을 잘해줘서”다. 60년 전 보령약국의 성공 포인트가 <br>그대로 이어지고 있다. 청년 김승호는 손님이 찾는 약이 없으면 <br>자전거를 타고 곳을 뒤져 이튿날엔 반드시 그 약을 구해 놓았다.
-              </p>
-            </div>
-            <div class="toggle_block">
-              <div class="toggle_text heading-2">경영학 교재가 된 약국 전표</div>
-              <div class="innerBox white">
-                <div class="voucher"></div>
-                <p class="text">
-                  보령약국은 1962년부터 전표(傳票)제를 도입했다. 약품이 팔릴 <br>때마다 약사에게 그 품목과 수량, 가격을 기입하도록 하고, <br>관리부서는 이를 넘겨받아 창구로 보내는 방식이다. <br>전표제가 정착되면서 재고 파악이 정확해졌고, 무엇보다 잘 팔리는 <br>제품군을 선별해 상품 관리의 효율성을 높였다. 이 모습을 발견한 <br>서울대 상학과 교수가 “획기적인 시스템 경영 도입 사례”라며 <br>수업 교재로
-                  인용하기도 했다.
-                </p>
-              </div>
-            </div>
-            <div class="toggle_block">
-              <div class="toggle_text heading-2">제약산업의 성장판이 되다</div>
-              <div class="innerBox white">
-                <p class="text">
-                  보령은 1963년 동영제약(현 보령제약)을 인수하면서 제약회사로 <br>발돋움한다. 한미약품의 모태인 ‘임성기약국’도 67년 종로5가에서 <br>창업했다. 전남 목포를 근거로 하던 의약품 유통회사 백제약방<br>(현 백제약품)은 이곳에 서울지점을 열었다. 1897년 동화약방 <br>설립으로 태동한 국내 제약산업이 한해 22조원 규모로 성장하는데 <br>종로5가가 성장판 역할을 톡톡히 한 셈이다.
-                </p>
-                <div class="drugstore_front"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="interview" class="ja_section_wrap" ja-section-title="김승호 회장 인터뷰">
-      <div class="wrapper">
-        <header class='section-header'>
-          <h4 class="overline dark">interview</h4>
-        </header>
-        <div id="video2" class="video-play">
-          <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster2.jpg');"></a>
+        <div id="video1" class="video-play">
+          <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster1.jpg');"></a>
           <video></video>
         </div>
-        <span class="interview_title heading-1">이제는 글로벌 보령!</span>
-        <p class="text">
-          김승호 보령제약그룹 회장과 유명 MC 이홍렬씨가 만났다. 기업인으로, 방송인으로 각각 걸어온 이력은 달라도 두 사람은 닮은꼴이다. 김 회장은 약국 경영으로 출발해 세계 시장에서 인정받는 신약 개발을 이뤄냈다. 1979년 동양방송 개그맨으로 데뷔한 이홍렬씨는 40년 가까이 ‘방송 한길’을 걷고 있다. 그러면서도 두 사람은 사회공헌, 특히 어린이 후원에 적극적이다. 김 회장은 보령 창립 50주년 때 사재 30억원을 출연해 보령중보(中甫)재단을 만들었다.
-          이씨도 98년 초록우산 어린이재단 홍보대사를 맡은 이래 20년째 활동 중이다. 기부 강의 ‘이홍렬의 펀펀 도네이션’은 100회를 넘었다.
-        </p>
-      </div>
-    </section>
-    <section id="injoongang" class="ja_section_wrap" ja-section-title="중앙일보 속 김승호 회장 이야기">
-      <div class="wrapper">
-        <header>
-          <h4 class="heading-2">중앙일보 속<br> 김승호 회장 이야기</h4>
-        </header>
-        <p class="text">
-          김승호 회장은 2011년 2월부터 20차례에 걸쳐 중앙일보에 ‘멈추지 않는 자전거’라는 제목으로 경영 회고록을 연재했다. 보령의 성장과정과 김 회장의 경영 철학, 사회공헌 이야기가 담백하게 담겨 있다.
-        </p>
-      </div>
-      <div class="injoonang">
-        <div class="article_injoonang article-slider owl-carousel"></div>
-        <div class="article_arrow"></div>
       </div>
   </div>
+  <div class="bg_sceneTween">
+    <div class="sceneTween sceneTween1"></div>
+    <div class="sceneTween sceneTween2"></div>
+  </div>
+  <div class="story">
+    <div class="container">
+      <header class="section-header">
+        <h4 class="overline">종로 약국 거리</h4>
+      </header>
+      <div class="toggle_block">
+        <div class="toggle_text heading-2">“없는 약이 없고 값이 저렴해서”</div>
+        <div class="wrapper">
+          <p class="text">
+            서울 강남에서, 지방에서 종로5가 약국거리를 찾는 단골손님이 꽤 있다. 이유는 간단하다. “없는 약이 없고” “약값이 저렴하며” “친절 하게 설명을 잘해줘서”다. 60년 전 보령약국의 성공 포인트가 그대로 이어지고 있다. 청년 김승호는 손님이 찾는 약이 없으면 자전거를 타고 곳을 뒤져 이튿날엔 반드시 그 약을 구해 놓았다.
+          </p>
+        </div>
+      </div>
+      <div class="toggle_block">
+        <div class="toggle_text heading-2">경영학 교재가 된 약국 전표</div>
+        <div class="wrapper">
+          <div class="voucher"></div>
+          <p class="text">
+            보령약국은 1962년부터 전표(傳票)제를 도입했다. 약품이 팔릴 때마다 약사에게 그 품목과 수량, 가격을 기입하도록 하고, 관리부서는 이를 넘겨받아 창구로 보내는 방식이다. 전표제가 정착되면서 재고 파악이 정확해졌고, 무엇보다 잘 팔리는 제품군을 선별해 상품 관리의 효율성을 높였다. 이 모습을 발견한 서울대 상학과 교수가 “획기적인 시스템 경영 도입 사례”라며 수업 교재로 인용하기도 했다.
+          </p>
+        </div>
+      </div>
+      <div class="toggle_block">
+        <div class="toggle_text heading-2">제약산업의 성장판이 되다</div>
+        <div class="wrapper">
+          <p class="text">
+            보령은 1963년 동영제약(현 보령제약)을 인수하면서 제약회사로 발돋움한다. 한미약품의 모태인 ‘임성기약국’도 67년 종로5가에서 창업했다. 전남 목포를 근거로 하던 의약품 유통회사 백제약방(현 백제약품)은 이곳에 서울지점을 열었다. 1897년 동화약방 설립으로 태동한 국내 제약산업이 한해 22조원 규모로 성장하는데 종로5가가 성장판 역할을 톡톡히 한 셈이다.
+          </p>
+          <div class="drugstore_front"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section id="interview" class="ja_section_wrap" ja-section-title="김승호 회장 인터뷰">
+    <div class="wrapper">
+      <header class='section-header'>
+        <h4 class="overline dark">interview</h4>
+      </header>
+      <div id="video2" class="video-play">
+        <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster2.jpg');"></a>
+        <video></video>
+      </div>
+      <span class="interview_title heading-1">이제는 글로벌 보령!</span>
+      <p class="text">
+        김승호 보령제약그룹 회장과 유명 MC 이홍렬씨가 만났다. 기업인으로, 방송인으로 각각 걸어온 이력은 달라도 두 사람은 닮은꼴이다. 김 회장은 약국 경영으로 출발해 세계 시장에서 인정받는 신약 개발을 이뤄냈다. 1979년 동양방송 개그맨으로 데뷔한 이홍렬씨는 40년 가까이 ‘방송 한길’을 걷고 있다. 그러면서도 두 사람은 사회공헌, 특히 어린이 후원에 적극적이다. 김 회장은 보령 창립 50주년 때 사재 30억원을 출연해 보령중보(中甫)재단을 만들었다.
+        이씨도 98년 초록우산 어린이재단 홍보대사를 맡은 이래 20년째 활동 중이다. 기부 강의 ‘이홍렬의 펀펀 도네이션’은 100회를 넘었다.
+      </p>
+    </div>
+  </section>
+  <section id="injoongang" class="ja_section_wrap" ja-section-title="중앙일보 속 김승호 회장 이야기">
+    <div class="wrapper">
+      <header>
+        <h4 class="heading-2">중앙일보 속<br> 김승호 회장 이야기</h4>
+      </header>
+      <p class="text">
+        김승호 회장은 2011년 2월부터 20차례에 걸쳐 중앙일보에 ‘멈추지 않는 자전거’라는 제목으로 경영 회고록을 연재했다. 보령의 성장과정과 김 회장의 경영 철학, 사회공헌 이야기가 담백하게 담겨 있다.
+      </p>
+    </div>
+    <div class="injoonang">
+      <div class="article_injoonang article-slider owl-carousel"></div>
+      <div class="article_arrow"></div>
+    </div>
+    </div>
   </section>
   <style type="text/css" id="bg_article">
   </style>
@@ -1112,7 +1123,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
   <!-- <script src="./js/SplitText.min.js"></script> -->
-  <script src="./js/script.js?v=1508150928079"></script>
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="./js/script.js?v=1508152850349"></script>
 </body>
 
 </html>
