@@ -147,7 +147,7 @@ var article = {
    
    for (var key in article.articles) {
         if (article.articles.hasOwnProperty(key)){
-        var item = "<div class='item grid'><div class='bg_article bg_article"+article.articles[key].num+"'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='"+article.articles[key].url+"' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+        var item = "<div class='item grid'><div class='bg_article bg_article"+article.articles[key].num+"'></div><div class='overlay'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='"+article.articles[key].url+"' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
         var sheet = $("#bg_article").get(0).sheet;
         var styles = '.bg_article'+article.articles[key].num+' {';
         styles += 'background-image: url('+article.articles[key].img+')';

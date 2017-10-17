@@ -277,22 +277,21 @@ function scrollToSection () {
 }
 
 TweenMax.set('.bg_1975',{autoAlpha:0});
-var len = $('.article_1975').height();
-var offset =  $('.h1975').offset().top;
-  new ScrollMagic.Scene(
-    {
-      offset:offset,
-      duration:len
-    })
-     .on('enter leave', function(event){  
-      if (event.type === 'enter') {
-          TweenMax.to('.bg_1975', 1, {autoAlpha:1}, 0.1);
-      } else {
-        TweenMax.to('.bg_1975', 1, {autoAlpha:0}, 0.1);
-      }
-    })
-    .addIndicators()
-    .addTo(controller);
+// var len = $('.article_1975').height();
+// var offset =  $('.h1975').offset().top;
+//   new ScrollMagic.Scene(
+//     {
+//       offset:offset,
+//       duration:len
+//     })
+//      .on('enter leave', function(event){  
+//       if (event.type === 'enter') {
+//           TweenMax.to('.bg_1975', 1, {autoAlpha:1}, 0.1);
+//       } else {
+//         TweenMax.to('.bg_1975', 1, {autoAlpha:0}, 0.1);
+//       }
+//     })
+//     .addTo(controller);
 
 
 function upTween(e, hook){

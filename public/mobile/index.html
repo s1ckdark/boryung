@@ -37,7 +37,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1508261354059">
+  <link rel="stylesheet" href="./css/style.css?v=1508283002102">
   <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="../js/common.js"></script>
@@ -76,21 +76,21 @@
   </script>
   <!-- Dable 스크립트 종료 / 문의 support@dable.io -->
   <!-- Begin JA Tracker Script -->
-  <!-- <script type="text/javascript">
-  (function (jaW, jaD, jaS, jaG, jaR, jaA, jaM) {
-    jaW['JaTrackerObject'] = jaR;
-    jaW[jaR] = jaW[jaR] || function () {
-      (jaW[jaR].q = jaW[jaR].q || []).push(arguments);
-    }, jaW[jaR].l = 1 * new Date();
-    jaA = jaD.createElement(jaS),
-      jaM = jaD.getElementsByTagName(jaS)[0];
-    jaA.async = 1;
-    jaA.src = jaG;
-    jaM.parentNode.insertBefore(jaA, jaM);
-  })(window, document, 'script', 'http://jtracker.joins.com/jatracker.min.js?v2', 'jatracker');
-  jatracker('require', 'heightChecker', true);
-  jatracker('require', 'sectionTimer', true);
-</script> -->
+  <script type="text/javascript">
+    (function(jaW, jaD, jaS, jaG, jaR, jaA, jaM) {
+      jaW['JaTrackerObject'] = jaR;
+      jaW[jaR] = jaW[jaR] || function() {
+        (jaW[jaR].q = jaW[jaR].q || []).push(arguments);
+      }, jaW[jaR].l = 1 * new Date();
+      jaA = jaD.createElement(jaS),
+        jaM = jaD.getElementsByTagName(jaS)[0];
+      jaA.async = 1;
+      jaA.src = jaG;
+      jaM.parentNode.insertBefore(jaA, jaM);
+    })(window, document, 'script', 'http://jtracker.joins.com/jatracker.min.js?v2', 'jatracker');
+    jatracker('require', 'heightChecker', true);
+    jatracker('require', 'sectionTimer', true);
+  </script>
   <!-- End JA Tracker Script -->
   <!-- Facebook Pixel Code -->
   <script>
@@ -200,11 +200,12 @@
               <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:720px; position: absolute; left: 0px; top: 0px; display: block;">
               </div>
             </div>
+            <div id='_preload_div_' style='display: inline-block; height:720px; width: 1200px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;'> <span style='display: inline-block; height: 100%; vertical-align: middle;'></span> <img src=img/hero/_preloader.gif?1508131847145 style='vertical-align: middle; max-height: 100%' /></div>
           </div>
         </div>
       </div>
       <div class="top-intro">
-        <p class="text">
+        <p class="text-intro">
           첫 무대는 종로5가의 한 귀퉁이였다. <br>지금은 세계 신약 시장이다. <br>도전 메시지는 그때나 지금이나 <br>변함이 없다. ‘지도’를 바꾸는 것이다. <br>종로5가를 ‘약국거리’로 만들었고, <br>다국적 제약회사가 주름잡던 <br>고혈압 치료제 시장에 뛰어들면서 <br>‘새로운 지도’를 그리고 있다.<br>보령제약그룹의 60년 이야기다.
         </p>
       </div>
@@ -430,7 +431,7 @@
     };
     for (var key in article.articles) {
       if (article.articles.hasOwnProperty(key)) {
-        let item = "<div class='item grid bg_article" + article.articles[key].num + "'><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+        let item = "<div class='item grid'><div class='bg_article bg_article" + article.articles[key].num + "'></div><div class='overlay'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
         let sheet = $("#bg_article").get(0).sheet;
         let styles = '.bg_article' + article.articles[key].num + ' {';
         styles += 'background-image: url(' + article.articles[key].img + ')';
@@ -704,7 +705,7 @@
                   <div class="icon"></div>
                 </div>
                 <div class="col">
-                  <p class="text">조선산업<br>250조</p>
+                  <p class="text-icon">조선산업<br>250조</p>
                 </div>
               </div>
             </div>
@@ -714,7 +715,7 @@
                   <div class="icon"></div>
                 </div>
                 <div class="col">
-                  <p class="text">반도체 <br> 400조</p>
+                  <p class="text-icon">반도체 <br> 400조</p>
                 </div>
               </div>
             </div>
@@ -724,13 +725,13 @@
                   <div class="icon"></div>
                 </div>
                 <div class="col">
-                  <p class="text">자동차 <br> 600조</p>
+                  <p class="text-icon">자동차 <br> 600조</p>
                 </div>
               </div>
             </div>
             <div class="medicine circle_bubble">
               <div class="icon"></div>
-              <p class="text">바이오·제약 <br> 1200조원대</p>
+              <p class="text-icon">바이오·제약 <br> 1200조원대</p>
             </div>
           </div>
         </div>
@@ -1073,7 +1074,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-  <script src="./js/script.js?v=1508261354059"></script>
+  <script src="./js/script.js?v=1508283002102"></script>
 </body>
 
 </html>

@@ -34,7 +34,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1508261354059">
+  <link rel="stylesheet" href="./css/style.css?v=1508283002102">
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -74,21 +74,21 @@
   </script>
   <!-- Dable 스크립트 종료 / 문의 support@dable.io -->
   <!-- Begin JA Tracker Script -->
-  <!-- <script type="text/javascript">
-  (function (jaW, jaD, jaS, jaG, jaR, jaA, jaM) {
-    jaW['JaTrackerObject'] = jaR;
-    jaW[jaR] = jaW[jaR] || function () {
-      (jaW[jaR].q = jaW[jaR].q || []).push(arguments);
-    }, jaW[jaR].l = 1 * new Date();
-    jaA = jaD.createElement(jaS),
-      jaM = jaD.getElementsByTagName(jaS)[0];
-    jaA.async = 1;
-    jaA.src = jaG;
-    jaM.parentNode.insertBefore(jaA, jaM);
-  })(window, document, 'script', 'http://jtracker.joins.com/jatracker.min.js?v2', 'jatracker');
-  jatracker('require', 'heightChecker', true);
-  jatracker('require', 'sectionTimer', true);
-</script> -->
+  <script type="text/javascript">
+    (function(jaW, jaD, jaS, jaG, jaR, jaA, jaM) {
+      jaW['JaTrackerObject'] = jaR;
+      jaW[jaR] = jaW[jaR] || function() {
+        (jaW[jaR].q = jaW[jaR].q || []).push(arguments);
+      }, jaW[jaR].l = 1 * new Date();
+      jaA = jaD.createElement(jaS),
+        jaM = jaD.getElementsByTagName(jaS)[0];
+      jaA.async = 1;
+      jaA.src = jaG;
+      jaM.parentNode.insertBefore(jaA, jaM);
+    })(window, document, 'script', 'http://jtracker.joins.com/jatracker.min.js?v2', 'jatracker');
+    jatracker('require', 'heightChecker', true);
+    jatracker('require', 'sectionTimer', true);
+  </script>
   <!-- End JA Tracker Script -->
   <!-- Facebook Pixel Code -->
   <script>
@@ -412,7 +412,7 @@
 
       for (var key in article.articles) {
         if (article.articles.hasOwnProperty(key)) {
-          var item = "<div class='item grid'><div class='bg_article bg_article" + article.articles[key].num + "'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+          var item = "<div class='item grid'><div class='bg_article bg_article" + article.articles[key].num + "'></div><div class='overlay'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
           var sheet = $("#bg_article").get(0).sheet;
           var styles = '.bg_article' + article.articles[key].num + ' {';
           styles += 'background-image: url(' + article.articles[key].img + ')';
@@ -1039,7 +1039,7 @@
     <script src="./js/lib/DrawSVGPlugin.min.js"></script>
     <script src="./js/lib/SplitText.min.js"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="./js/script.js?v=1508261354059"></script>
+    <script src="./js/script.js?v=1508283002102"></script>
 </body>
 
 </html>

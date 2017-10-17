@@ -164,10 +164,10 @@ var controller = new ScrollMagic.Controller();
 
 var bar3d = new TimelineMax({paused:true});
 bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
-     .fromTo('.bar3d .ship.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
-     .fromTo('.bar3d .chip.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1.5)
-     .fromTo('.bar3d .vehicle.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},2)
-     .fromTo('.bar3d .medicine.circle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},2.5)
+     .fromTo('.bar3d .ship.retangle_bubble',.5,{scale:0},{scale:.6,ease:Back.easeOut},1)
+     .fromTo('.bar3d .chip.retangle_bubble',.5,{scale:0},{scale:.6,ease:Back.easeOut},1.5)
+     .fromTo('.bar3d .vehicle.retangle_bubble',.5,{scale:0},{scale:.6,ease:Back.easeOut},2)
+     .fromTo('.bar3d .medicine.circle_bubble',.5,{scale:0},{scale:.6,ease:Back.easeOut},2.5)
 
  
   new ScrollMagic.Scene(
@@ -193,8 +193,8 @@ chartBubble.fromTo('.retangle_bubble.s2011',.1,{scale:0},{scale:1,ease:Back.ease
      .fromTo('.retangle_bubble.s2016',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.6)
      .fromTo('.kanarbSales .circle_bubble',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.7);
 
-var chartLine = new TimelineMax({paused:true,onComplete:function(){chartBubble.play();}});
-chartLine.staggerFrom("#line path", .5, {drawSVG:"50% 50%"}, .1);
+// var chartLine = new TimelineMax({paused:true,onComplete:function(){chartBubble.play();}});
+// chartLine.staggerFrom("#line path", .5, {drawSVG:"50% 50%"}, .1);
 
 
   new ScrollMagic.Scene(
@@ -204,9 +204,9 @@ chartLine.staggerFrom("#line path", .5, {drawSVG:"50% 50%"}, .1);
     })
      .on('enter leave', function(event){  
       if (event.type === 'enter') {
-        chartLine.play();
+        chartBubble.play();
         } else {
-        chartLine.pause();
+        chartBubble.pause();
       }
     })
     .addTo(controller);
@@ -291,7 +291,6 @@ upTween('p.text16','p.text16');
 upTween('.heading-1','.5');
 upTween('.heading-2','.5');
 upTween('.desc','.5');
-upTween('.icon','.5');
 upTween('.question','.5');
 upTween('.answer','.5');
 
