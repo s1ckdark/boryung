@@ -10,58 +10,252 @@
 *    - TweenMax.min.js
 * */
 
-// ScrollMagic 컨트롤러
+// // ScrollMagic 컨트롤러
 var controller = new ScrollMagic.Controller();
 
-window.addEventListener('load', initScrollMagic);
+// window.addEventListener('load', initScrollMagic);
 
-function initScrollMagic() {
-  // Scene 샘플
-  // var scene = new ScrollMagic.Scene(
+// function initScrollMagic() {
+//   // 4C 인재 텍스트 색상 채우기
+//   var $person4c = $('#person-4c-color');
+//   new ScrollMagic.Scene(
+//     {
+//       triggerElement: $person4c[0],
+//       offset: -50,
+//     })
+//     .setTween($person4c, .8, {width: '100%', ease: Linear.easeNone})
+//     .addTo(controller);
+
+//   // 로버트의 말 텍스트 색상 채우기
+//   var $robertQuote = $('#robert-quote');
+//   var $robertQuoteText = $robertQuote.find('.color');
+//   var rqTimeline = new TimelineMax()
+//     .to($robertQuoteText.eq(0), .8, {width: '100%'})
+//     .to($robertQuoteText.eq(1), 1.0, {width: '100%'})
+//     .to($robertQuoteText.eq(2), 1.5, {width: '100%'});
+//   new ScrollMagic.Scene(
+//     {
+//       triggerElement: $robertQuote[0]
+//     })
+//     .setTween(rqTimeline)
+//     .addTo(controller);
+
+  // video
+   var $video2 = $('#video2');
+  var $video3 = $('#video3');
+  var $video4 = $('#video4');
+  var $video5 = $('#video5');
+  var $video6 = $('#video6');
+  var $video7 = $('#video7');
+  var $twinklebtn = $('.top-indicator .link');
+
+  $video2.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/15dTkyZDE6hd11k9l-gw1Af3KKt819wk/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  });
+
+   $video3.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/M4aXYwZDE6EA_PCboH7mBcI6zEpCbm_d/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //카나브 신약
+  
+   $video4.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/V4anYwZDE6YQ7f3Go8QxokuUgalQKH0L/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //겔포스 수사반장 2편
+  
+   $video7.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/d5aXYwZDE6Pj8CH-O-8bARx9OvW9NvXF/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //겔포스 수사반장 1편   
+
+   $video6.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/5ud2oxZDE6RIyA9OeE2NrjiiqvIj8ush/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //용각산 1970년대
+
+    $video5.find('video').attr({
+    'src': 'http://cf.c.ooyala.com/k3aHYwZDE6pHASeJKdfJ7b7g6q0ugOUm/DOcJ-FxaFrRg4gtDEwOmw3OjBrO9xAJa',
+    'controls':true,
+    'controlsList':'nodownload',
+    'preload':'auto',
+    'loop':false,
+    'poster': ''
+  }); //용각산 30년편
+  
+
+  // // scroll auto play
+  // new ScrollMagic.Scene(
   //   {
-  //     triggerElement: '#trigger,
-  //     triggerHook: 0, // 'onLeave' 0, 'onCenter' 0.5, 'onEnter' 1
-  //     duration: 100, // '100%' = screen height
-  //     offset: -100,
+  //     triggerElement: $video2[0],
+  //     duration: $video2.height(),
   //   })
-  //   .setTween('#target', 1, {width: 100, ease: Linear.easeNone})
-  //   .setPin('#sample')
-  //   .setClassToggle('#sample', 'active')
+  //   .on('enter leave', function(event){
+  //     var $video = $video2;
+  //     var video = $video.find('video')[0];
+  //     var timer;
+  //     var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+  //     if (event.type === 'enter') {
+  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
+  //         if (!isPlaying) {
+  //           $video.find('.play').click(); // play
+  //         }
+  //       }, 600);
+  //     } else {
+  //       if (timer) {
+  //         clearTimeout(timer);
+  //       }
+  //       if (isPlaying) {
+  //         video.pause(); // pause
+  //       }
+  //     }
+  //   })
   //   .addTo(controller);
 
-  // 4C 인재 텍스트 색상 채우기
-  var $person4c = $('#person-4c-color');
-  var $$person4cText = $person4c.find('.color');
-  var p4cTimeline = new TimelineMax()
-    .staggerTo($$person4cText, .8, {width: '100%'}, .8);
+  // new ScrollMagic.Scene(
+  //   {
+  //     triggerElement: $video3[0],
+  //     duration: $video2.height(),
+  //   })
+  //   .on('enter leave', function(event){
+  //     var $video = $video3;
+  //     var video = $video.find('video')[0];
+  //     var timer;
+  //     if (event.type === 'enter') {
+  //       timer = setTimeout(function(){ // enter -> leave 이벤트 연속 발생시 play() 방지
+  //         var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
+
+  //         if (!isPlaying) {
+  //           $video.find('.play').click(); // play
+  //         }
+  //       }, 300);
+  //     } else {
+  //       if (timer) {
+  //         clearTimeout(timer);
+  //       }
+  //       if (video.played) {
+  //         video.pause(); // pause
+  //       }
+  //     }
+  //   })
+  //   .addTo(controller);
+
+//twinkle arrow, hero tween on hero
+  var arrowTween = new TimelineMax({paused:true});
+  arrowTween.staggerTo($twinklebtn, 1, {opacity:0.3,ease:SteppedEase.config(1),y:'+20',repeat:-1,delay:-1},0.5);
+
+  var $hero = $('.hero').children();
+  var heroAni = new TimelineMax({paused:true, repeat:-1,repeatDelay:5});
+  heroAni.to($hero.eq(1),1, {autoAlpha:1,scale:1,ease: Back.easeInOut},0)
+         .to($hero.eq(1),1, {autoAlpha:0,scale:1,ease: Back.easeInOut},2)
+         .to($hero.eq(2), 1, {autoAlpha:1,sclae:1}, 1)
+         .to($hero.eq(2), 1, {opacity:0,scale:0,ease: Back.easeOut,delay:2},2)
+         .fromTo($hero.eq(3), 1, {autoAlpha:0,sclae:0}, {autoAlpha:1,scale:1,ease: Back.easeInOut,zIndex:0}, 2)
+
+ 
   new ScrollMagic.Scene(
     {
-      triggerElement: $person4c[0],
+      triggerElement: $('#top')[0],
+      duration: $('#top').height(),
     })
-    .setTween(p4cTimeline)
+    .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+        arrowTween.play();
+        } else {
+        arrowTween.pause();
+      }
+
+    })
     .addTo(controller);
 
 
+var bar3d = new TimelineMax({paused:true});
+bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
+     .fromTo('.bar3d .ship.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
+     .fromTo('.bar3d .chip.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1.5)
+     .fromTo('.bar3d .vehicle.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},2)
+     .fromTo('.bar3d .medicine.circle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},2.5)
 
-  // 로버트의 말 텍스트 색상 채우기
-  var $robertQuote = $('#robert-quote');
-  var $robertQuoteText = $robertQuote.find('.color');
-  var rqTimeline = new TimelineMax()
-    .staggerTo($robertQuoteText, .8, {width: '100%'}, .8);
+ 
   new ScrollMagic.Scene(
     {
-      triggerElement: $robertQuote[0]
+      triggerElement: $('.market')[0],
+      duration: $('.market').height(),
     })
-    .setTween(rqTimeline)
+     .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+        bar3d.play();
+        } else {
+        bar3d.pause();
+      }
+
+    })
+    .addTo(controller);
+var chartBubble = new TimelineMax({paused:true});
+chartBubble.fromTo('.retangle_bubble.s2011',.1,{scale:0},{scale:1,ease:Back.easeOut},.1)
+     .fromTo('.retangle_bubble.s2012',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.2)
+     .fromTo('.retangle_bubble.s2013',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.3)
+     .fromTo('.retangle_bubble.s2014',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.4)
+     .fromTo('.retangle_bubble.s2015',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.5)
+     .fromTo('.retangle_bubble.s2016',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.6)
+     .fromTo('.kanarbSales .circle_bubble',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.7);
+
+var chartLine = new TimelineMax({paused:true,onComplete:function(){chartBubble.play();}});
+chartLine.staggerFrom("#line path", .5, {drawSVG:"50% 50%"}, .1);
+
+
+  new ScrollMagic.Scene(
+    {
+      triggerElement: '.bg_medicine',
+      triggerHook:.6,
+    })
+     .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+        chartLine.play();
+        } else {
+        chartLine.pause();
+      }
+    })
     .addTo(controller);
 
+  new ScrollMagic.Scene(
+    {
+      triggerElement: '.cardflip',
+      triggerHook:.6
+    })
+     .on('enter', function(event){  
+      if (event.type === 'enter') {
+          TweenMax.fromTo($(".cardflip"), 1, {rotationY:0}, {rotationY:360}, 0.1);
+      }   
+    })
+    .addTo(controller);
 
   scrollToSection();
-}
 
+  
 // Section Nav 링크 스크롤링
 function scrollToSection () {
-  $('.section-nav a, .brand-top-intro .link, .brand-identity a').on('click', function (e) {
+  $('.top-indicator .link').on('click', function (e) {
     e.preventDefault();
 
     var id = $(this).attr('href');
@@ -81,6 +275,192 @@ function scrollToSection () {
   });
 }
 
-$(function(){
-
+function upTween(e, hook){
+     var $e = $(e);
+     TweenMax.set($e, {opacity:0, y:40});
+     // TweenMax.killTweensOf()
+     $e.each(function(){
+        var $this = this;
+        var sectionTitTween = TweenMax.to($this, .8, {opacity:1, y:0});
+        var sectionTitScene = new ScrollMagic.Scene({
+            triggerElement: $this,
+            triggerHook: hook
+        })
+        .setTween(sectionTitTween)
+        .reverse(false)
+        .addTo(controller);
 });
+}
+
+upTween('p.text','p.text');
+upTween('p.text16','p.text16');
+upTween('.heading-1','.heading-1');
+upTween('.heading-2','.heading-2');
+upTween('.icon','.6');
+upTween('.question','.question');
+upTween('.answer','.answer');
+
+
+
+
+ var article = {
+        'articles': [{
+            'num': '01',
+            'title': '‘울지마 톤즈’ 고 이태석 신부와 나',
+            'img': './img/articles/1.jpg',
+            'url': 'http://news.joins.com/article/5049132'
+          },
+          {
+            'num': '02',
+            'title': '히트상품 ‘용각산’ 탄생 비화',
+            'img': './img/articles/2.jpg',
+            'url': 'http://news.joins.com/article/5061204'
+          },
+          {
+            'num': '03',
+            'title': '용각산, 중동으로 가다',
+            'img': './img/articles/3.jpg',
+            'url': 'http://news.joins.com/article/5073091'
+          },
+          {
+            'num': '04',
+            'title': '약국거리의 효시 종로5가',
+            'img': './img/articles/4.jpg',
+            'url': 'http://news.joins.com/article/5082902'
+          },
+          {
+            'num': '05',
+            'title': '보령약국 세 가지 영업전략',
+            'img': './img/articles/5.jpg',
+            'url': 'http://news.joins.com/article/5095298'
+          },
+          {
+            'num': '06',
+            'title': '‘가짜 기응환’ 사건',
+            'img': './img/articles/6.jpg',
+            'url': 'http://news.joins.com/article/5108852'
+          },
+          {
+            'num': '07',
+            'title': '겔포스와 조우',
+            'img': './img/articles/7.jpg',
+            'url': 'http://news.joins.com/article/5118491'
+          },
+          {
+            'num': '08',
+            'title': '수렁에서 건진 보령제약',
+            'img': './img/articles/8.jpg',
+            'url': 'http://news.joins.com/article/5127525'
+          },
+          {
+            'num': '09',
+            'title': '남미 정글 숲을 헤친 우리 제약기술과 청국장',
+            'img': './img/articles/9.jpg',
+            'url': 'http://news.joins.com/article/5133756'
+          },
+          {
+            'num': '10',
+            'title': '다국적 제약사와 특허 분쟁',
+            'img': './img/articles/10.jpg',
+            'url': 'http://news.joins.com/article/5140360'
+          },
+          {
+            'num': '11',
+            'title': '우리가 죽인 섬나라 투발루국',
+            'img': './img/articles/11.jpg',
+            'url': 'http://news.joins.com/article/5149711'
+          },
+          {
+            'num': '12',
+            'title': '보령제약의 세계화',
+            'img': './img/articles/12.jpg',
+            'url': 'http://news.joins.com/article/5155880'
+          },
+          {
+            'num': '13',
+            'title': '소아암 병동과 월드컵',
+            'img': './img/articles/13.jpg',
+            'url': 'http://news.joins.com/article/5162049'
+          },
+          {
+            'num': '14',
+            'title': '기형 아이들 위한 특수 젖꼭지',
+            'img': './img/articles/14.jpg',
+            'url': 'http://news.joins.com/article/5168012'
+          },
+          {
+            'num': '15',
+            'title': '보령메디앙스 탄생의 비밀',
+            'img': './img/articles/15.jpg',
+            'url': 'http://news.joins.com/article/5174576'
+          },
+          {
+            'num': '16',
+            'title': '직원 나이 기억하는 CEO',
+            'img': './img/articles/16.jpg',
+            'url': 'http://news.joins.com/article/5185523'
+          },
+          {
+            'num': '17',
+            'title': '투석 환자의 고통',
+            'img': './img/articles/17.jpg',
+            'url': 'http://news.joins.com/article/5191819'
+          },
+          {
+            'num': '18',
+            'title': '베트남 여인의 눈물',
+            'img': './img/articles/18.jpg',
+            'url': 'http://news.joins.com/article/5198517'
+          },
+          {
+            'num': '19',
+            'title': '아내를 가슴에 묻으며',
+            'img': './img/articles/19.jpg',
+            'url': 'http://news.joins.com/article/5204909'
+          },
+          {
+            'num': '20',
+            'title': '초심으로 돌아가자',
+            'img': './img/articles/20.jpg',
+            'url': 'http://news.joins.com/article/5211020'
+          }
+        ]
+      };
+
+      
+   
+
+       var numofboryung = {
+        'history': [
+          {
+            'num': '1',
+            'unit': '위',
+            'desc': '위장병 치료제 ‘겔포스엠’은 1975년 출시 이래 제산제 시장에서 부동의 1위를 달리고 있다. 누적 판매량이 16억5700만 포로, 일렬로 늘려놓으면 지구 네 바퀴를 돌 수 있다.'
+          },
+          {
+            'num': '9',
+            'unit': '개',
+            'desc': '보령제약을 비롯해 보령메디앙스·보령바이오파마·보령컨슈머헬스케어 등 9개 계열사에서 임직원 1650여 명이 근무하고 있다. 올해 그룹의 예상 매출은 8000억원이다.'
+          },
+          {
+            'num': '50',
+            'unit': '년',
+            'desc': '일본 류카쿠산과 기술 제휴를 맺고 용각산을 제조, 판매한지 올해로 50년이 된다. 보령제약은 후지이 류타 류카쿠산 사장 가문과 각각 2대, 3대째 인연을 맺고 있다.'
+          },
+          {
+            'num': '337',
+            'unit': '명',
+            'desc': '보령의료봉사상을 수상한 의료인 숫자. 1985년 시작된 보령의 사회공헌 프로그램으로, 무의촌이나 지역사회에서 봉사하는 참의료인을 조명하고 있다.'
+          },
+          {
+            'num': '465',
+            'unit': '회',
+            'desc': '1979년 1월부터 올해 10월까지 열린 월례 직원 생일파티 횟수. 요즘엔 연극 관람 같은 문화행사도 겸한다. 2015년 메르스 사태 때를 빼고 매달 계속됐다.'
+          },
+          {
+            'num': '600',
+            'unit': '억',
+            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 지난해보다 30% 이상 성장했다. 카나브는 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
+          }
+        ]
+      };

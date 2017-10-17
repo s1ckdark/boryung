@@ -13,6 +13,20 @@ if (typeof WebFont === 'object') {
 
 $(function(){
 
+  // // lazyLoad
+  // // https://appelsiini.net/projects/lazyload
+  // var userAgent = navigator.userAgent.toLowerCase();
+  // if (userAgent.indexOf('edge') > -1 || userAgent.indexOf('trident') > -1) { // edge & ie - lazyload 버그로 임시로 처리함.
+  //   $('img.lazyload').each(function(){
+  //     $(this).attr('src', $(this).data('src'));
+  //   });
+  //   $('.lazyload').not('img').each(function(){
+  //     $(this).css('background-image', 'url("' + $(this).data('src') + '")');
+  //   });
+  // } else {
+  //   lazyload();
+  // }
+
  //injoongang 
   var current = 0;
   $('.article_arrow').click(function(){
@@ -90,8 +104,8 @@ $('.close').click(function(){
       $qna.find('.hidden').show();
     });
   }
-
   //we set the backface 
+   TweenMax.set(".cardflip", {transformStyle:"preserve-3d"});
   TweenMax.set($(".back"), {rotationY:-180});
   $.each($(".cardflip"), function(i,element) {
     var frontCard = $(this).children(".front"),
@@ -112,38 +126,5 @@ $('.close').click(function(){
       this.animation.reverse();
   }
 
-// document.addEventListener('DOMContentLoaded', function() {
-
-//   // Hoisting
-//   var svgElement  = $(".line-graph-svg"),
-//     timeline      = new TimelineMax(),
-//     gridLines     = svgElement.find(".grid-lines line"),
-//     graphArea     = svgElement.find(".graph .graph-area"),
-//     graphLineFlat = svgElement.find(".graph .graph-line-flat"),
-//     graphLine     = svgElement.find(".graph .graph-line"),
-//     dots          = svgElement.find(".dots circle");
-
-//   // Animate element
-//   timeline.staggerFrom(gridLines, 2, { drawSVG: 0, ease: Back.easeOut.config(1.7) }, 0.01)
-//   .from(graphLine, 3, {drawSVG: 0, ease: Power1.easeOut}, "-=1.9")
-//   .staggerFrom(dots, 0.5, { scale: 0, transformOrigin: "50% 50%", ease: Back.easeOut.config(1.7) }, 0.3, "-=2.7")
-//   .from(graphArea, 1, {autoAlpha: 0}, "-=1.4")
-  
-//   // Pause on first frame and wait for waypoint
-//   // timeline.pause();
-  
-
-//         timeline.play();  
-//         // timeline.reverse();
-
-//   $(".restart").on('click', function(){
-//     timeline.seek(0).play();
-//   });
-  
-//   $(".reverse").on('click', function(){
-//     timeline.reverse();
-//   });
-// });
-  
 
 });

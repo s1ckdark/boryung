@@ -10,19 +10,10 @@
     width: 35px;
     height: 46px;
     margin-top: -23px;
-    background: rgba(255,255,255,.4);
+    // background: rgba(255,255,255,.4);
     font-size: 0;
     color: transparent;
     text-align: center;
-    @at-root .brand & {
-      background: $brand-bg-color;
-    }
-    @at-root .april & {
-      background: $april-bg-color;
-    }
-    @at-root .mono-nav & {
-      background: rgba(0,0,0,.3);
-    }
     &:before {
       content: '';
       display: inline-block;

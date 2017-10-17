@@ -41,8 +41,7 @@ var controller = new ScrollMagic.Controller();
 //     .addTo(controller);
 
   // video
-  var $video1 = $('#video1');
-  var $video2 = $('#video2');
+   var $video2 = $('#video2');
   var $video3 = $('#video3');
   var $video4 = $('#video4');
   var $video5 = $('#video5');
@@ -50,17 +49,8 @@ var controller = new ScrollMagic.Controller();
   var $video7 = $('#video7');
   var $twinklebtn = $('.top-indicator .link');
 
-  $video1.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/ZoYXUwZDE6-emQJWei9s1vfHjU8Kb9Cg/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
-    'controls':true,
-    'controlsList':'nodownload',
-    'preload':'auto',
-    'loop':false,
-    'poster': ''
-  });
-
   $video2.find('video').attr({
-    'src': 'http://cf.c.ooyala.com/xkYXUwZDE6lP0nn6dZ62uqH_OmG-sEJ6/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_',
+    'src': 'http://cf.c.ooyala.com/15dTkyZDE6hd11k9l-gw1Af3KKt819wk/DOcJ-FxaFrRg4gtDEwOjFyazowODE7G_ ',
     'controls':true,
     'controlsList':'nodownload',
     'preload':'auto',
@@ -117,11 +107,11 @@ var controller = new ScrollMagic.Controller();
   // scroll auto play
   new ScrollMagic.Scene(
     {
-      triggerElement: $video1[0],
-      duration: $video1.height(),
+      triggerElement: $video2[0],
+      duration: $video2.height(),
     })
     .on('enter leave', function(event){
-      var $video = $video1;
+      var $video = $video2;
       var video = $video.find('video')[0];
       var timer;
       var isPlaying = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2;
@@ -144,11 +134,11 @@ var controller = new ScrollMagic.Controller();
 
   new ScrollMagic.Scene(
     {
-      triggerElement: $video2[0],
+      triggerElement: $video3[0],
       duration: $video2.height(),
     })
     .on('enter leave', function(event){
-      var $video = $video2;
+      var $video = $video3;
       var video = $video.find('video')[0];
       var timer;
       if (event.type === 'enter') {
@@ -199,7 +189,7 @@ var controller = new ScrollMagic.Controller();
     .addTo(controller);
 
 
-var bar3d = new TimelineMax({pause:true});
+var bar3d = new TimelineMax({paused:true});
 bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
      .fromTo('.bar3d .ship.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
      .fromTo('.bar3d .chip.retangle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1.5)
@@ -221,23 +211,23 @@ bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
 
     })
     .addTo(controller);
+var chartBubble = new TimelineMax({paused:true});
+chartBubble.fromTo('.retangle_bubble.s2011',.1,{scale:0},{scale:1,ease:Back.easeOut},.1)
+     .fromTo('.retangle_bubble.s2012',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.2)
+     .fromTo('.retangle_bubble.s2013',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.3)
+     .fromTo('.retangle_bubble.s2014',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.4)
+     .fromTo('.retangle_bubble.s2015',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.5)
+     .fromTo('.retangle_bubble.s2016',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.6)
+     .fromTo('.kanarbSales .circle_bubble',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.7);
 
-var chartLine = new TimelineMax({paused:true});
-chartLine.staggerFrom("#line path", 2, {drawSVG:"0% 100%",onComplete:function(){chartBubble.play()}}, 0.1);
+var chartLine = new TimelineMax({paused:true,onComplete:function(){chartBubble.play();}});
+chartLine.staggerFrom("#line path", .5, {drawSVG:"50% 50%"}, .1);
 
-var chartBubble = new TimelineMax({pause:true});
-chartBubble.fromTo('.retangle_bubble.s2011',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
-     .fromTo('.retangle_bubble.s2012',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
-     .fromTo('.retangle_bubble.s2013',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
-     .fromTo('.retangle_bubble.s2014',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
-     .fromTo('.retangle_bubble.s2015',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
-     .fromTo('.retangle_bubble.s2016',.5,{scale:0},{scale:1,ease:Back.easeOut},1)
-     .fromTo('.kanarbSales .circle_bubble',.5,{scale:0},{scale:1,ease:Back.easeOut},1);
 
   new ScrollMagic.Scene(
     {
-      triggerElement: $('.bg_medicine'),
-      duration: $('.bg_medicine').height(),
+      triggerElement: '.bg_medicine',
+      triggerHook:.6,
     })
      .on('enter leave', function(event){  
       if (event.type === 'enter') {
@@ -248,7 +238,21 @@ chartBubble.fromTo('.retangle_bubble.s2011',1,{scale:0},{scale:1,ease:Back.easeO
     })
     .addTo(controller);
 
+  new ScrollMagic.Scene(
+    {
+      triggerElement: '.cardflip',
+      triggerHook:.6
+    })
+     .on('enter', function(event){  
+      if (event.type === 'enter') {
+          TweenMax.fromTo($(".cardflip"), 1, {rotationY:0}, {rotationY:360}, 0.1);
+      }   
+    })
+    .addTo(controller);
+
   scrollToSection();
+
+  
 // Section Nav 링크 스크롤링
 function scrollToSection () {
   $('.top-indicator .link').on('click', function (e) {
@@ -270,4 +274,102 @@ function scrollToSection () {
     }
   });
 }
+// TweenMax.set($(".bg_1975")[0], 1, {display:'none'});
+//   new ScrollMagic.Scene(
+//     {
+//       triggerElement: '.article_1975',
+//       triggerHook:.6
+//     })
+//      .on('enter', function(event){  
+//       if (event.type === 'enter') {
+//           TweenMax.to('.bg_1975', 1, {display:'block'}, 0.1);
+//       } else {
+//         TweenMax.to('.bg_1975', 1, {display:'none'}, 0.1);
+//       }
+//     })
+//      .addIndicators()
+//     .addTo(controller);
 
+
+function upTween(e, hook){
+     var $e = $(e);
+     TweenMax.set($e, {opacity:0, y:40});
+     // TweenMax.killTweensOf()
+     $e.each(function(){
+        var $this = this;
+        var sectionTitTween = TweenMax.to($this, .8, {opacity:1, y:0});
+        var sectionTitScene = new ScrollMagic.Scene({
+            triggerElement: $this,
+            triggerHook: hook
+        })
+        .setTween(sectionTitTween)
+        .reverse(false)
+        .addTo(controller);
+});
+}
+
+upTween('p.text','p.text');
+upTween('p.text16','p.text16');
+upTween('.heading-1','.heading-1');
+upTween('.heading-2','.heading-2');
+upTween('.desc','.desc');
+upTween('.icon','.icon');
+upTween('.question','.question');
+upTween('.answer','.answer');
+
+
+ 
+      
+   
+
+       var numofboryung = {
+        'history': [
+          {
+            'num': '1',
+            'unit': '위',
+            'desc': '위장병 치료제 ‘겔포스엠’은 1975년 출시 이래 제산제 시장에서 부동의 1위를 달리고 있다. 누적 판매량이 16억5700만 포로, 일렬로 늘려놓으면 지구 네 바퀴를 돌 수 있다.'
+          },
+          {
+            'num': '9',
+            'unit': '개',
+            'desc': '보령제약을 비롯해 보령메디앙스·보령바이오파마·보령컨슈머헬스케어 등 9개 계열사에서 임직원 1650여 명이 근무하고 있다. 올해 그룹의 예상 매출은 8000억원이다.'
+          },
+          {
+            'num': '50',
+            'unit': '년',
+            'desc': '일본 류카쿠산과 기술 제휴를 맺고 용각산을 제조, 판매한지 올해로 50년이 된다. 보령제약은 후지이 류타 류카쿠산 사장 가문과 각각 2대, 3대째 인연을 맺고 있다.'
+          },
+          {
+            'num': '337',
+            'unit': '명',
+            'desc': '보령의료봉사상을 수상한 의료인 숫자. 1985년 시작된 보령의 사회공헌 프로그램으로, 무의촌이나 지역사회에서 봉사하는 참의료인을 조명하고 있다.'
+          },
+          {
+            'num': '465',
+            'unit': '회',
+            'desc': '1979년 1월부터 올해 10월까지 열린 월례 직원 생일파티 횟수. 요즘엔 연극 관람 같은 문화행사도 겸한다. 2015년 메르스 사태 때를 빼고 매달 계속됐다.'
+          },
+          {
+            'num': '600',
+            'unit': '억',
+            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 지난해보다 30% 이상 성장했다. 카나브는 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
+          }
+        ]
+      };
+
+
+        new ScrollMagic.Scene(
+    {
+      triggerElement: '.listofcircle',
+      triggerHook:.6
+    })
+     .on('enter', function(event){  
+      for (var key in numofboryung.history) {
+        if (numofboryung.history.hasOwnProperty(key)){
+          var item = "<div class='grid'><div class='round-bubble'>"+numofboryung.history[key].num+"<span class='unit'>"+numofboryung.history[key].unit+"</span></div><div class='desc'>"+numofboryung.history[key].desc+"</div></div>";
+          $('.listofcircle').append(item);
+        }
+      }
+ 
+    })
+    .addTo(controller);
