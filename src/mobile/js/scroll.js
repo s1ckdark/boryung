@@ -13,33 +13,6 @@
 // // ScrollMagic 컨트롤러
 var controller = new ScrollMagic.Controller();
 
-// window.addEventListener('load', initScrollMagic);
-
-// function initScrollMagic() {
-//   // 4C 인재 텍스트 색상 채우기
-//   var $person4c = $('#person-4c-color');
-//   new ScrollMagic.Scene(
-//     {
-//       triggerElement: $person4c[0],
-//       offset: -50,
-//     })
-//     .setTween($person4c, .8, {width: '100%', ease: Linear.easeNone})
-//     .addTo(controller);
-
-//   // 로버트의 말 텍스트 색상 채우기
-//   var $robertQuote = $('#robert-quote');
-//   var $robertQuoteText = $robertQuote.find('.color');
-//   var rqTimeline = new TimelineMax()
-//     .to($robertQuoteText.eq(0), .8, {width: '100%'})
-//     .to($robertQuoteText.eq(1), 1.0, {width: '100%'})
-//     .to($robertQuoteText.eq(2), 1.5, {width: '100%'});
-//   new ScrollMagic.Scene(
-//     {
-//       triggerElement: $robertQuote[0]
-//     })
-//     .setTween(rqTimeline)
-//     .addTo(controller);
-
   // video
    var $video2 = $('#video2');
   var $video3 = $('#video3');
@@ -275,9 +248,10 @@ function scrollToSection () {
   });
 }
 
+
 function upTween(e, hook){
      var $e = $(e);
-     TweenMax.set($e, {opacity:0, y:40});
+     TweenMax.set($e, {opacity:0, y:30});
      // TweenMax.killTweensOf()
      $e.each(function(){
         var $this = this;
@@ -292,175 +266,46 @@ function upTween(e, hook){
 });
 }
 
+// function tweenText(e, hook){
+//        var $e = $(e);
+//        // TweenMax.killTweensOf()
+//        $e.each(function(){
+//         var $this = this;
+//         var textTween = new SplitText($this, {type:"lines"});
+//         var tl = new TimelineMax({paused:true});
+//         tl.staggerFrom(textTween.lines, 0.5, {opacity:0, cycle:{x:[100, -100]}}, 0.2)
+//         var textScene = new ScrollMagic.Scene({
+//             triggerElement: $this,
+//             triggerHook: hook
+//         })
+//         .on('start', function(){
+//           tl.play();
+//         })
+//         .reverse(false)
+//         .addTo(controller);
+// });
+// }
+
 upTween('p.text','p.text');
 upTween('p.text16','p.text16');
-upTween('.heading-1','.heading-1');
-upTween('.heading-2','.heading-2');
-upTween('.icon','.6');
-upTween('.question','.question');
-upTween('.answer','.answer');
+upTween('.heading-1','.5');
+upTween('.heading-2','.5');
+upTween('.desc','.5');
+upTween('.icon','.5');
+upTween('.question','.5');
+upTween('.answer','.5');
+
+
+var len =$('#discobar').height()*2;
+var redlineTween = TweenMax.fromTo("#era_scroll b", 1, {height: 0}, {height: len, ease: Power0.easeNone}); 
+var navLineDrawScene1 = new ScrollMagic.Scene({
+        triggerElement: "#discobar",
+        triggerHook: 0.5,
+        duration: len // red_line height
+    })
+    .setTween(redlineTween)
+    .addTo(controller);
 
 
 
-
- var article = {
-        'articles': [{
-            'num': '01',
-            'title': '‘울지마 톤즈’ 고 이태석 신부와 나',
-            'img': './img/articles/1.jpg',
-            'url': 'http://news.joins.com/article/5049132'
-          },
-          {
-            'num': '02',
-            'title': '히트상품 ‘용각산’ 탄생 비화',
-            'img': './img/articles/2.jpg',
-            'url': 'http://news.joins.com/article/5061204'
-          },
-          {
-            'num': '03',
-            'title': '용각산, 중동으로 가다',
-            'img': './img/articles/3.jpg',
-            'url': 'http://news.joins.com/article/5073091'
-          },
-          {
-            'num': '04',
-            'title': '약국거리의 효시 종로5가',
-            'img': './img/articles/4.jpg',
-            'url': 'http://news.joins.com/article/5082902'
-          },
-          {
-            'num': '05',
-            'title': '보령약국 세 가지 영업전략',
-            'img': './img/articles/5.jpg',
-            'url': 'http://news.joins.com/article/5095298'
-          },
-          {
-            'num': '06',
-            'title': '‘가짜 기응환’ 사건',
-            'img': './img/articles/6.jpg',
-            'url': 'http://news.joins.com/article/5108852'
-          },
-          {
-            'num': '07',
-            'title': '겔포스와 조우',
-            'img': './img/articles/7.jpg',
-            'url': 'http://news.joins.com/article/5118491'
-          },
-          {
-            'num': '08',
-            'title': '수렁에서 건진 보령제약',
-            'img': './img/articles/8.jpg',
-            'url': 'http://news.joins.com/article/5127525'
-          },
-          {
-            'num': '09',
-            'title': '남미 정글 숲을 헤친 우리 제약기술과 청국장',
-            'img': './img/articles/9.jpg',
-            'url': 'http://news.joins.com/article/5133756'
-          },
-          {
-            'num': '10',
-            'title': '다국적 제약사와 특허 분쟁',
-            'img': './img/articles/10.jpg',
-            'url': 'http://news.joins.com/article/5140360'
-          },
-          {
-            'num': '11',
-            'title': '우리가 죽인 섬나라 투발루국',
-            'img': './img/articles/11.jpg',
-            'url': 'http://news.joins.com/article/5149711'
-          },
-          {
-            'num': '12',
-            'title': '보령제약의 세계화',
-            'img': './img/articles/12.jpg',
-            'url': 'http://news.joins.com/article/5155880'
-          },
-          {
-            'num': '13',
-            'title': '소아암 병동과 월드컵',
-            'img': './img/articles/13.jpg',
-            'url': 'http://news.joins.com/article/5162049'
-          },
-          {
-            'num': '14',
-            'title': '기형 아이들 위한 특수 젖꼭지',
-            'img': './img/articles/14.jpg',
-            'url': 'http://news.joins.com/article/5168012'
-          },
-          {
-            'num': '15',
-            'title': '보령메디앙스 탄생의 비밀',
-            'img': './img/articles/15.jpg',
-            'url': 'http://news.joins.com/article/5174576'
-          },
-          {
-            'num': '16',
-            'title': '직원 나이 기억하는 CEO',
-            'img': './img/articles/16.jpg',
-            'url': 'http://news.joins.com/article/5185523'
-          },
-          {
-            'num': '17',
-            'title': '투석 환자의 고통',
-            'img': './img/articles/17.jpg',
-            'url': 'http://news.joins.com/article/5191819'
-          },
-          {
-            'num': '18',
-            'title': '베트남 여인의 눈물',
-            'img': './img/articles/18.jpg',
-            'url': 'http://news.joins.com/article/5198517'
-          },
-          {
-            'num': '19',
-            'title': '아내를 가슴에 묻으며',
-            'img': './img/articles/19.jpg',
-            'url': 'http://news.joins.com/article/5204909'
-          },
-          {
-            'num': '20',
-            'title': '초심으로 돌아가자',
-            'img': './img/articles/20.jpg',
-            'url': 'http://news.joins.com/article/5211020'
-          }
-        ]
-      };
-
-      
    
-
-       var numofboryung = {
-        'history': [
-          {
-            'num': '1',
-            'unit': '위',
-            'desc': '위장병 치료제 ‘겔포스엠’은 1975년 출시 이래 제산제 시장에서 부동의 1위를 달리고 있다. 누적 판매량이 16억5700만 포로, 일렬로 늘려놓으면 지구 네 바퀴를 돌 수 있다.'
-          },
-          {
-            'num': '9',
-            'unit': '개',
-            'desc': '보령제약을 비롯해 보령메디앙스·보령바이오파마·보령컨슈머헬스케어 등 9개 계열사에서 임직원 1650여 명이 근무하고 있다. 올해 그룹의 예상 매출은 8000억원이다.'
-          },
-          {
-            'num': '50',
-            'unit': '년',
-            'desc': '일본 류카쿠산과 기술 제휴를 맺고 용각산을 제조, 판매한지 올해로 50년이 된다. 보령제약은 후지이 류타 류카쿠산 사장 가문과 각각 2대, 3대째 인연을 맺고 있다.'
-          },
-          {
-            'num': '337',
-            'unit': '명',
-            'desc': '보령의료봉사상을 수상한 의료인 숫자. 1985년 시작된 보령의 사회공헌 프로그램으로, 무의촌이나 지역사회에서 봉사하는 참의료인을 조명하고 있다.'
-          },
-          {
-            'num': '465',
-            'unit': '회',
-            'desc': '1979년 1월부터 올해 10월까지 열린 월례 직원 생일파티 횟수. 요즘엔 연극 관람 같은 문화행사도 겸한다. 2015년 메르스 사태 때를 빼고 매달 계속됐다.'
-          },
-          {
-            'num': '600',
-            'unit': '억',
-            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 지난해보다 30% 이상 성장했다. 카나브는 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
-          }
-        ]
-      };

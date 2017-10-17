@@ -212,7 +212,8 @@ bar3d.fromTo('.bar3d',1,{scale:0},{scale:1,ease:Back.easeOut},.5)
     })
     .addTo(controller);
 var chartBubble = new TimelineMax({paused:true});
-chartBubble.fromTo('.retangle_bubble.s2011',.1,{scale:0},{scale:1,ease:Back.easeOut},.1)
+chartBubble
+     .fromTo('.retangle_bubble.s2011',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.1)
      .fromTo('.retangle_bubble.s2012',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.2)
      .fromTo('.retangle_bubble.s2013',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.3)
      .fromTo('.retangle_bubble.s2014',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.4)
@@ -221,13 +222,13 @@ chartBubble.fromTo('.retangle_bubble.s2011',.1,{scale:0},{scale:1,ease:Back.ease
      .fromTo('.kanarbSales .circle_bubble',.1,{scale:0,autoAlpha:0},{scale:1,autoAlpha:1,ease:Back.easeOut},.7);
 
 var chartLine = new TimelineMax({paused:true,onComplete:function(){chartBubble.play();}});
-chartLine.staggerFrom("#line path", .5, {drawSVG:"50% 50%"}, .1);
+chartLine.staggerFrom("#line path", .1, {drawSVG:"80% 50%"}, .1);
 
 
   new ScrollMagic.Scene(
     {
       triggerElement: '.bg_medicine',
-      triggerHook:.6,
+      triggerHook:.5,
     })
      .on('enter leave', function(event){  
       if (event.type === 'enter') {
@@ -274,26 +275,29 @@ function scrollToSection () {
     }
   });
 }
-// TweenMax.set($(".bg_1975")[0], 1, {display:'none'});
-//   new ScrollMagic.Scene(
-//     {
-//       triggerElement: '.article_1975',
-//       triggerHook:.6
-//     })
-//      .on('enter', function(event){  
-//       if (event.type === 'enter') {
-//           TweenMax.to('.bg_1975', 1, {display:'block'}, 0.1);
-//       } else {
-//         TweenMax.to('.bg_1975', 1, {display:'none'}, 0.1);
-//       }
-//     })
-//      .addIndicators()
-//     .addTo(controller);
+
+TweenMax.set('.bg_1975',{autoAlpha:0});
+var len = $('.article_1975').height();
+var offset =  $('.h1975').offset().top;
+  new ScrollMagic.Scene(
+    {
+      offset:offset,
+      duration:len
+    })
+     .on('enter leave', function(event){  
+      if (event.type === 'enter') {
+          TweenMax.to('.bg_1975', 1, {autoAlpha:1}, 0.1);
+      } else {
+        TweenMax.to('.bg_1975', 1, {autoAlpha:0}, 0.1);
+      }
+    })
+    .addIndicators()
+    .addTo(controller);
 
 
 function upTween(e, hook){
      var $e = $(e);
-     TweenMax.set($e, {opacity:0, y:40});
+     TweenMax.set($e, {opacity:0, y:30});
      // TweenMax.killTweensOf()
      $e.each(function(){
         var $this = this;
@@ -308,19 +312,35 @@ function upTween(e, hook){
 });
 }
 
+function tweenText(e, hook){
+       var $e = $(e);
+       // TweenMax.killTweensOf()
+       $e.each(function(){
+        var $this = this;
+        var textTween = new SplitText($this, {type:"lines"});
+        var tl = new TimelineMax({paused:true});
+        tl.staggerFrom(textTween.lines, 0.5, {opacity:0, cycle:{x:[100, -100]}}, 0.2)
+        var textScene = new ScrollMagic.Scene({
+            triggerElement: $this,
+            triggerHook: hook
+        })
+        .on('start', function(){
+          tl.play();
+        })
+        .reverse(false)
+        .addTo(controller);
+});
+}
+
 upTween('p.text','p.text');
 upTween('p.text16','p.text16');
-upTween('.heading-1','.heading-1');
-upTween('.heading-2','.heading-2');
-upTween('.desc','.desc');
-upTween('.icon','.icon');
-upTween('.question','.question');
-upTween('.answer','.answer');
+tweenText('.heading-1','.5');
+tweenText('.heading-2','.5');
+upTween('.desc','.5');
+upTween('.icon','.5');
+upTween('.question','.5');
+upTween('.answer','.5');
 
-
- 
-      
-   
 
        var numofboryung = {
         'history': [
@@ -372,4 +392,5 @@ upTween('.answer','.answer');
       }
  
     })
+     .reverse(false)
     .addTo(controller);

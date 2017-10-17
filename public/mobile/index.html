@@ -37,7 +37,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1508245099746">
+  <link rel="stylesheet" href="./css/style.css?v=1508261354059">
   <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="../js/common.js"></script>
@@ -305,6 +305,129 @@
   <style type="text/css" id="bg_article">
   </style>
   <script>
+    var article = {
+      'articles': [{
+          'num': '01',
+          'title': '‘울지마 톤즈’ 고 이태석 신부와 나',
+          'img': './img/articles/1.jpg',
+          'url': 'http://news.joins.com/article/5049132'
+        },
+        {
+          'num': '02',
+          'title': '히트상품 ‘용각산’ 탄생 비화',
+          'img': './img/articles/2.jpg',
+          'url': 'http://news.joins.com/article/5061204'
+        },
+        {
+          'num': '03',
+          'title': '용각산, 중동으로 가다',
+          'img': './img/articles/3.jpg',
+          'url': 'http://news.joins.com/article/5073091'
+        },
+        {
+          'num': '04',
+          'title': '약국거리의 효시 종로5가',
+          'img': './img/articles/4.jpg',
+          'url': 'http://news.joins.com/article/5082902'
+        },
+        {
+          'num': '05',
+          'title': '보령약국 세 가지 영업전략',
+          'img': './img/articles/5.jpg',
+          'url': 'http://news.joins.com/article/5095298'
+        },
+        {
+          'num': '06',
+          'title': '‘가짜 기응환’ 사건',
+          'img': './img/articles/6.jpg',
+          'url': 'http://news.joins.com/article/5108852'
+        },
+        {
+          'num': '07',
+          'title': '겔포스와 조우',
+          'img': './img/articles/7.jpg',
+          'url': 'http://news.joins.com/article/5118491'
+        },
+        {
+          'num': '08',
+          'title': '수렁에서 건진 보령제약',
+          'img': './img/articles/8.jpg',
+          'url': 'http://news.joins.com/article/5127525'
+        },
+        {
+          'num': '09',
+          'title': '남미 정글 숲을 헤친 우리 제약기술과 청국장',
+          'img': './img/articles/9.jpg',
+          'url': 'http://news.joins.com/article/5133756'
+        },
+        {
+          'num': '10',
+          'title': '다국적 제약사와 특허 분쟁',
+          'img': './img/articles/10.jpg',
+          'url': 'http://news.joins.com/article/5140360'
+        },
+        {
+          'num': '11',
+          'title': '우리가 죽인 섬나라 투발루국',
+          'img': './img/articles/11.jpg',
+          'url': 'http://news.joins.com/article/5149711'
+        },
+        {
+          'num': '12',
+          'title': '보령제약의 세계화',
+          'img': './img/articles/12.jpg',
+          'url': 'http://news.joins.com/article/5155880'
+        },
+        {
+          'num': '13',
+          'title': '소아암 병동과 월드컵',
+          'img': './img/articles/13.jpg',
+          'url': 'http://news.joins.com/article/5162049'
+        },
+        {
+          'num': '14',
+          'title': '기형 아이들 위한 특수 젖꼭지',
+          'img': './img/articles/14.jpg',
+          'url': 'http://news.joins.com/article/5168012'
+        },
+        {
+          'num': '15',
+          'title': '보령메디앙스 탄생의 비밀',
+          'img': './img/articles/15.jpg',
+          'url': 'http://news.joins.com/article/5174576'
+        },
+        {
+          'num': '16',
+          'title': '직원 나이 기억하는 CEO',
+          'img': './img/articles/16.jpg',
+          'url': 'http://news.joins.com/article/5185523'
+        },
+        {
+          'num': '17',
+          'title': '투석 환자의 고통',
+          'img': './img/articles/17.jpg',
+          'url': 'http://news.joins.com/article/5191819'
+        },
+        {
+          'num': '18',
+          'title': '베트남 여인의 눈물',
+          'img': './img/articles/18.jpg',
+          'url': 'http://news.joins.com/article/5198517'
+        },
+        {
+          'num': '19',
+          'title': '아내를 가슴에 묻으며',
+          'img': './img/articles/19.jpg',
+          'url': 'http://news.joins.com/article/5204909'
+        },
+        {
+          'num': '20',
+          'title': '초심으로 돌아가자',
+          'img': './img/articles/20.jpg',
+          'url': 'http://news.joins.com/article/5211020'
+        }
+      ]
+    };
     for (var key in article.articles) {
       if (article.articles.hasOwnProperty(key)) {
         let item = "<div class='item grid bg_article" + article.articles[key].num + "'><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
@@ -326,9 +449,45 @@
     </div>
   </section>
   <script>
+    var numofboryung = {
+      'history': [{
+          'num': '1',
+          'unit': '위',
+          'desc': '위장병 치료제 ‘겔포스엠’은 1975년 출시 이래 제산제 시장에서 부동의 1위를 달리고 있다. 누적 판매량이 16억5700만 포로, 일렬로 늘려놓으면 지구 네 바퀴를 돌 수 있다.'
+        },
+        {
+          'num': '9',
+          'unit': '개',
+          'desc': '보령제약을 비롯해 보령메디앙스·보령바이오파마·보령컨슈머헬스케어 등 9개 계열사에서 임직원 1650여 명이 근무하고 있다. 올해 그룹의 예상 매출은 8000억원이다.'
+        },
+        {
+          'num': '50',
+          'unit': '년',
+          'desc': '일본 류카쿠산과 기술 제휴를 맺고 용각산을 제조, 판매한지 올해로 50년이 된다. 보령제약은 후지이 류타 류카쿠산 사장 가문과 각각 2대, 3대째 인연을 맺고 있다.'
+        },
+        {
+          'num': '337',
+          'unit': '명',
+          'desc': '보령의료봉사상을 수상한 의료인 숫자. 1985년 시작된 보령의 사회공헌 프로그램으로, 무의촌이나 지역사회에서 봉사하는 참의료인을 조명하고 있다.'
+        },
+        {
+          'num': '465',
+          'unit': '회',
+          'desc': '1979년 1월부터 올해 10월까지 열린 월례 직원 생일파티 횟수. 요즘엔 연극 관람 같은 문화행사도 겸한다. 2015년 메르스 사태 때를 빼고 매달 계속됐다.'
+        },
+        {
+          'num': '600',
+          'unit': '억',
+          'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 지난해보다 30% 이상 성장했다. 카나브는 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
+        }
+      ]
+    };
+
+
+
     for (var key in numofboryung.history) {
       if (numofboryung.history.hasOwnProperty(key)) {
-        let item = "<div class='item grid'><div class='round-bubble'>" + numofboryung.history[key].num + "<span class='unit'>" + numofboryung.history[key].unit + "</span></div><div class='desc'>" + numofboryung.history[key].desc + "</div></div>";
+        var item = "<div class='grid'><div class='round-bubble'>" + numofboryung.history[key].num + "<span class='unit'>" + numofboryung.history[key].unit + "</span></div><div class='desc'>" + numofboryung.history[key].desc + "</div></div>";
         $('.listofcircle').append(item);
       }
     }
@@ -347,66 +506,68 @@
       <header class="disco_heading">
         <h4 class="heading-2 dark">변화의 흐름에 올라타다</h4>
       </header>
-      <article class="article_1962">
-        <div class="toggle_open h1962 box">
-          <p><span class="num">1962</span>年<br>경제개발 5개년 계획 실시<br>본격적인 산업화 시작</p>
-        </div>
-      </article>
-      <article class="article_1967">
-        <div class="h1967 toggle_open circle">
-          <p><span class="num">1967</span>年<br>용각산 발매</p>
-        </div>
-        <div class="toggle_layer_block">
-          <div class="layer_article">
-            <div class="boldbtn btn-wide btn btn-corner-rounded">용각산의 ‘Bold Marketing’</div>
-            <div class="article-slider slider1967 owl-carousel">
-              <div class="item">
-                <div class="img img1967-1"></div>
-                <header class="slider-header">
-                  <h4 class="heading-2">산업화의 시작을 함께 하다</h4>
-                </header>
-                <p class="text">
-                  일본 류카쿠산(龍角散)과 제휴해 1967년 출시한 진해거담제 ‘용각산’이 대표적이다. 정부 주도의 경제 개발이 시작되면서 배기가스와 공해 문제가 대두되던 시기였다. 호흡기 질환 환자가 부쩍 늘었다. 용각산은 길경·살구씨·감초 등 순수 생약 성분으로 이뤄져 있다. 보령은 대대적인 마케팅으로 ‘목 건강’이라는 효능을 강조하면서 용각산을 시장에 안착시켰다.
-                </p>
-              </div>
-              <div class="item">
-                <div class="img img1967-2"></div>
-                <header class="slider-header">
-                  <h4 class="heading-2">미세먼지 시대,<br>옷을 갈아입다</h4>
-                </header>
-                <p class="text">
-                  올해로 꼭 쉰 살이 된 용각산은 ‘업그레이드’가 한창이다. 미세먼지·황사 등이 이슈가 되면서 용각산을 찾는 사람이 다시 늘고 있다. 특히 젊은 층과 여성의 관심이 높아졌다. 이런 트렌드에 맞춰 용각산은 스틱형으로 포장을 바꾸고, 복숭아·민트향을 넣어 ‘용각산쿨’로 변신했다.
-                </p>
+      <div id="discobar">
+        <div id="era_scroll"><b></b></div>
+        <article class="article_1962">
+          <div class="toggle_open h1962 box">
+            <p><span class="num">1962</span>年<br>경제개발 5개년 계획 실시<br>본격적인 산업화 시작</p>
+          </div>
+        </article>
+        <article class="article_1967">
+          <div class="h1967 toggle_open circle">
+            <p><span class="num">1967</span>年<br>용각산 발매</p>
+          </div>
+          <div class="toggle_layer_block">
+            <div class="layer_article">
+              <div class="boldbtn btn-wide btn btn-corner-rounded">용각산의 ‘Bold Marketing’</div>
+              <div class="article-slider slider1967 owl-carousel">
+                <div class="item">
+                  <div class="img img1967-1"></div>
+                  <header class="slider-header">
+                    <h4 class="heading-2">산업화의 시작을 함께 하다</h4>
+                  </header>
+                  <p class="text">
+                    일본 류카쿠산(龍角散)과 제휴해 1967년 출시한 진해거담제 ‘용각산’이 대표적이다. 정부 주도의 경제 개발이 시작되면서 배기가스와 공해 문제가 대두되던 시기였다. 호흡기 질환 환자가 부쩍 늘었다. 용각산은 길경·살구씨·감초 등 순수 생약 성분으로 이뤄져 있다. 보령은 대대적인 마케팅으로 ‘목 건강’이라는 효능을 강조하면서 용각산을 시장에 안착시켰다.
+                  </p>
+                </div>
+                <div class="item">
+                  <div class="img img1967-2"></div>
+                  <header class="slider-header">
+                    <h4 class="heading-2">미세먼지 시대,<br>옷을 갈아입다</h4>
+                  </header>
+                  <p class="text">
+                    올해로 꼭 쉰 살이 된 용각산은 ‘업그레이드’가 한창이다. 미세먼지·황사 등이 이슈가 되면서 용각산을 찾는 사람이 다시 늘고 있다. 특히 젊은 층과 여성의 관심이 높아졌다. 이런 트렌드에 맞춰 용각산은 스틱형으로 포장을 바꾸고, 복숭아·민트향을 넣어 ‘용각산쿨’로 변신했다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="toggle_layer_bold">
-          <div class="boldMarketing">
-            <header class="slider-header">
-              <h4 class="overline heading-2"><span class="lipstick">B</span>OLD MARKETING</h4>
-            </header>
-            <div class="item">
-              <div id="video6" class="video-play">
-                <a href="javascript:void(0)" class="play"></a>
-                <video></video>
-              </div>
+          <div class="toggle_layer_bold">
+            <div class="boldMarketing">
               <header class="slider-header">
-                <h4 class="heading-2">매출의 30%를 광고에 투자</h4>
+                <h4 class="overline heading-2"><span class="lipstick">B</span>OLD MARKETING</h4>
               </header>
-              <p class="text">
-                보령은 67년 용각산을 출시하면서 매출의 30%, 약 1000만원를 광고에 투입했다. 단일 품목으로는 당시 국내 최고 액수였다. 한편으론 무모해 보였으나 용각산은 이듬해부터 공장을 풀가동해도 주문량을 맞추지 못하는 호황을 누렸다.
-              </p>
+              <div class="item">
+                <div id="video6" class="video-play">
+                  <a href="javascript:void(0)" class="play"></a>
+                  <video></video>
+                </div>
+                <header class="slider-header">
+                  <h4 class="heading-2">매출의 30%를 광고에 투자</h4>
+                </header>
+                <p class="text">
+                  보령은 67년 용각산을 출시하면서 매출의 30%, 약 1000만원를 광고에 투입했다. 단일 품목으로는 당시 국내 최고 액수였다. 한편으론 무모해 보였으나 용각산은 이듬해부터 공장을 풀가동해도 주문량을 맞추지 못하는 호황을 누렸다.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-      <article class="article_1970">
-        <div class="toggle_open h1970 box">
-          <p><span class="num">1970</span>年<br>수출 확대, 경제 성장</p>
-        </div>
-      </article>
-      <!--     <article class="article_2b">
+        </article>
+        <article class="article_1970">
+          <div class="toggle_open h1970 box">
+            <p><span class="num">1970</span>年<br>수출 확대, 경제 성장</p>
+          </div>
+        </article>
+        <!--     <article class="article_2b">
       <div class="h2b toggle_open circle">
         <p><span class="lipstick">두 개의<br>
         <span class="bigtext">B</span></span></p>
@@ -427,97 +588,98 @@
         </div>
       </div>
     </article> -->
-      <article class="article_1975">
-        <div class="h1975 toggle_open circle">
-          <p><span class="num">1975</span>年<br>겔포스 출시</p>
-        </div>
-        <div class="toggle_layer_block">
-          <div class="layer_article">
-            <div class="boldbtn btn-wide btn btn-corner-rounded">겔포스의 ‘Brief &amp; Concise Message’</div>
-            <div class="article-slider slider1967 owl-carousel">
-              <div class="item">
-                <div class="img img1975-1"></div>
-                <header class="slider-header">
-                  <h4 class="heading-2">야근과 잔업의 시대, <br>직장인의 쓰린 속을 달래다</h4>
-                </header>
-                <p class="text">
-                  한국 경제가 비상하던 1970~80년대. 직장인들은 이른 아침에 출근해 야근과 잔업을 하는 게 일상이었다. 이럴 때 동료들과 어울려 소주 한 잔 기울이는 것이 큰 즐거움이었다. 이즈음 출시된 위장병 치료제 ‘겔포스’는 날개 돋친 듯 팔렸다. 불규칙한 식사와 과음 탓에 위장 질환을 호소하는 직장인들이 늘었고, 겔포스의 효능이 입소문을 타면서 크게 히트한 것이다.
-                </p>
-              </div>
-              <div class="item col2">
-                <div class="img img1975-2"></div>
-                <header class="slider-header">
-                  <h4 class="heading-2">알고 보면 <br>수출 효자 ‘겔포스’</h4>
-                </header>
-                <p class="text">
-                  중국·대만 등에서 겔포스는 독보적 판매 1위 제산제 브랜드다. 점유율이 40% 이상이다. 대만에는 1980년 수출을 시작했다. 한때 점유율 70% 이상을 차지했고, 겔포스 짝퉁 제품이 100개 가까이 된 적도 있다. 중국에는 92년부터 수출을 시작했다. 대중국 완제 의약품 수출 1호, 2013년 한국산 의약품 판매 1위 기록을 보유하고 있다.
-                </p>
-              </div>
-            </div>
+        <article class="article_1975">
+          <div class="h1975 toggle_open circle">
+            <p><span class="num">1975</span>年<br>겔포스 출시</p>
           </div>
-          <div class="boldMarketing toggle_open">
-            <div class="toggle_layer_block">
-              <div class="layer_article">
-                <div id="video7" class="video-play">
-                  <a href="javascript:void(0)" class="play"></a>
-                  <video></video>
+          <div class="toggle_layer_block">
+            <div class="layer_article">
+              <div class="boldbtn btn-wide btn btn-corner-rounded">겔포스의 ‘Brief &amp; Concise Message’</div>
+              <div class="article-slider slider1967 owl-carousel">
+                <div class="item">
+                  <div class="img img1975-1"></div>
+                  <header class="slider-header">
+                    <h4 class="heading-2">야근과 잔업의 시대, <br>직장인의 쓰린 속을 달래다</h4>
+                  </header>
+                  <p class="text">
+                    한국 경제가 비상하던 1970~80년대. 직장인들은 이른 아침에 출근해 야근과 잔업을 하는 게 일상이었다. 이럴 때 동료들과 어울려 소주 한 잔 기울이는 것이 큰 즐거움이었다. 이즈음 출시된 위장병 치료제 ‘겔포스’는 날개 돋친 듯 팔렸다. 불규칙한 식사와 과음 탓에 위장 질환을 호소하는 직장인들이 늘었고, 겔포스의 효능이 입소문을 타면서 크게 히트한 것이다.
+                  </p>
                 </div>
-                <header class="slider-header">
-                  <h4 class="overline heading-2"><span class="lipstick">B</span>rief&amp;<br>Concise Message</h4>
-                </header>
-                <header class="slider-header">
-                  <h4 class="heading-2">간결하면서 임팩트 있게!</h4>
-                </header>
-                <p class="text">
-                  겔포스는 간결하면서도 임팩트 있는 메시지를 통해 브랜드 이미지를 탄탄하게 만들었다. 1980년대 초반 최고 인기드라마 ‘수사반장’ 출연진을 등장시켜 ‘위장병 잡혔어’ ‘속쓰림 꼼짝 마’ 같은 명(名)카피를 내놓았다. 92년 바르셀로나 올림픽 당시엔 ‘빠떼루 아저씨’(김영준 전 경기대 교수)를 등장시켜 ‘겔포스 금메달 줘야 합니다’ 편을 찍기도 했다. 최근엔 JTBC 예능 ‘냉장고를 부탁해’ 출연진을 모델로 ‘속쓰림을 부탁해’ 편을 방영했다.
-                </p>
+                <div class="item col2">
+                  <div class="img img1975-2"></div>
+                  <header class="slider-header">
+                    <h4 class="heading-2">알고 보면 <br>수출 효자 ‘겔포스’</h4>
+                  </header>
+                  <p class="text">
+                    중국·대만 등에서 겔포스는 독보적 판매 1위 제산제 브랜드다. 점유율이 40% 이상이다. 대만에는 1980년 수출을 시작했다. 한때 점유율 70% 이상을 차지했고, 겔포스 짝퉁 제품이 100개 가까이 된 적도 있다. 중국에는 92년부터 수출을 시작했다. 대중국 완제 의약품 수출 1호, 2013년 한국산 의약품 판매 1위 기록을 보유하고 있다.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="boldMarketing toggle_open">
+              <div class="toggle_layer_block">
+                <div class="layer_article">
+                  <div id="video7" class="video-play">
+                    <a href="javascript:void(0)" class="play"></a>
+                    <video></video>
+                  </div>
+                  <header class="slider-header">
+                    <h4 class="overline heading-2"><span class="lipstick">B</span>rief&amp;<br>Concise Message</h4>
+                  </header>
+                  <header class="slider-header">
+                    <h4 class="heading-2">간결하면서 임팩트 있게!</h4>
+                  </header>
+                  <p class="text">
+                    겔포스는 간결하면서도 임팩트 있는 메시지를 통해 브랜드 이미지를 탄탄하게 만들었다. 1980년대 초반 최고 인기드라마 ‘수사반장’ 출연진을 등장시켜 ‘위장병 잡혔어’ ‘속쓰림 꼼짝 마’ 같은 명(名)카피를 내놓았다. 92년 바르셀로나 올림픽 당시엔 ‘빠떼루 아저씨’(김영준 전 경기대 교수)를 등장시켜 ‘겔포스 금메달 줘야 합니다’ 편을 찍기도 했다. 최근엔 JTBC 예능 ‘냉장고를 부탁해’ 출연진을 모델로 ‘속쓰림을 부탁해’ 편을 방영했다.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </article>
+        <article class="article_1980era">
+          <div class="toggle_open h1980era box">
+            <p><span class="num">1980</span>年代<br>3저 호황으로 고도성장</p>
+          </div>
+        </article>
+        <article class="article_1990era">
+          <div class="toggle_open h1990era box">
+            <p><span class="num">1990</span>年代</p>
+          </div>
+        </article>
+        <article class="article_1990">
+          <div class="h1990 toggle_open circle">
+            <p><span class="num">1990</span>年<br>투석 사업 시작</p>
+          </div>
+          <div class="toggle_layer_block">
+            <div class="layer_article">
+              <div class="article-slider slider1990 owl-carousel">
+                <div class="item">
+                  <div class="img img1990-1"></div>
+                  <header class="slider-header">
+                    <h4 class="heading-2">만성신부전증 환자들의 버팀돌이 되다</h4>
+                  </header>
+                  <p class="text">
+                    국내 투석 환자는 매해 8~9%씩 증가하고 있다. 대한신장학회에 따르면 2014년 말 현재 투석 치료가 필요한 환자는 8만여 명으로, 1986년(2534명)에 비해 30배 이상 늘었다. 투석은 연구개발 비용과 기간에 대한 부담이 커 국내 제약사들이 진출을 꺼리던 분야다. 보령은 90년대 초반 투석 사업에 뛰어들었다. “외국계의 잠식에서 벗어나고 합리적인 약값을 제시해 환자들의 고통을 덜어주겠다”는 소명의식에서였다.
+                  </p>
+                </div>
+                <div class="item">
+                  <div class="img img1990-2"></div>
+                  <header class="slider-header">
+                    <h4 class="heading-2">국산화 성공 이어<br>특허 취득까지</h4>
+                  </header>
+                  <p class="text">
+                    보령중앙연구소는 1999년 ‘페리시스’를 출시해 복막투석 국산화에 성공했다. 이어 수소이온농도(㏗)를 인체와 비슷한 ㏗ 7.3~7.4로 높인 중탄산 복막투석제 ‘페리플러스’ 발매, 투석용 튜브 특허 취득 같은 성과를 냈다. 지금도 수익구조가 불리하지만 꾸준한 투자를 통해 만성신부전증 환자들의 버팀돌 역할을 하고 있다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-      </article>
-      <article class="article_1980era">
-        <div class="toggle_open h1980era box">
-          <p><span class="num">1980</span>年代<br>3저 호황으로 고도성장</p>
+        </article>
         </div>
-      </article>
-      <article class="article_1990era">
-        <div class="toggle_open h1990era box">
-          <p><span class="num">1990</span>年代</p>
-        </div>
-      </article>
-      <article class="article_1990">
-        <div class="h1990 toggle_open circle">
-          <p><span class="num">1990</span>年<br>투석 사업 시작</p>
-        </div>
-        <div class="toggle_layer_block">
-          <div class="layer_article">
-            <div class="article-slider slider1990 owl-carousel">
-              <div class="item">
-                <div class="img img1990-1"></div>
-                <header class="slider-header">
-                  <h4 class="heading-2">만성신부전증 환자들의 버팀돌이 되다</h4>
-                </header>
-                <p class="text">
-                  국내 투석 환자는 매해 8~9%씩 증가하고 있다. 대한신장학회에 따르면 2014년 말 현재 투석 치료가 필요한 환자는 8만여 명으로, 1986년(2534명)에 비해 30배 이상 늘었다. 투석은 연구개발 비용과 기간에 대한 부담이 커 국내 제약사들이 진출을 꺼리던 분야다. 보령은 90년대 초반 투석 사업에 뛰어들었다. “외국계의 잠식에서 벗어나고 합리적인 약값을 제시해 환자들의 고통을 덜어주겠다”는 소명의식에서였다.
-                </p>
-              </div>
-              <div class="item">
-                <div class="img img1990-2"></div>
-                <header class="slider-header">
-                  <h4 class="heading-2">국산화 성공 이어<br>특허 취득까지</h4>
-                </header>
-                <p class="text">
-                  보령중앙연구소는 1999년 ‘페리시스’를 출시해 복막투석 국산화에 성공했다. 이어 수소이온농도(㏗)를 인체와 비슷한 ㏗ 7.3~7.4로 높인 중탄산 복막투석제 ‘페리플러스’ 발매, 투석용 튜브 특허 취득 같은 성과를 냈다. 지금도 수익구조가 불리하지만 꾸준한 투자를 통해 만성신부전증 환자들의 버팀돌 역할을 하고 있다.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
+        </article>
       </div>
-      </article>
   </section>
-  <section id="market" class="ja_section_wrap" ja-section-title="사회공헌">
+  <section id="market" class="ja_section_wrap" ja-section-title="고혈압 치료제 시장">
     <div class="marketshare">
       <div class="market">
         <div class="wrapper">
@@ -803,7 +965,7 @@
         <video></video>
       </div>
   </section>
-  <section id="kanarb_interview" class="brand-solution ja_section_wrap" ja-section-title="사회공헌">
+  <section id="kanarb_interview" class="brand-solution ja_section_wrap" ja-section-title="카나브 인터뷰">
     <div class="interview1">
       <div class="wrapper">
         <div class="title">
@@ -905,15 +1067,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-  <!-- <script src="./js/SplitText.min.js"></script> -->
   <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-  <script src="./js/script.js?v=1508245099746"></script>
+  <script src="./js/script.js?v=1508261354059"></script>
 </body>
 
 </html>

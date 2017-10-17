@@ -98,23 +98,6 @@ $('.close').click(function(){
       this.animation.reverse();
   }
 
-  var $toggle_layer = $('.toggle_layer_block');
-  if ($toggle_layer.length) {
-    // 질문 누르면 답변 열고 닫기
-    $toggle_layer.prev('.toggle_open').on('click', function(e) {
-      e.preventDefault();
 
-      var $this = $(this);
-      $this
-        .next().toggleClass('active') // 클릭 목록 활성화 토글
-        .siblings('.active').removeClass('active'); // 기존 활성화 목록 비활성화
-    });
-  }
-  var $closeBtn = $('.close');
-  $closeBtn.on('click', function(e){
-     e.preventDefault();
-    var $this = $(this);
-      $this.parent().parent().removeClass('active'); // 클릭 목록 활성화 토글
-    });
 
 });

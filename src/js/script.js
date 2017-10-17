@@ -51,8 +51,8 @@ $('.boldbtn').click(function(){
 })
 $('.close').click(function(){
   var target = $(this).parent();
-  TweenMax.fromTo(this,1,{y:'+5'}, {y:'-5',onComplete:function(){
-  TweenMax.to(target[0],1, {autoAlpha:0})    
+  TweenMax.fromTo(this,.5,{y:'+5'}, {y:'-5',onComplete:function(){
+  TweenMax.to(target[0],.1, {autoAlpha:0})    
   }})
 })
 

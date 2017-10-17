@@ -183,14 +183,16 @@
 				}
 			}
 			.box {
-				display:flex;
+				@extend %clearfix;
 				.equal {
 					width:rem(20px);
 					height:rem(12px);
 					background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAQAAADIBVVwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg4SGAFRHdLEAAAAQ0lEQVQY02M0FmAwYCAMHrAwGDDsJ0JhIxMRihgYGBgYiFbIwnCBwZEYNxJr4EACRmMFhgQi1B1gYVBgqCfGRKLDEQALCAbbxPw+cgAAAABJRU5ErkJggg==');
-					margin: 40px 10px;
+					margin: 40px 5px;
+					float:left;
 				}
 				.retangle_bubble {
+					float:left;
 					display:inline-block;
 					width: rem(150px);
 					height: rem(100px);
