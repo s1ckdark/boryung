@@ -57,7 +57,13 @@ $btn-padding-wide: rem(20px);
   display:inline-block;
   line-height:1;
   position:absolute;
-
+  &.lipstick {
+    width: rem(13px);
+    height: rem(6px);
+    background-size: contain;
+    background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAQCAMAAACr6TZoAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAM1BMVEUAAADQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCzQJCz///+fT5M0AAAAD3RSTlMA72CPMM+fEN+AUK9wIL9e/9yxAAAAAWJLR0QQlbINLAAAAAd0SU1FB+EKEQseCGUWEtAAAACDSURBVCjPfZFZEoAgDEOpFsE197+twXFBa8kPA33TJjQIutBSBwkC9A2kBxmNwJAcIg1AVp6E4j9UlQiL/iCaOeK6jIQmg0y0OtbmYeKZN5WqrWegxJsf52mmW+PxFc/N+nS3k28tZ7wSaHF3cxQL2thhGZKdH7210iziGppKG7ZvoB0nAQV9cDNw1AAAAABJRU5ErkJggg==');
+    margin: rem(10px) 0 0 rem(5px);
+  }
 }
 
 .close {
@@ -68,4 +74,5 @@ $btn-padding-wide: rem(20px);
   position:absolute;
   top:rem(20px);
   right:rem(20px);
+  z-index:1001;
 }

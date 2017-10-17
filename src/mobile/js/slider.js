@@ -10,13 +10,12 @@ $(function(){
 
   // brand article slider
   //
-  $('.article-slider').owlCarousel({
+ $('.article-slider').owlCarousel({
     loop: true,
     nav: true,
     dots: true,
     items: 1
   });
-
   // // brand interview slider
   // //
   // var $interviewSlider = $('#interview-slider').owlCarousel({

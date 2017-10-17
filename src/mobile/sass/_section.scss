@@ -78,68 +78,80 @@
   }
 
 .toggle_block {
-  width: 100vw;
-  height: calc(100vw * 80 / 640);
-  background-color: rgb(238, 238, 238);
-  display:block;
   .toggle_text {
     position:relative;
     text-align:center;
-    color: $lipstick;
-    font-size:rem(13px);
-  }
-  p {
-    display:none;
-  }
-  &.active {
+    &.btn {
+      width:rem(140px);
+      height:rem(30px);
+      margin:0 auto;
+      background-color: rgb(255,255,255);
+      border:1px solid $lipstick;
+      color: $lipstick;
+      font-size:rem(13px);
+      display:block;
+        .down-arrow {
+         }
+      }
+    }
+     p, .drugstore_front, .voucher {
+      display:none !important;
+    }
+    &.active {
     background-color: transparent;
     height:100% !important;
-    p {
+    p,  .drugstore_front, .voucher {
       display:block !important;
     }
-    .toggle_text {display:none;}
+
+    .toggle_text {
+       color: $lipstick;
+      font-size:rem(13px);
+      // padding: rem(10px) 0;
+      .down-arrow {
+        transform: rotate(180deg);
+        margin:rem(8px) rem(5px) 0;
+      }
+    }
+  }
+  &.gray {
+  width: 100vw;
+  padding:rem(14px) 0;
+  display:block;
+    .toggle_text {
+      background-color: rgb(238, 238, 238);
+      color: $lipstick;
+      font-size:rem(13px);
+      padding: rem(10px) 0;
+    }
+ }
+
+  &.dark {
+    .toggle_text {
+      width:calc(100vw - 10px);
+      padding:rem(14px) 0 rem(14px) rem(10px);
+      background-color: rgb(34, 34, 34);
+      height:rem(16px);
+      color: $br-gray-color;
+      font-size:rem(16px);
+      margin-bottom:1px;  
+      text-align: left;
+      .down-arrow {
+        right:rem(40px);
+          top:rem(24px);
+          margin:0;
+          padding:0;
+      }
+      &.red {
+        color:$lipstick;
+      }
+    }
   }
 }
-
-.toggle_block.dark {
-      .toggle_text {
-        width:calc(100vw - 40px);
-        padding:rem(14px) rem(20px);
-        height:rem(28px);
-        background-color: rgb(34, 34, 34);
-        color: $br-gray-color;
-        font-size:rem(18px);
-        margin-bottom:1px;  
-        text-align: left;
-        line-height:rem(29px);
-        .down-arrow {
-          right:rem(40px);
-            top:rem(24px);
-        }
-      }
-    }
-
-.toggle_block.btn {
-      width:100%;
-      .toggle_text {
-        padding:rem(14px) rem(20px);
-        height:rem(28px);
-        background-color: rgb(34, 34, 34);
-        color: $br-gray-color;
-        font-size:rem(18px);
-        margin-bottom:1px;  
-        text-align: left;
-        line-height:rem(29px);
-        .down-arrow {
-          right:rem(40px);
-            top:rem(24px);
-        }
-      }
-    }
-
 .toggle_layer_block {
-  opacity:0;
-  visibility:hidden;
+ display:none;
+ opacity:0;
+ visibility: hidden;
   .toggle_text {
     position:relative;
     text-align:center;
@@ -147,13 +159,12 @@
     font-size:rem(13px);
   }
   &.active {
-    height:100vh;
     width:100vw;
     display:block;
     opacity:1;
     visibility:visible;
     position:fixed !important;
-    top:0;left:0;right:0;bottom:0;
+    top:50px;left:0;right:0;bottom:0;
     background-color: rgb(255,255,255);
     z-index:1001;
   }

@@ -60,6 +60,7 @@ section {
   .overline {
     position:relative;
     z-index:30;
+    font-family:$font-family;
     &:after {
       content:'';
       position:absolute;

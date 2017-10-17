@@ -43,8 +43,6 @@ function imageTween(ele) {
 }
 
 imageTween('.bg_sceneTween');
-imageTween('.contribute_img.img1');
-imageTween('.contribute_img.img2');
 imageTween('.rnd-imgTweem');
 
 // function drawsvg(ele) {

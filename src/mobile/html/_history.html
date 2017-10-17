@@ -6,46 +6,11 @@
     <div class="listofcircle owl-carousel article-slider"></div>
   </div>
 </section>
-  
-  <script>
-      let numofboryung = {
-        'history': [
-          {
-            'num': '1',
-            'unit': '위',
-            'desc': '위장병 치료제 ‘겔포스엠’은 1975년 출시 이래 제산제 시장에서 부동의 1위를 달리고 있다. 누적 판매량이 16억5700만 포로, 일렬로 늘려놓으면 지구 네 바퀴를 돌 수 있다.'
-          },
-          {
-            'num': '9',
-            'unit': '개',
-            'desc': '보령제약을 비롯해 보령메디앙스·킴즈컴 비알네트콤·보령바이오파마 등 9개 계열사에서 임직원 1650여 명이 근무하고 있다. 올해 그룹의 예상 매출은 8000억원이다.'
-          },
-          {
-            'num': '50',
-            'unit': '년',
-            'desc': '일본 류카쿠산과 기술 제휴를 맺고 용각산을 제조, 판매한지 올해로 50년이 된다. 보령제약은 후지이 류타 류카쿠산 사장 가문과 각각 2대, 3대째 인연을 맺고 있다.'
-          },
-          {
-            'num': '337',
-            'unit': '명',
-            'desc': '보령의료봉사상을 수상한 의료인 숫자. 1985년 시작된 보령의 사회공헌 프로그램으로, 무의촌이나 지역사회에서 봉사하는 참의료인을 조명하고 있다.'
-          },
-          {
-            'num': '465',
-            'unit': '회',
-            'desc': '1979년 1월부터 올해 10월까지 열린 월례 직원 생일파티 횟수. 요즘엔 연극 관람 같은 문화행사도 겸한다. 2015년 메르스 사태 때를 빼고 매달 계속됐다.'
-          },
-          {
-            'num': '600',
-            'unit': '억',
-            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 효능을 인정받아 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
-          }
-        ]
-      };
-      for (var key in numofboryung.history) {
+<script>
+	      for (var key in numofboryung.history) {
         if (numofboryung.history.hasOwnProperty(key)){
           let item = "<div class='item grid'><div class='round-bubble'>"+numofboryung.history[key].num+"<span class='unit'>"+numofboryung.history[key].unit+"</span></div><div class='desc'>"+numofboryung.history[key].desc+"</div></div>";
           $('.listofcircle').append(item);
         }
       }
-    </script>
+</script>

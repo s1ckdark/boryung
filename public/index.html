@@ -12,13 +12,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="약국거리 원조에서 신약 개발까지- 보령 60년 스토리">
-  <meta property="og:url" content="http://innovationlab.co.kr/project/boryung/">
+  <meta property="og:url" content="http://innovationlab.co.kr/innovation/boryung/">
   <meta property="og:title" content="약국거리 원조에서 신약 개발까지- 보령 60년 스토리">
   <meta property="og:description" content="1957년 10월 서울 종로5가에 세 평 반짜리 약국이 문을 열었다. 스물다섯 청년 김승호는 자신의 고향 이름을 따서 ‘보령약국’이라고 이름 지었다. 그리고 60년. 제약과 헬스케어로 영역을 넓힌 보령은 계열사 9개, 매출 8000억원대 중견그룹으로 성장했다. 김승호 회장은 이제 ‘글로벌 보령’을 지휘하고 있다.">
-  <meta property="og:image" content="http://innovationlab.co.kr/project/boryung/img/og-image.jpg">
+  <meta property="og:image" content="http://innovationlab.co.kr/innovation/boryung/img/og-image.jpg">
   <meta property="og:locale" content="ko">
-  <meta property="article:author" content="">
-  <meta property="article:publisher" content="https://www.facebook.com/joongang">
   <script>
     // detect if mobile browser. regex -> http://detectmobilebrowsers.com
     var isMobile = (function(a) {
@@ -36,7 +34,7 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./css/style.css?v=1508181674640">
+  <link rel="stylesheet" href="./css/style.css?v=1508245099746">
   <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico">
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -67,11 +65,11 @@
       e = a.createElement(l);
       e.async = 1;
       e.charset = 'utf-8';
-      e.src = '//static.dable.io/dist/dablena.min.js';
+      e.src = 'https://static.dable.io/dist/dablena.min.js';
       _ = a.getElementsByTagName(l)[0];
       _.parentNode.insertBefore(e, _);
     })(window, document, 'dablena', 'script');
-    dablena('init', 'www.innovationlab.co.kr');
+    dablena('init', 'www.boryung.co.kr');
     dablena('track', 'PageView');
   </script>
   <!-- Dable 스크립트 종료 / 문의 support@dable.io -->
@@ -123,14 +121,44 @@
 <body>
   <input type="hidden" id="jaHeightSec" value="20">
   <div id="viewport" class="viewport">
+    <!-- 상단공통 -->
+    <div id="roof" class="rooftop">
+      <script>
+        layout.gnb.renderHtml();
+        $(function() {
+          $(".rooftop").addClass("on");
+
+          // header - 공유 설정
+          $(".sns-share-box .sns-more").on("click", function() {
+            $("#snsMore").toggleClass("open");
+            return false;
+          });
+        });
+      </script>
+      <div class="forehead">
+        <div class="inner">
+          <div class="brandsolution-logo"><a href="/" title="Innovation Lab"></a></div>
+          <div class="brand-identity"><a href="#viewport"><img src="./img/header-logo.svg" alt="보령제약" height="16"></a></div>
+          <div class="sns-share-box">
+            <ul>
+              <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;facebook&#39;);" class="sns-fb" title="facebook"></a></li>
+              <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;twitter&#39;);" class="sns-tw" title="twitter"></a></li>
+              <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;kakaostory&#39;);" class="sns-ks" title="kakaostory"></a></li>
+              <li><a href="javascript:void(0)" class="sns-more" title="더 보기"></a></li>
+            </ul>
+            <div id="snsMore" class="sns-more-box">
+              <ul>
+                <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;googleplus&#39;);" class="sns-gp" title="googleplus"><i></i>구글+</a></li>
+                <li><a href="javascript:void(0)" onclick="fnSendSns(&#39;pinterest&#39;);" class="sns-pt" title="pinterest"><i></i>핀터레스트</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //상단공통 -->
     <section id="top" class="ja_section_wrap" ja-section-title="보령제약 인트로">
       <div class="wrapper">
-        <!--     <div id="hero" class="hero">
-      <div class="hero--obj title"></div>
-      <div class="hero--obj kanarb"></div>
-      <div class="hero--map greydot"></div>
-      <div class="hero--map orangedot"></div>
-    </div> -->
         <div id="animation_container" class="hero">
           <canvas id="canvas" width="1200" height="720" style="position: absolute; display: none; background-color:rgba(34, 34, 34, 1.00);"></canvas>
           <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1200px; height:720px; position: absolute; left: 0px; top: 0px; display: none;">
@@ -168,10 +196,6 @@
               </p>
             </div>
           </div>
-          <div id="video1" class="video-play">
-            <a href="javascript:void(0)" class="play" style="background-image: url('./img/video/poster1.jpg');"></a>
-            <video></video>
-          </div>
         </div>
       </div>
       <div class="bg_sceneTween">
@@ -188,7 +212,7 @@
                   <h2 class="heading-2">“없는 약이 없고 값이 저렴해서”</h2>
                 </header>
                 <p class="text">
-                  서울 강남에서, 지방에서 종로5가 약국거리를 찾는 단골손님이 <br>꽤 있다. 이유는 간단하다. “없는 약이 없고” “약값이 저렴하며” <br>“친절 하게 설명을 잘해줘서”다. 60년 전 보령약국의 성공 포인트가 <br>그대로 이어지고 있다. 청년 김승호는 손님이 찾는 약이 없으면 <br>자전거를 타고 곳을 뒤져 이튿날엔 반드시 그 약을 구해 놓았다.
+                  서울 강남에서, 지방에서 종로5가 약국거리를 찾는 단골손님이 <br>꽤 있다. 이유는 간단하다. “없는 약이 없고” “약값이 저렴하며” <br>“친절하게 설명을 잘해줘서”다. 60년 전 보령약국의 성공 포인트가 <br>그대로 이어지고 있다. 청년 김승호는 손님이 찾는 약이 없으면 <br>자전거를 타고 곳곳을 뒤져 이튿날엔 반드시 그 약을 구해 놓았다.
                 </p>
               </div>
               <div class="innerBox white">
@@ -208,7 +232,7 @@
                   <h2 class="heading-2">제약산업의 성장판이 되다</h2>
                 </header>
                 <p class="text">
-                  보령은 1963년 동영제약(현 보령제약)을 인수하면서 제약회사로 <br>발돋움한다. 한미약품의 모태인 ‘임성기약국’도 67년 종로5가에서 <br>창업했다. 전남 목포를 근거로 하던 의약품 유통회사 백제약방<br>(현 백제약품)은 이곳에 서울지점을 열었다. 1897년 동화약방 <br>설립으로 태동한 국내 제약산업이 한해 22조원 규모로 성장하는데 <br>종로5가가 성장판 역할을 톡톡히 한 셈이다.
+                  보령은 1963년 동영제약(현 보령제약)을 인수하면서 제약회사로 <br>발돋움한다. 한미약품의 모태인 ‘임성기약국’도 67년 종로5가에서 <br>창업했다. 전남 목포를 근거로 하던 의약품 유통회사 백제약방<br>(현 백제약품)은 이곳에 서울지점을 열었다. 1897년 동화약방 <br>설립으로 태동한 국내 제약산업이 한해 22조원 규모로 커지는데 <br>종로5가가 성장판 역할을 톡톡히 한 셈이다.
                 </p>
                 <div class="drugstore_front"></div>
               </div>
@@ -243,8 +267,8 @@
       <div class="wrapper">
         <div class="container col2 type-b">
           <div class="col">
-            <header>
-              <h4 class="title">중앙일보 속 김승호 회장 이야기</h4>
+            <header class="section-header">
+              <h4 class="heading-2">중앙일보 속 김승호 회장 이야기</h4>
             </header>
           </div>
           <div class="col">
@@ -262,7 +286,7 @@
     <style type="text/css" id="bg_article">
     </style>
     <script>
-      let article = {
+      var article = {
         'articles': [{
             'num': '01',
             'title': '‘울지마 톤즈’ 고 이태석 신부와 나',
@@ -277,7 +301,7 @@
           },
           {
             'num': '03',
-            'title': '각산, 중동으로 가다',
+            'title': '용각산, 중동으로 가다',
             'img': './img/articles/3.jpg',
             'url': 'http://news.joins.com/article/5073091'
           },
@@ -385,11 +409,12 @@
           }
         ]
       };
+
       for (var key in article.articles) {
         if (article.articles.hasOwnProperty(key)) {
-          let item = "<div class='item grid'><div class='bg_article bg_article" + article.articles[key].num + "'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
-          let sheet = $("#bg_article").get(0).sheet;
-          let styles = '.bg_article' + article.articles[key].num + ' {';
+          var item = "<div class='item grid'><div class='bg_article bg_article" + article.articles[key].num + "'></div><div class='number'>" + article.articles[key].num + "</div><div class='title'>" + article.articles[key].title + "</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='" + article.articles[key].url + "' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+          var sheet = $("#bg_article").get(0).sheet;
+          var styles = '.bg_article' + article.articles[key].num + ' {';
           styles += 'background-image: url(' + article.articles[key].img + ')';
           styles += '}';
           sheet.insertRule(styles, 0);
@@ -397,52 +422,6 @@
         }
       }
     </script>
-    <section id="contribute" class="ja_section_wrap" ja-section-title="사회공헌">
-      <div class="wrapper">
-        <header class="section-header">
-          <h4 class="heading-1">세상을 밝히는 ‘따뜻한 손길’</h4>
-        </header>
-        <div class="article">
-          <div class="container col2">
-            <div class="col">
-              <div class="contribute_img img1">
-                <div class="img img1-1"></div>
-                <div class="img img1-2"></div>
-                <div class="img img1-3"></div>
-              </div>
-            </div>
-            <div class="col">
-              <header>
-                <h2 class="heading-2">‘한국의 슈바이처’를 찾아내 응원하다</h2>
-              </header>
-              <p class="text">
-                보령제약의 사보 ‘보령’은 1984년부터 오지에서 인술을 펼치고 있는 의료인들 이야기를 연재했다. 이것이 인연이 돼 이듬해 대한의사협회와 함께 ‘보령의료봉사상’을 만들었다. ‘울지 마 톤즈’의 주인공 고 이태석 신부, 한센인들의 아버지로 불리는 고 차윤근 박사 등 337명이 상을 받았다. 올해로 33회째, 보령은 꾸준히 이 행사를 후원하고 있다. 2002년엔 한국암연구재단과 공동으로 ‘보령암학술상’을 제정했다. 국내 유일의 종양학 분야 학술상으로
-                지금까지 16명의 학자들이 상을 받았다.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="article">
-          <div class="container col2">
-            <div class="col">
-              <div class="contribute_img img2">
-                <div class="img img2-1"></div>
-                <div class="img img2-2"></div>
-                <div class="img img2-3"></div>
-              </div>
-            </div>
-            <div class="col">
-              <header>
-                <h2 class="heading-2">“아이들 먼저 챙겨라”</h2>
-              </header>
-              <p class="text">
-                김승호 회장의 아호를 따 2008년 설립된 보령중보(中甫)재단은 취약계층 아동들의 복지를 중점 지원하고 있다. 무엇보다 김 회장의 마음씀씀이가 따뜻하다. 가령 크리스마스 때 직원들에게 초콜릿을 선물하면 “종로 지역아동센터에 먼저 전달해라”고 지시하는 식이다.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="history" class="ja_section_wrap" ja-section-title="숫자로 보는 보령 60년">
       <div class="wrapper">
         <header class="section-header">
@@ -451,47 +430,6 @@
         <div class="listofcircle"></div>
       </div>
     </section>
-    <script>
-      let numofboryung = {
-        'history': [{
-            'num': '1',
-            'unit': '위',
-            'desc': '위장병 치료제 ‘겔포스엠’은 1975년 출시 이래 제산제 시장에서 부동의 1위를 달리고 있다. 누적 판매량이 16억5700만 포로, 일렬로 늘려놓으면 지구 네 바퀴를 돌 수 있다.'
-          },
-          {
-            'num': '9',
-            'unit': '개',
-            'desc': '보령제약을 비롯해 보령메디앙스·킴즈컴 비알네트콤·보령바이오파마 등 9개 계열사에서 임직원 1650여 명이 근무하고 있다. 올해 그룹의 예상 매출은 8000억원이다.'
-          },
-          {
-            'num': '50',
-            'unit': '년',
-            'desc': '일본 류카쿠산과 기술 제휴를 맺고 용각산을 제조, 판매한지 올해로 50년이 된다. 보령제약은 후지이 류타 류카쿠산 사장 가문과 각각 2대, 3대째 인연을 맺고 있다.'
-          },
-          {
-            'num': '337',
-            'unit': '명',
-            'desc': '보령의료봉사상을 수상한 의료인 숫자. 1985년 시작된 보령의 사회공헌 프로그램으로, 무의촌이나 지역사회에서 봉사하는 참의료인을 조명하고 있다.'
-          },
-          {
-            'num': '465',
-            'unit': '회',
-            'desc': '1979년 1월부터 올해 10월까지 열린 월례 직원 생일파티 횟수. 요즘엔 연극 관람 같은 문화행사도 겸한다. 2015년 메르스 사태 때를 빼고 매달 계속됐다.'
-          },
-          {
-            'num': '600',
-            'unit': '억',
-            'desc': '고혈압 치료제 ‘카나브’의 올해 매출 예상액. 지난해보다 30% 이상 성장했다. 카나브는 전 세계 51개국에서 글로벌 제약회사와 당당히 겨루고 있다.'
-          }
-        ]
-      };
-      for (var key in numofboryung.history) {
-        if (numofboryung.history.hasOwnProperty(key)) {
-          let item = "<div class='grid'><div class='round-bubble'>" + numofboryung.history[key].num + "<span class='unit'>" + numofboryung.history[key].unit + "</span></div><div class='desc'>" + numofboryung.history[key].desc + "</div></div>";
-          $('.listofcircle').append(item);
-        }
-      }
-    </script>
     <section id="era" class="ja_section_wrap" ja-section-title="시대 흐름을 읽으면 성공 해법이 보인다">
       <div class="wrapper">
         <header class="section-header">
@@ -527,10 +465,10 @@
                 <div class="item container col2" data-dot="<span class='circle-num'>2</span>">
                   <div class="col">
                     <header class="slider-header">
-                      <h4 class="heading-2">산업화의 시작을 함께 하다</h4>
+                      <h4 class="heading-2">미세먼지 시대,<br>옷을 갈아입다</h4>
                     </header>
                     <p class="text">
-                      일본 류카쿠산(龍角散)과 제휴해 1967년 출시한 진해거담제 ‘용각산’이 대표적이다. 정부 주도의 경제 개발이 시작되면서 배기가스와 공해 문제가 대두되던 시기였다. 호흡기 질환 환자가 부쩍 늘었다. 용각산은 길경·살구씨·감초 등 순수 생약 성분으로 이뤄져 있다. 보령은 대대적인 마케팅으로 ‘목 건강’이라는 효능을 강조하면서 용각산을 시장에 안착시켰다.
+                      올해로 꼭 쉰 살이 된 용각산은 ‘업그레이드’가 한창이다. 미세먼지·황사 등이 이슈가 되면서 용각산을 찾는 사람이 다시 늘고 있다. 특히 젊은 층과 여성의 관심이 높아졌다. 이런 트렌드에 맞춰 용각산은 스틱형으로 포장을 바꾸고, 복숭아·민트향을 넣어 ‘용각산쿨’로 변신했다.
                     </p>
                   </div>
                   <div class="col">
@@ -549,8 +487,7 @@
                       <h4 class="heading-2">매출의 30%를 광고에 투자</h4>
                     </header>
                     <p class="text">
-                      꼭 20년 전 외환위기 상황에서 기업들은 광고와 마케팅 비용을 대폭 삭감했다. 생존을 위해 재무구조 개선이 급했기 때문이다. 반대로 동서식품은 커피 브랜드 ‘맥심’ 광고비를 30% 늘렸다. 1998년 57% 수준이던 맥심의 시장 점유율은 이듬해 64%로 뛰었다. 보령은 67년 용각산을 출시하면서 매출의 30%, 약 1000만원를 광고에 투입했다. 단일 품목으로는 당시 국내 최고 액수였다. 한편으론 무모해 보였으나 용각산은 이듬해부터 공장을 풀가동해도
-                      주문량을 맞추지 못하는 호황을 누렸다.
+                      보령은 67년 용각산을 출시하면서 매출의 30%, 약 1000만원를 광고에 투입했다. 단일 품목으로는 당시 국내 최고 액수였다. 한편으론 무모해 보였으나 용각산은 이듬해부터 공장을 풀가동해도 주문량을 맞추지 못하는 호황을 누렸다.
                     </p>
                   </div>
                   <div class="col">
@@ -580,6 +517,7 @@
                 </div>
             </article>
             <article class="article_1975">
+              <div class="bg_1975"></div>
               <header class="slider-header">
                 <h4 class="overline dark">겔포스</h4>
               </header>
@@ -651,8 +589,8 @@
                       <h4 class="heading-2">만성신부전증 환자들의<br> 버팀돌이 되다</h4>
                     </header>
                     <p class="text">
-                      국내 투석 환자는 매해 8~9%씩 증가하고 있다. <br>대한신장학회에 따르면 2014년 말 현재 <br>투석 치료가 필요한 환자는 8만여 명으로, <br>1986년(2534명)에 비해 30배 이상 늘었다. <br>투석은 연구개발 비용과 기간이 많이 들어 <br>국내 제약사들이 진출을 꺼리던 분야다. 보령은 <br>90년대 초반 투석 사업에 뛰어들었다. “외국계의 잠식에서 벗어나고 합리적인 약값을 제시해 <br>환자들의
-                      고통을 덜어주겠다”는 소명의식에서였다.
+                      국내 투석 환자는 매해 8~9%씩 증가하고 있다. <br>대한신장학회에 따르면 2014년 말 현재 <br>투석 치료가 필요한 환자는 8만여 명으로, <br>1986년(2534명)에 비해 30배 이상 늘었다. <br>투석은 연구개발 비용과 기간에 대한 부담이 커 <br>국내 제약사들이 진출을 꺼리던 분야다. 보령은 <br>90년대 초반 투석 사업에 뛰어들었다. “외국계의 잠식에서 벗어나고 합리적인 약값을 제시해
+                      <br>환자들의 고통을 덜어주겠다”는 소명의식에서였다.
                     </p>
                   </div>
                   <div class="col">
@@ -706,7 +644,6 @@
                 </div>
                 <div class="h1990era">
                   <p><span class="num">1990</span>年代</p>
-                  <p>경제개발 5개년 계획 실시<br>본격적인 산업화 시작</p>
                 </div>
                 <div class="h1990">
                   <p><span class="num">1990</span>年</p>
@@ -729,7 +666,7 @@
               <span>글로벌 바이오·제약 시장이 얼마나 크길래</span>
             </p>
             <p class="text16">
-              글로벌 바이오·제약 시장은 1200조원대 규모로 파악된다. 자동차(600조원)와 반도체(400조원)·조선(250조원) 시장을 합친 것과 비슷하다. 경제가 성장하고 고령화 가속화하는 한편, 만성질환·신종질병이 증가하면서 제약 시장은 최근 7년간(2009~2015년) 연 평균 5.2%씩 성장했다. 2021년에는 1700조원에 이를 전망이다. 하지만 미국과 독일·영국·스위스·일본계 20개 메이저 제약기업들이 시장의 60%를 차지하고 있다.
+              글로벌 바이오·제약 시장은 1200조원대 규모로 파악된다. 자동차(600조원)와 반도체(400조원)·조선(250조원) 시장을 합친 것과 비슷하다. 경제가 성장하고 고령화 가속화하는 한편, 만성질환·신종질병이 증가하면서 제약 시장은 최근 7년간(2009~2015년) 연 평균 5.2%씩 성장했다. 2021년에는 1700조원에 이를 전망이다. 하지만 미국과 독일·영국·스위스·일본계 20개 메이저 제약기업들이 시장의 60%를 차지하고 있다(자료 : 한국제약바이오협회).
             </p>
             <div class="bar3d">
               <div class="ship"></div>
@@ -782,8 +719,8 @@
                 <h2 class="heading-2">특허 받은 신약이 얼마나 많은 부가가치를 창출하나</h2>
               </header>
               <p class="text16">
-                미국 화이자는 고지혈증 치료제 ‘리피토’ 한 제품의 판매로 13조1000억원의 매출을 올렸다. 준중형 <br>승용차 100만 대를 수출한 것과 맞먹는다. 미래 성장동력을 찾으려는 제약 기업들의 연구개발(R&amp;D) <br>투자가 늘어나는 이유다. 세계 3위 로슈는 지난해 114억 달러(약 12조8000억원)를 R&amp;D에 쏟아 부었다. <br>매출의 22.8%에 이른다. 화이자·노바티스·존슨앤존슨 등 10대 글로벌
-                제약사의 지난해 R&amp;D 투자는 <br>718억 달러(약 81조원)였다. 국내 메이저 10대 제약회사들 1조1300억원보다 80배나 많다.
+                미국 화이자는 고지혈증 치료제 ‘리피토’ 한 제품으로 특허만료(2009년) 이후인 2012년에도 13조1000억원의 매출을 올렸다. 준중형 승용차 100만 대를 수출한 것과 맞먹는다. 미래 성장동력을 찾으려는 제약 기업들의 연구개발(R&amp;D) 투자가 늘어나는 이유다. 세계 3위 로슈는 지난해 114억 달러(약 12조8000억원)를 R&amp;D에 쏟아 부었다. 매출의 22.8%에 이른다. 화이자·노바티스·존슨앤존슨 등 10대 글로벌 제약사의
+                지난해 R&amp;D 투자는 718억 달러(약 81조원)였다. 국내 메이저 10대 제약회사들 1조1300억원보다 80배나 많다.
               </p>
             </div>
             <div class="col">
@@ -814,8 +751,8 @@
                 <h2 class="heading-2">국내 신약 개발의 현주소는</h2>
               </header>
               <p class="text16">
-                120년 국내 제약사(史)에서 신약 1호는 1999년 <br>SK케미칼이 식품의약품안전청(현 식약처)로부터 <br>판매 허가 받은 항암제 ‘선플라’다. 2003년엔 <br>LG생명과학이 개발한 항생제 ‘팩티브’가 국내 제약 <br>처음으로 미국 식품의약국(FDA)의 승인을 받았다.<br>2017년 7월 코오롱생명과학의 관절염 치료제 <br>‘인보사’까지 29개의 신약이 탄생했다. 지금까지 <br>고혈압과 당뇨병 같은
-                만성질환을 포함해 항암제·<br>발기부전치료제·항생제 등 다양한 영역에서 <br>매해 1~2개의 신약이 등장하고 있다.
+                120년 국내 제약사(史)에서 신약 1호는 1999년 SK케미칼이 식품의약품안전청(현 식약처)로부터 판매 허가 받은 항암제 ‘선플라’다. 2003년엔 LG생명과학이 개발한 항생제 ‘팩티브’가 국내 제약 처음으로 미국 식품의약국(FDA)의 승인을 받았다. 2017년 7월 코오롱생명과학의 관절염 치료제 ‘인보사’까지 29개의 신약이 탄생했다. 지금까지 고혈압과 당뇨병 같은 만성질환을 포함해 항암제·발기부전치료제·항생제 등 다양한 영역에서 매해 1~2개의
+                신약이 등장하고 있다.
               </p>
             </div>
           </div>
@@ -830,7 +767,7 @@
               <h2 class="heading-2 dark">국내 제약사에 남을 만한 신약은 무엇이 있나</h2>
             </header>
             <p class="text dark">
-              상징성에서는 국내 신약 1호 ‘선플라’나 FDA 승인 1호 ‘팩티브’가 꼽힐 것이다. <br>경제성으로 가면 얘기가 달라진다. 신약 가운데 일부는 이미 생산을 중단했거나 철수를 선언했다. <br>시장에서 ‘의미 있는’ 실적을 내기가 그만큼 어렵다는 의미다. 시장 규모가 크고 제품 경쟁력이 <br>있어야 한다. 특허 기간이 만료되고 제네릭(복제약품)이 쏟아지는 것도 대비해야 한다. <br>국내에선 신약의 성공 여부를 ‘실적
+              상징성에서는 국내 신약 1호 ‘선플라’나 FDA 승인 1호 ‘팩티브’가 꼽힐 것이다. <br>경제성으로 가면 얘기가 달라진다. 신약 가운데 일부는 이미 생산을 중단했거나 철수를 선언했다. <br>시장에서 ‘의미 있는’ 실적을 내기가 그만큼 어렵다는 얘기다. 시장 규모가 크고 제품 경쟁력이 <br>있어야 한다. 특허 기간이 만료되고 제네릭(복제약품)이 쏟아지는 것도 대비해야 한다. <br>국내에선 신약의 성공 여부를 ‘실적
               100억원’에 맞추고 있는데, LG화학이 개발한 당뇨 치료제 <br>‘제미글로’와 일양약품 ‘놀텍’, 종근당 ‘듀비에’ 등이 지난해 100억원어치 이상을 생산했다.
             </p>
             <div class="listofmedicine">
@@ -859,7 +796,7 @@
                 <div class='desc'>
                   <span class="year">2002년</span>
                   <span class="effect">항균·항생제</span>
-                  <span class="subdesc">미국 FDA 승인 1호</span>
+                  <span class="subdesc">미국 FDA 승인 1호(2003년)</span>
                 </div>
               </div>
               <div class="medicine">
@@ -968,8 +905,8 @@
                 <h4 class="heading-2">세계 제약업계가 ‘카나브’에 주목하는 이유는</h4>
               </header>
               <p class="text16">
-                보령제약이 2010년 판매 허가를 받은 ‘카나브’는 국내 신약 15호다. <br>국산 신약으로 가장 먼저 글로벌 시장에서 성공 가능성을 제시했다는 데서 <br>주목 받는다. 92년 개발을 시작했으니 후보 물질 발굴, 임상시험 등을 거쳐 <br>세상에 나오기까지 꼭 18년 걸린 셈이다. 투자금액은 500억원에 이른다. <br>카나브는 올해 600억원대 매출이 예상된다. 노바티스·사노피·베링거인겔하임 <br>같은 다국적
-                제약사를 누르고 국내 ARB 계열 고혈압 치료제 시장 1위다.
+                보령제약이 2010년 판매 허가를 받은 ‘카나브’는 국내 신약 15호다. <br>국산 신약으로 가장 먼저 글로벌 시장에서 성공 가능성을 제시했다는 데서 <br>주목 받는다. 92년 개발을 시작했으니 후보 물질 발굴, 임상시험 등을 거쳐 <br>세상에 나오기까지 18년이 걸렸다. 투자금액은 500억원에 이른다. <br>카나브는 올해 600억원대 매출이 예상된다. 노바티스·사노피·베링거인겔하임 <br>같은 다국적 제약사를
+                누르고 국내 ARB 계열 고혈압 치료제 시장 1위다.
               </p>
             </div>
           </div>
@@ -980,8 +917,8 @@
                 <h4 class="heading-2">카나브는 정말 칸이 될 수 있을까</h4>
               </header>
               <p class="text16">
-                고혈압 치료제는 혈관을 확장시켜 혈압을 낮추는 역할을 한다. <br>크게 봐서 ARB(안지오텐신Ⅱ수용체차단제) 계열과 CCB(칼슘<br>채널차단제) 계열이 시장을 주도하고 있다. <br>ARB 계열은 혈관을 수축시키는 안지오텐신II 호르몬을 차단해 혈압을 낮추는 물질이다. ARB 계열의 세계 시장 규모는 40조~50조원대, 비만 인구 증가와 인구 고령화 영향으로 매해 두 자릿수씩<br> 성장하고 있다. 카나브(Kanarb)는
-                ‘ARB 계열의 황제(kahn)’라는 뜻이다. <br>신약 하나로 세계 제약 시장 지도를 바꾸겠다는 의지를 담았다. <br>ARB 계열 고혈압 치료제를 판매하는 다국적 제약사는 7곳이다.<br> 카나브가 경쟁사 제품보다 혈압을 낮춰주는 효과가 20% 이상 뛰어나다는 임상결과가 발표되기도 했다.<br> 2017년 10월 현재까지 전 세계 51개국에 4억1300만 달러어치를 수출(계약 포함)했다.
+                고혈압 치료제는 혈관을 확장시켜 혈압을 낮추는 역할을 한다. 크게 봐서 ARB(안지오텐신Ⅱ수용체차단제) 계열과 CCB(칼슘채널차단제) 계열이 시장을 주도하고 있다. ARB 계열은 혈관을 수축시키는 안지오텐신II 호르몬을 차단해 혈압을 낮추는 물질이다. ARB 계열의 세계 시장 규모는 40조~50조원대, 비만 인구 증가와 인구 고령화 영향으로 매해 두 자릿수씩 성장하고 있다. 카나브(Kanarb)는 ‘ARB 계열의 황제(kahn)’라는 뜻이다. 신약
+                하나로 세계 제약 시장 지도를 바꾸겠다는 의지를 담았다. ARB 계열 고혈압 치료제를 판매하는 다국적 제약사는 7곳이다. 카나브가 경쟁사 제품보다 혈압을 낮춰주는 효과가 20% 이상 뛰어나다는 임상결과가 발표되기도 했다. 2017년 10월 현재까지 전 세계 51개국에 4억1300만 달러어치를 수출(계약 포함)했다.
               </p>
             </div>
           </div>
@@ -1004,7 +941,7 @@
           </div>
           <div class="img"></div>
           <header class="section-header">
-            <h2 class="heading-2">“마감 90일 남기고 기적 같이 후보물질 발견” </h2>
+            <h2 class="heading-2">“마감 90일 남기고 기적 같이 후보물질 발견”</h2>
           </header>
           <p class="question">
             <span>Q</span> 신약 개발은 낙타가 바늘구멍 통과하기만큼이나 어렵다는데…
@@ -1022,7 +959,7 @@
             <span>Q</span> 카나브가 이제는 글로벌 시장에서도 인정받고 있다.
           </p>
           <p class="answer">
-            “신약 개발의 1단계인 세포 실험에선 100만 개의 신약 후보를 놓고 시작한다. 임상 시험까지 살아남는 건 그 중 딱 하나다. 신약 후보 물질을 직접 찾아내는 일부터 해외 시장에서 직접 발매까지 다 해 본 신약은 카나브가 처음이다 경험을 가졌다는 것 자체가 연구자로서 기쁘다.”
+            “신약 개발의 1단계인 세포 실험에선 100만 개의 신약 후보를 놓고 시작한다. 임상 시험까지 살아남는 건 그 중 딱 하나다. 신약 후보 물질을 직접 찾아내는 일부터 해외 시장에서 직접 발매까지 다 해 본 신약은 카나브가 처음이다. 경험을 가졌다는 것 자체가 연구자로서 기쁘다.”
           </p>
         </div>
       </div>
@@ -1034,9 +971,9 @@
           <div class="container col2 type-d">
             <div class="col">
               <header class="section-header">
-                <h2 class="heading-2">“출시 2년 만에 점유율 5%&#183&#183&#183 성공을 확신한다”</h2>
+                <h2 class="heading-2">“출시 2년 만에 점유율 5%&#183;&#183;&#183; 성공을 확신한다”</h2>
               </header>
-              <p class="answer">고혈압 치료제 ‘카나브’는 전 세계 50여 국에 진출했다. 한국산 고혈압 신약과 가장 먼저 손을 잡은 회사가 멕시코의 중견 제약회사 스텐달(Stendhal)이다. 카를로스 아레나스 위드필드 최고경영자(CEO)로부터 현지 반응을 들어봤다.</p>
+              <p class="answer">고혈압 치료제 ‘카나브’는 전 세계 51개국에 진출했다. 한국산 고혈압 신약과 가장 먼저 손을 잡은 회사가 멕시코의 중견 제약회사 스텐달(Stendhal)이다. 카를로스 아레나스 위드필드 최고경영자(CEO)로부터 현지 반응을 들어봤다.</p>
               <p class="question">
                 <span>Q</span> 회사를 간단히 소개하면.
               </p>
@@ -1066,8 +1003,7 @@
                 <span>Q</span> 다국적 제약회사와 경쟁하면서 어떻게 시장 개척에 성공했나.
               </p>
               <p class="answer">
-                “멕시코에선 ‘한국에서 온 ARB’라는 뜻을 가진 ‘아라코(ARAHKOR·ARB+Heart +Korea)’로 판매되고 있다. ARB 계열 고혈압 치료제의 시장 규모는 소매가 기준으로 2억 달러대에 이른다. 아라코는 2015년 출시돼 7만 유닛(약 140만 정), 금액으로는 150만 달러의 성과를 올렸다. 당초 목표(4만 유닛)보다 2배 가까이 판매된 것이다. 현재 ARB 계열 시장에서 5%의 점유율을 차지하고 있다. 올해 270만 달러의 매출을
-                예상한다.”
+                “멕시코에는 ARB 계열에서만 오리지널 8개, 제네릭(복제약) 60여 개가 경쟁하고 있다. 이제 다국적 제약사들도 아라코를 주요한 경쟁 상대로 인식하기 시작했다. 이유는 명확하다. 아라코는 혈압 강하 효과가 두드러진다. 멕시코를 포함한 중남미에서 고혈압 환자가 10년 내 두 배 이상 증가할 것으로 예상되는 가운데 아라코의 성공을 확신한다.”
               </p>
             </div>
             <div class="col">
@@ -1083,7 +1019,7 @@
         </div>
         <div class="col">
           <div class="more more-svg">
-            <a href="#" class="btn btn-white btn-corner-rounded"><span class="btn-more-text">보령제약 더 자세히 보기</span><span class="more-arrow"></span></a>
+            <a href="http://www.boryung.co.kr/index.do" class="btn btn-white btn-corner-rounded" target='_blank'><span class="btn-more-text">보령제약 더 자세히 보기</span><span class="more-arrow"></span></a>
           </div>
         </div>
       </div>
@@ -1100,11 +1036,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+    <!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script> -->
     <script src="./js/lib/DrawSVGPlugin.min.js"></script>
     <script src="./js/lib/SplitText.min.js"></script>
     <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="./js/script.js?v=1508181674640"></script>
+    <script src="./js/script.js?v=1508245099746"></script>
 </body>
 
 </html>

@@ -133,12 +133,14 @@
 		}
 	}
 	.valueadded {
-		padding-top: rem(192px);
-		.heading-2 {
-		color: rgb(17, 17, 17);
+		.section-header {
+			padding: rem(50px) 0 rem(20px);
+			.heading-2 {
+			color: rgb(17, 17, 17);
+			line-height:rem(25px);
+			}
 		}
-		& > .wrapper > .article {
-			width: 100%;
+		.article {
 			.circle_bubble {
 				width: rem(130px);
 				height: rem(130px);
@@ -146,7 +148,8 @@
 			    background-color: $lipstick;
 			    position:relative;
 			    margin:0 auto;
-			    top: rem(-30px);
+			    top: rem(-10px);
+			    transform: scale(.8);
 			    span.value {
 			    	width: rem(110px);
 			    	height: rem(80px);
@@ -172,9 +175,10 @@
 					width:rem(24px);
 					height: rem(24px);
 					display:block;
-					bottom: rem(-23px);
+					bottom: rem(-20px);
 					left: rem(53px);
-					transform: rotate(90deg);
+					transform: scale(.8) rotate(90deg);
+					background-repeat:no-repeat;
 				}
 			}
 			.box {
@@ -183,12 +187,13 @@
 					width:rem(20px);
 					height:rem(12px);
 					background-image: url('data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAQAAADIBVVwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfhCg4SGAFRHdLEAAAAQ0lEQVQY02M0FmAwYCAMHrAwGDDsJ0JhIxMRihgYGBgYiFbIwnCBwZEYNxJr4EACRmMFhgQi1B1gYVBgqCfGRKLDEQALCAbbxPw+cgAAAABJRU5ErkJggg==');
-					margin: 40px 10px;
+					margin: rem(40px) auto;
+					background-repeat: no-repeat;
 				}
 				.retangle_bubble {
 					display:inline-block;
-					width: rem(150px);
-					height: rem(100px);
+					width: rem(112px);
+					height: rem(81px);
 					border-radius: 4px;
 				    background-color: #333333;
 				    span, p {
@@ -196,6 +201,7 @@
 				    	margin:0 auto;
 				    	color:rgb(255,255,255);
 				    	font-weight:bold;
+				    	font-size:rem(13px);
 				    }
 				    &.med > .icon {
 				    	width: rem(46px);
@@ -204,6 +210,7 @@
 			    	   	background-size:cover;
 				    	display:block;
 				    	margin:rem(20px) auto rem(10px);
+				    	transform:scale(.8);
 				    }
 				    &.car > .icon {
 				    	width: rem(50px);
@@ -212,19 +219,34 @@
 				    	background-size:cover;
 				    	display:block;
 				    	margin:rem(13px) auto rem(10px);
+				    	transform:scale(.8);
 				    }
 				}
 			}
+		}
 		.realize {
-			.article:nth-child(1) {
-				width: 100vw;
-				height:calc(100vw * 414 / 700);
-				position: relative;
-				.rnd-img {position:absolute;top:0;left:0;width: 100vw;height:calc(100vw * 414 / 700);background-size: cover;background-position: 50% 50%;}
-				.rnd-img1 {background-image: url('../img/market/rnd-img1.jpg');}
-				.rnd-img2 {background-image: url('../img/market/rnd-img2.jpg');}
+			width: 100vw;
+			height:auto;
+			position: relative;
+			.rnd-imgTween {
+				display:block;
+				width:100vw;
+				height:calc(100vw * 382 / 642);
+				.rnd-img {
+					position:absolute;
+					top:0;
+					left:0;
+					width: 100vw;
+					height:calc(100vw * 382 / 642);
+					background-size: cover;
+					background-position: 50% 50%;
+					&.rnd-img1 {background-image: url('../img/market/rnd-img1.jpg');}
+					&.rnd-img2 {background-image: url('../img/market/rnd-img2.jpg');}
+				}
 			}
 		}
-	}	
+		.section-header {
+			padding:0;
+		}
 }
 }

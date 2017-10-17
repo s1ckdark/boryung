@@ -19,14 +19,17 @@
 			display:flex;
 			flex-wrap: wrap;
 			width:80vw;
-			height:calc(80vw * 320 / 500);
+			background-position:50% 50%;
 			overflow:hidden;
 			margin:0 auto;
+			.owl-dots {
+				display:none;
+			}
 			.grid {
 				margin:0 auto;
 				position:relative;
 				width: 80vw;
-				height: calc(80vw * 320 / 500);
+				height: calc(80vw * 260 / 400);
 				display:block;
 				text-align: center;
 				margin-bottom:20px;

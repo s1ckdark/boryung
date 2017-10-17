@@ -11,7 +11,7 @@
 		@extend %clearfix;
 		.grid {
 			float:left;
-			width: calc(100% / 6);
+			width: calc(100% / 6 - 1px);
 			.round-bubble {
 				@extend %eng;
 				width: rem(150px);

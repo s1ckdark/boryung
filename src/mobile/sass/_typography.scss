@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $heading-font-weight;
   line-height: 1;
   color: $heading-text-color;
+  font-family:$font-family;
 }
 .heading-1 {
   line-height: 1.26;
@@ -53,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: $heading-1;
   padding: rem(30px) 0 rem(20px);
   text-align:center;
+  font-family: $font-family;
   &.dark {
     color: $br-gray-color;
   }
@@ -64,7 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: $heading-2;
   color: rgb(17, 17, 17);
   line-height:rem(18px);
-   text-align:center;
+  text-align:center;
+  font-family: $font-family;
   &.dark {
     color: $br-gray-color;
   }

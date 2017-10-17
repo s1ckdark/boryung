@@ -53,6 +53,7 @@ module.exports = {
     "SplitText": true,
     "upTween":true,
     "handle":true,
-    "Back":true
+    "Back":true,
+    "lazyload": true,
   }
 };

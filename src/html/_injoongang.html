@@ -2,8 +2,8 @@
   <div class="wrapper">
     <div class="container col2 type-b">
       <div class="col">
-            <header>
-              <h4 class="title">중앙일보 속 김승호 회장 이야기</h4>
+            <header class="section-header">
+              <h4 class="heading-2">중앙일보 속 김승호 회장 이야기</h4>
             </header>
       </div>
       <div class="col">
@@ -20,8 +20,8 @@
 </section>
 <style type="text/css" id="bg_article">
 </style>
-     <script>
-      let article = {
+<script>
+var article = {
         'articles': [{
             'num': '01',
             'title': '‘울지마 톤즈’ 고 이태석 신부와 나',
@@ -36,7 +36,7 @@
           },
           {
             'num': '03',
-            'title': '각산, 중동으로 가다',
+            'title': '용각산, 중동으로 가다',
             'img': './img/articles/3.jpg',
             'url': 'http://news.joins.com/article/5073091'
           },
@@ -144,15 +144,16 @@
           }
         ]
       };
-      for (var key in article.articles) {
+   
+   for (var key in article.articles) {
         if (article.articles.hasOwnProperty(key)){
-        let item = "<div class='item grid'><div class='bg_article bg_article"+article.articles[key].num+"'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='"+article.articles[key].url+"' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
-        let sheet = $("#bg_article").get(0).sheet;
-        let styles = '.bg_article'+article.articles[key].num+' {';
+        var item = "<div class='item grid'><div class='bg_article bg_article"+article.articles[key].num+"'></div><div class='number'>"+article.articles[key].num+"</div><div class='title'>"+article.articles[key].title+"</div><div class='btn-readmore btn btn-wide btn-corner-rounded'><a href='"+article.articles[key].url+"' target='_blank'><span class='btn-text'>Read more</span></a></div></div>";
+        var sheet = $("#bg_article").get(0).sheet;
+        var styles = '.bg_article'+article.articles[key].num+' {';
         styles += 'background-image: url('+article.articles[key].img+')';
         styles += '}';
         sheet.insertRule(styles, 0);
         $('.article_injoonang').append(item);
       }
       }
-    </script>
+ </script>
