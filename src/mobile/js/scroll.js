@@ -266,37 +266,15 @@ function upTween(e, hook){
 });
 }
 
-// function tweenText(e, hook){
-//        var $e = $(e);
-//        // TweenMax.killTweensOf()
-//        $e.each(function(){
-//         var $this = this;
-//         var textTween = new SplitText($this, {type:"lines"});
-//         var tl = new TimelineMax({paused:true});
-//         tl.staggerFrom(textTween.lines, 0.5, {opacity:0, cycle:{x:[100, -100]}}, 0.2)
-//         var textScene = new ScrollMagic.Scene({
-//             triggerElement: $this,
-//             triggerHook: hook
-//         })
-//         .on('start', function(){
-//           tl.play();
-//         })
-//         .reverse(false)
-//         .addTo(controller);
-// });
-// }
-
-upTween('p.text','p.text');
-upTween('p.text16','p.text16');
-upTween('.heading-1','.5');
-upTween('.heading-2','.5');
-upTween('.desc','.5');
-upTween('.question','.5');
-upTween('.answer','.5');
+upTween('p.text16','.6');
+upTween('.heading-1','.6');
+upTween('.heading-2','.6');
+upTween('.question','.6');
+upTween('.answer','.6');
 
 
-var len =$('#discobar').height()*2;
-var redlineTween = TweenMax.fromTo("#era_scroll b", 1, {height: 0}, {height: len, ease: Power0.easeNone}); 
+var len =$('#discobar').height() * 1.75;
+var redlineTween = TweenMax.fromTo("#era_scroll b", 1, {height: 0}, {height: len, ease: Power0.easeNone,zIndex:0}); 
 var navLineDrawScene1 = new ScrollMagic.Scene({
         triggerElement: "#discobar",
         triggerHook: 0.5,
@@ -304,7 +282,6 @@ var navLineDrawScene1 = new ScrollMagic.Scene({
     })
     .setTween(redlineTween)
     .addTo(controller);
-
 
 
    

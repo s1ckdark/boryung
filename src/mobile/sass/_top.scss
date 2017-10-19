@@ -14,6 +14,7 @@
     position: relative;
     height: 100%;
   }
+   
     .box {width: 100%;}
     /*비례 유지하면 사이즈 조절하기*/
     .motion1-wrapper {
@@ -38,47 +39,7 @@
       width: 100%!important;
       height: 100%!important;
     }
-    /*비례 유지하면 사이즈 조절하기*/
-  .hero {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    &--map {
-      position:absolute;
-      left:calc(50% - 590.5px);
-      top:calc(50% - 354.5px);
-      background-size: contain !important;
-      width:1181px;
-      height:709px;
-      display:block;
-      &.greydot {
-        z-index: 1;
-        background: url('../img/hero/map_greydot.png') 50% 50%/cover no-repeat;
-      }
-      &.orangedot {
-        opacity: 0;
-        background: url('../img/hero/map_orangedot.png') 50% 50%/cover no-repeat;
-      }
-    }
-    &--obj {
-      position:absolute;
-      background-size: cover;
-      &.title {
-        width: rem(503px);
-        height: rem(324px);
-        background: url('../img/hero/hero_title.png') 50% 20%/60vw no-repeat;
-        left: calc(50% - 30vwx);
-      }
-      &.kanarb {
-        width: rem(497px);
-        height: rem(423px);
-        background: url('../img/hero/kanarb.png') 0 0/cover no-repeat;
-        left: calc(50% - 249px);
-        top: calc(50% - 211px);
-      }
-    }
-  }
+  
 
   .top-intro  {
     position: absolute;

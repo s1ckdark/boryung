@@ -29,7 +29,7 @@ $(function(){
 var discoLen = $('#era > .wrapper > .container').height() - 155;
 $('#era > .wrapper > .container > .col').eq(1).css({'height':discoLen});
 // era boldMarketing
-TweenMax.set('.boldMarketing',{autoAlpha:0})
+// TweenMax.set('.boldMarketing',{autoAlpha:0})
 $('.boldbtn').click(function(){
   var target = $(this).siblings('.boldMarketing');
   TweenMax.to(target[0], 1, {autoAlpha:1,ease:Power1.easeIn})

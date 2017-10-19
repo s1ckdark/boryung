@@ -1,4 +1,6 @@
 #market {
+	position: relative;
+    z-index: 99;
 	.marketshare {
 		background-color: rgb(245, 245, 245);
 		.market {

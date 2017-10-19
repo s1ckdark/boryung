@@ -2,6 +2,9 @@
 // brand-era
 //
 #era {
+	width: 100%;
+	height:auto;
+	position:relative;
 	#era_scroll {
 		position:relative;
 		b {
@@ -38,9 +41,6 @@
 			z-index: 30;
 		}
 	}
-	width: 100%;
-	height:auto;
-	position:relative;
 	.overline {
 		@extend %eng;
 		text-transform: uppercase;
@@ -64,14 +64,11 @@
 			text-align:center;
 		}
 		article {
-			padding: rem(60px) auto;
+			// padding: rem(60px) 0;
 			position: relative;
 			.slider-header {
 				.overline {
 					color: rgb(17, 17, 17);
-					position:absolute;
-					top: rem(50px);
-					left: rem(30px);
 				}	
 			}
 			.img {
@@ -91,6 +88,32 @@
 					background-image:url('../img/era/1967-2.jpg');
 				}
 			}
+			article.article_boldmarketing, article.article_brief {
+				padding:0 0 rem(30px);
+			  	background: #f9f9f9;
+			  	 .toggle_layer_block {
+			  	 	background: #f9f9f9;
+			  	 .slider-header {
+			  	 	margin:0 0 rem(20px);
+			  	 	padding: rem(40px) 0 rem(10px);
+				  	 .heading-2 {
+		  	 		    font-size: 1.16667rem;
+					    line-height: .93333rem;
+				  	 	.lipstick {
+					    	color: $lipstick;
+						 }
+					}
+			  	 }
+			  	 .section-header {
+					margin:0;
+					padding-top:0;
+					.heading-1 {
+						font-size:1.5rem;
+						padding: 0 0 rem(10px);
+					}
+			  	 }
+			}
+		}
 			article.article_2b {
 				display:none! important;
 				height:calc(100vh - 55);
@@ -271,6 +294,15 @@
 				}
 			}
 		}
-	}
+}
 
 
+/*용각산 및 수사반장 슬라이딩 될때 롤링 2번째에서 글자 안보이는 부분 "!important"로 강제 보이게 함*/
+    .article_1975 .heading-2 { opacity: 1!important;transform:translateY(0) !important;}
+    /*.article_1975 .item .slider-header { margin: -.5rem 0 .5rem!important;}*/
+    .article_1975 .item .text { opacity: 1!important;transform:translateY(0) !important;}
+
+    .article_1967 .heading-2 { opacity: 1!important;transform:translateY(0) !important;}
+    /*.article_1967 .item .slider-header { margin: -.5rem 0 .5rem!important;transform:translateY(0) !important;}*/
+    .article_1967 .item .text { opacity: 1!important;transform:translateY(0) !important;}
+  /*용각산 및 수사반장 슬라이딩 될때 롤링 2번째에서 글자 안보이는 부분 "!important"로 강제 보이게 함*/

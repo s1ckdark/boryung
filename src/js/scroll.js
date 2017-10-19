@@ -331,8 +331,8 @@ function tweenText(e, hook){
 });
 }
 
-upTween('p.text','p.text');
-upTween('p.text16','p.text16');
+upTween('p.text','.4');
+upTween('p.text16','.4');
 tweenText('.heading-1','.5');
 tweenText('.heading-2','.5');
 upTween('.desc','.5');

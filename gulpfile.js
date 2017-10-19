@@ -32,14 +32,14 @@ gulp.task('html', function () {
       .pipe(nunjucks.compile({
         baseurl: baseurl,
         version: date.getTime(), // CSS, JS 파일 캐시용 버전
-        viewport_width: '1024', // pc 버전은 프로젝트마다 넓이가 상이함. mobile은 device-width으로 설정
+        viewport_width: '1200', // pc 버전은 프로젝트마다 넓이가 상이함. mobile은 device-width으로 설정
         brand: '보령제약', // header logo 이미지에 들어가는 대체 텍스트
         title: '약국거리 원조에서 신약 개발까지- 보령 60년 스토리',
         description: '1957년 10월 서울 종로5가에 세 평 반짜리 약국이 문을 열었다. 스물다섯 청년 김승호는 자신의 고향 이름을 따서 ‘보령약국’이라고 이름 지었다. 그리고 60년. 제약과 헬스케어로 영역을 넓힌 보령은 계열사 9개, 매출 8000억원대 중견그룹으로 성장했다. 김승호 회장은 이제 ‘글로벌 보령’을 지휘하고 있다.',
         keyword: '보령 保寧,보령제약,보령제약그룹,종로5가,보령약국,보령약국 서울미래유산,김승호 보령제약그룹 회장 창업자,약국 1번가,약국 거리,용각산,용각산쿨,겔포스,겔포스엠,속쓰림 꼼짝 마,속쓰림을 부탁해,누크,겔포스 수출,류카쿠산,투석 사업,대한의사협회,보령의료봉사상,보령암학술상,보령중보재단,보령 생일 파티,복막 투석제 페리플러스,보령메디앙스,비알네트콤,보령바이오파마,후지이 류타,카나브,보령약국 전표,SK케미칼 선플라,LG생명과학 팩티브,일양약품 슈펙트,동아제약 자이네나,LG화학 제미글로,코오롱생명과학 인비사,리피토,이주한 보령제약,카를로스 아레나스 스텐달 멕시코',
         og_image: baseurl + '/img/og-image.jpg', // 최적 사이즈 1200x628px
         og_article_publisher: 'https://www.facebook.com/joongang', // A Facebook page URL or ID
-        dablena_init: 'www.boryung.co.kr', // client website
+        dablena_init: 'www.innovationlab.co.kr', // client website
       }))
       .pipe(htmlbeautify(options)) // beautify HTML files
       .pipe(gulp.dest('public/' + element + '/'))
