@@ -266,6 +266,7 @@ function upTween(e, hook){
 });
 }
 
+upTween('p.text','.6');
 upTween('p.text16','.6');
 upTween('.heading-1','.6');
 upTween('.heading-2','.6');
