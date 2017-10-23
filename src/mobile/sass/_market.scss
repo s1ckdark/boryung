@@ -1,6 +1,6 @@
 #market {
+	position:relative;
 	.marketshare {
-
 		background-color: rgb(245, 245, 245);
 		.market {
 			position:relative;
@@ -138,8 +138,11 @@
 			padding: rem(50px) 0 rem(20px);
 			.heading-2 {
 			color: rgb(17, 17, 17);
-			line-height:rem(25px);
 			}
+		}
+		.text16 {
+			width:100%;
+			line-height: rem(28px);
 		}
 		.article {
 			.circle_bubble {

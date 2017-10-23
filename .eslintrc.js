@@ -49,6 +49,7 @@ module.exports = {
     "Elastic": true,
     "Strong":true,
     "Expo":true,
+    "Circ":true,
     "SteppedEase":true,
     "SplitText": true,
     "upTween":true,

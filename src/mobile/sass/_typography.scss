@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height:rem(18px);
   text-align:center;
   font-family: $font-family;
+  font-weight:400;
   &.dark {
     color: $br-gray-color;
   }
@@ -75,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     color: $lipstick;
   }
 }
-.text {
+.text, .txt16 {
   &.dark {
     color: rgb(255, 255, 255)
   }
