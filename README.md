@@ -52,7 +52,7 @@
 - Template Engine [Nunjucks](https://mozilla.github.io/nunjucks)
    - compile using `gulp-nunjucks`
    - manage layout template
-- formattiong thorugh `gulp-html-beautify`
+- formatting thorugh `gulp-html-beautify`
 
 ### JavaScript
 - ES5
