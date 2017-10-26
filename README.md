@@ -11,7 +11,7 @@
 - **if you have any question, contact lee.jungwoo1@joongang.co.kr**
 
 ## Boryung Project
-- due date at 10182017.
+- **due date is 10182017**
 - At first, after `git clone`, set up on local.
 - please read it all of this document.
 - separate section  _brand.html, _institute.html, _april.html, _igarten.html
